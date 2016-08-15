@@ -1,0 +1,179 @@
+<!DOCTYPE html><html class="no-js" lang="en"><!-- InstanceBegin template="/Templates/1_Column.dwt" codeOutsideHTMLIsLocked="false" -->
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta id="p7PM3" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <!-- InstanceBeginEditable name="doctitle" --><title>Calendar of Shooting and Social Events | Pine Rivers Shooting Club</title><!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+
+<!-- InstanceEndEditable -->
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/home_badge_64.png" />
+        <link rel="apple-touch-icon-precomposed" href="/home_badge_64.png" />
+        <link rel="stylesheet" href="/_assets/css/normalize.css" />
+        <link rel="stylesheet" href="/_assets/css/font-awesome.css" />
+        <link rel="stylesheet" href="/_assets/css/foundation.css" />
+        <link rel="stylesheet" href="/_assets/css/styles.css" />
+        <link rel="stylesheet" href="/_assets/css/custom.css" />
+        <script src="//use.edgefonts.net/pt-serif:n4,i4,n7,i7;source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+        <script src="/_assets/js/custom.modernizr.js"></script>
+        <script src="/_assets/js/jquery-1.10.2.min.js"></script>
+        <script src="/_assets/js/sfcalendar.js"></script>
+        
+        <!-- menu -->
+        <link href="/p7pm3/p7PM3-01.css" rel="stylesheet" type="text/css" media="all">
+        <script type="text/javascript" src="/p7pm3/p7PM3scripts.js"></script>
+        
+        <script src="//use.typekit.net/ngg2icc.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript">
+    // Will retun 1 or 0 based on if user is logged in(1) or not logged in(0)
+    var _isLoggedIn = !!parseInt("{module_isloggedin}");
+    </script>
+    </head>
+    <body class="antialiased inner">
+        {module_contentholder, name="_Template - innerHeader"}
+        <!-- //header.row -->
+        <div class="omega delta" role="main">
+        <div class="row">
+        <div class="columns large-12">
+        <!-- InstanceBeginEditable name="ContentArea" -->
+<div>
+  <h1>Calendar of Club Shooting Events&nbsp;</h1>
+</div>
+<section id="content">
+  <div class="wrap-a row">
+    <div class="sidebar columns large-4 small-12">
+      <div class="calendar"></div>
+      <div class="AdBanr">{module_adrotator adRotatorId="5768"}</div>
+    </div>
+    <!-- // sidebar -->
+    <div class="main  columns large-8 small-12">
+      <section class="events-a">
+        <div class="data"> {module_webapps,26905,a,,,,true,,false,} </div>
+      </section>
+    </div>
+    <!-- // main col --> 
+  </div>
+</section>
+<!-- #content --> 
+
+    {module_webapps id="26846" filter="all" collection="results" template=""}
+    {module_webapps id="26905" filter="all" collection="events" template=""}
+<script type="text/javascript">
+            $(document).ready(function() {
+                var calWidget = $('<div class="calendar"></div>');
+                
+                $('section#content .sidebar').prepend(calWidget);
+                
+                $('section.events-a').sfCalendar({
+                    'calWrapper': calWidget,
+                    'listWrapper': 'section#content .main',
+                    'tagsWrapper': 'section#content .sidebar',
+                    'defaultView': 'month'
+                });
+                
+                $(".pop-up-closebutton").click(function() {
+                    $(".pop-up-holder").fadeOut();                    
+                    setTimeout(function () {
+                        $(".inner-popup-content").hide();
+                    }, 300);
+                });
+				
+				var itemsResults = JSON.parse(JSON.stringify({{results.items|json}}));
+				var arrResults = $.map(itemsResults, function(el) { return el });
+				//console.log(arrResults);
+				var itemsDetails = JSON.parse(JSON.stringify({{events.items|json}}));
+				var arrDetails = $.map(itemsDetails, function(el) { return el });
+				//console.log(arrDetails);
+                
+                $(".sfcalendar-widget-list").on("click",".results-button" ,function() {
+                    var resultId = $(this).attr("href").split("-")[1];	
+					var selectedResult = arrResults.filter(function (result) { return result.itemId == resultId });		
+					$(".results-popup").show();
+					$(".pop-up-holder").fadeIn();
+					var dateData = new Date(selectedResult[0]['releaseDate']);
+					$(".result-title").html(selectedResult[0]['name']);
+					$(".pop-up-holder .result-holder").empty();
+					$(".result-date-holder .actual-date").html(dateData.toString().replace(/\S+\s(\S+)\s(\d+)\s(\d+)\s.*/,'$1 $2, $3'));
+					for (var key in selectedResult[0]) {
+						if(key.indexOf('Event') > -1){
+							if(selectedResult[0][key] != ""){
+								$(".pop-up-holder .result-holder").append("<li class='col-md-12'><span class='result-key'>" + key + ":</span><span class='result-data'>" + selectedResult[0][key] + ":</span></li>");
+							}
+						}
+					}	
+                    return false;
+                });
+                
+                $(".sfcalendar-widget-list").on("click",".details-view-button" ,function() {
+					$(".linked-event-holder").hide();
+                    var resultId = $(this).attr("href");
+					var selectedEvent = arrDetails.filter(function (detail) { return detail.itemId == resultId });	
+					$(".details-popup").show();
+					$(".pop-up-holder").fadeIn();
+					$(".details-title").html(selectedEvent[0]['name']);
+					$(".pop-up-holder .result-holder").empty();
+					$(".pop-up-holder .result-holder").append(selectedEvent[0]['description']);
+											
+					if(selectedEvent[0]["Take Bookings"] === "Yes" && selectedEvent[0]["Linked Event Id"] != ""){
+						$(".linked-event-holder").show();
+						$(".linked-event-holder").attr("href","/BookingRetrieve.aspx?ID="+selectedEvent[0]["Linked Event Id"]);                            
+					}
+					
+					for (var key in selectedEvent[0]) {
+						if (selectedEvent[0][key] != "") {
+							if(key == "Event Day of Month"){
+								$("span.month-data").html(selectedEvent[0][key]);
+							}else if(key == "Event Month"){
+								$("span.day-data").html(selectedEvent[0][key]);
+							}else if(key == "Event Year"){
+								$("span.year-data").html(selectedEvent[0][key]);
+							}
+						}
+					}
+					
+                    return false;
+                });
+            });
+        </script>
+<div class="pop-up-holder">
+  <div class="main-popup-content">
+    <div class="inner-popup-content details-popup"> <span class="pop-up-closebutton">X</span>
+      <div class="result-header-content">
+        <div class="booking-detail">
+          <aside> <em class="icon-calendar"></em>
+            <p><span class="month-data"></span> <span class="day-data"></span>, <span class="year-data"></span></p>
+          </aside>
+        </div>
+        <h2 class="details-title">Title Here</h2>
+      </div>
+      <div class="result-list-container col-md-12">
+        <h3>Description</h3>
+        <a class="linked-event-holder" href="">BOOK NOW</a>
+        <ul class="result-holder">
+        </ul>
+      </div>
+    </div>
+    <div class="inner-popup-content results-popup"> <span class="pop-up-closebutton">X</span>
+      <div class="result-header-content">
+        <h2 class="result-title"></h2>
+        <p class="result-date-holder"><span>Date:</span><span class="actual-date"></span> </p>
+      </div>
+      <div class="result-list-container col-md-12">
+        <h3>Results</h3>
+        <ul class="result-holder">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- InstanceEndEditable -->
+        </div>
+        </div>
+        <!-- //.row -->
+        </div>
+        <!-- //.omega "Tour"-->
+        {module_contentholder, name="_Template - Footer"}
+        {module_contentholder, name="_Template - Scripts"}
+    </body>
+<!-- InstanceEnd --></html>

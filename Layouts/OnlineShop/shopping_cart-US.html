@@ -1,0 +1,57 @@
+<title>Shopping Cart</title>
+<h2>Review your items</h2>
+<div class="row">
+<div class="columns large-12">
+<div class="cartrow">
+<div class="cartlabel cldetails">Item Details</div>
+<div class="cartlabel clprice">Price</div>
+<div class="cartlabel clqty">Qty</div>
+<div class="cartlabel cltax">Tax</div>
+<div class="cartlabel clcost">Cost</div>
+<div class="cartlabel clremove">Remove</div>
+</div>
+<div class="cart-item product-image"> {tag_productimage} </div>
+<div class="cart-item product-title"> {tag_productname_nolink}</div>
+<div class="cart-item product-price">{tag_productextaxamount} </div>
+<div class="cart-item product-qty"> {tag_productquantity} </div>
+<div class="cart-item product-tax"> {tag_producttaxamount} </div>
+<div class="cart-item product-total"> {tag_producttotal} </div>
+<div class="cart-item product-remove">{tag_productremovelink} </div>
+</div>
+<!-- end .columns.large-12 -->
+</div>
+<!-- end .row -->
+<div id="cart-footer" class="row">
+<div class="columns large-4">
+<div class="cart-opt opt-discount">
+<label for="discountcode">Discount Code</label>
+{tag_discountcode}
+<input type="submit" class="button small radius" value="Update" onclick="return false;" />
+<label for="discountcode">Gift Card Code</label>
+{tag_giftvoucher}
+<input type="submit" class="button small radius" value="Update" onclick="return false;" />
+</div>
+</div>
+<!-- end .column.large-4 -->
+<div class="columns large-4">
+<div class="cart-opt">
+<p><strong>Where are you shipping to?</strong></p>
+{tag_shippingoptions,true,,,true,true}</div>
+</div>
+<!-- end .column.large-4 -->
+<div class="columns large-4">
+<div id="opt-total-container">
+<div class="opt-total-data">Sub-Total: <strong>{tag_productsubtotal}</strong></div>
+<div class="opt-total-data">Shipping and Handling: <strong>{tag_shippingtotal}</strong></div>
+<div class="opt-total-data">Sales Tax: <strong>{tag_producttaxtotal}</strong></div>
+<div class="opt-total-data">
+<h3>TOTAL: {tag_invoicetotal}</h3>
+</div>
+</div>
+<!-- End Total Container -->
+<div class="cart-opt opt-btns"> {tag_buybutton} {tag_clearcartbutton} </div>
+<!-- End Buttons -->
+</div>
+<!-- end .column.large-4 -->
+</div>
+<!-- end .row -->

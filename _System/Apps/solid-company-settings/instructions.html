@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Solid Company Settings</title>
+	<link href="/_System/apps/solid-company-settings/_assets/css/app.css" type="text/css" rel="stylesheet" media="screen" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+    <script type="text/javascript" src="//cdn.worldsecuresystems.com/bcapi/bcapi-0.1.0.min.js"></script>
+    <script type="text/javascript" src="/_System/apps/solid-company-settings/_assets/js/app.js"></script> 
+    <meta name="robots" content="noindex">
+</head>
+<body>
+<ul class="bcam-tabs">
+		<li>
+		<a id="tab-labels" href="/_System/Apps/solid-company-settings/index.html">Company Settings</a>
+		</li>
+		<li class="active">
+		<a id="tab-instructions" href="/_System/Apps/solid-company-settings/instructions.html">Instructions</a>
+		</li>
+</ul>
+<div id="container-body">
+	<h1><span>Solid Company Settings - Version 1.2</span>    </h1>
+    <h2>Description</h2>
+	<p>Admin users can easily update their company information and have those changes instantly reflected on the website.</p>
+<h3>Available Fields</h3>
+<ul>
+	<li>Company Name</li>
+	<li>Company Type (<a href="http://schema.org/Organization" target="_blank">defined by Schema.org</a>)</li>
+	<li>Slogan</li>
+	<li>Logo</li>
+	<li>Domain Name</li>
+	<li>Phone</li>
+    <li>Phone 2</li>
+    <li>Phone 3</li>
+	<li>Fax</li>
+	<li>Email</li>
+	<li>Address (2 locations)</li>
+  </ul>
+<h2>New In This Version</h2>
+<ul>
+  <li>Added additional phone numbers for each location</li>
+  <li>Added emial to schema definition</li>
+  <li>Bug Fix: Updated schema output to read "type" field</li>
+  <li>Bug Fix: Updated schema output to read "domain" field</li>
+</ul>
+<h2>Requirements</h2>
+<ul>
+	<li>Developer to use the proper tags throughout the website</li>
+	<li>Liquid markup enabled on website</li>
+</ul>
+<h2>Developer Notes</h2>
+<h3>Tag to Enable App on Website</h3>
+<p>Place in the head of the template</p>
+<pre>
+<code class="http"><span class="attribute" style="box-sizing: border-box; color: rgb(0, 128, 128);">Standard</span>: <span class="string" style="box-sizing: border-box; color: rgb(221, 17, 68);">&#123;%include &quot;/_System/apps/solid-company-settings/_data/company.inc&quot; -%&#125;</span>
+<span class="attribute" style="box-sizing: border-box; color: rgb(0, 128, 128);">Rich-Snippets</span>: <span class="string" style="box-sizing: border-box; color: rgb(221, 17, 68);">&#123;%include &quot;/_System/apps/solid-company-settings/_data/company-rich.inc&quot; -%&#125;</span>
+</code><code class="http"><span class="attribute" style="box-sizing: border-box; color: rgb(0, 128, 128);">Rich-Snippets (JSON)</span>: <span class="string" style="box-sizing: border-box; color: rgb(221, 17, 68);">&#123;%include &quot;/_System/apps/solid-company-settings/_data/company-rich-json.inc&quot; -%&#125;</span></code></pre>
+<p>Both tags will make all the company data tags avaiable, the difference is in the output:</p>
+<ul>
+	<li><strong>Standard tag:</strong>&nbsp;No output</li>
+	<li><strong>Rich Snippet tag:</strong>&nbsp;Will output all the company information in Schema.org Microdata markup using meta tags (no information will be displayed to the user)</li>
+	<li><strong>Rich Snippet JSON tag:</strong>&nbsp;Will output all the company information in Schema.org Microdata markup using JSON-ld markup (no information will be displayed to the user)</li>
+</ul>
+<p>Outputting company data is simple</p>
+<h3>Company Data Tags</h3>
+<pre>
+<code class="undefined">{{company.name}}
+{{company.type}}
+{{company.slogan}}
+{{company.logo}}
+{{company.domain}}
+{{company.phone}}
+{{company.phone2}}
+{{company.phone3}}
+{{company.fax}}
+{{company.email}}
+{{company.address}}
+{{company.address2}}
+{{company.city}}
+{{company.state}}
+{{company.zip}}
+{{company.country}}
+{{company.location2-phone}}
+{{company.location2-phone2}}
+{{company.location2-phone3}}
+{{company.location2-fax}}
+{{company.location2-address}}
+{{company.location2-address2}}
+{{company.location2-city}}
+{{company.location2-state}}
+{{company.location2-zip}}
+{{company.location2-country}}
+</code></pre>
+<h4>Company Data Tags can be used within</h4>
+<ul>
+	<li>Templates</li>
+	<li>Pages</li>
+	<li>Files referenced through Includes (see below)</li>
+    <li>Content Holders</li>
+</ul>
+<h4>Use Company Data Tags inside Content Holders</h4>
+<p>The best way to use these tags inside content holders is to replace your content holders with TPL or include files and then reference these files using the Liquid Include tags.</p>
+<p>Example:</p>
+<pre>
+<code class="http"><span class="attribute" style="box-sizing: border-box; color: rgb(0, 128, 128);">USE</span>: <span class="string" style="box-sizing: border-box; color: rgb(221, 17, 68);">&#123;%include &quot;/_System/Includes/_Template - Header.inc&quot;%&#125;</span>
+<span class="attribute" style="box-sizing: border-box; color: rgb(0, 128, 128);">NOT</span>: <span class="string" style="box-sizing: border-box; color: rgb(221, 17, 68);">&#123;module_contentholder, name=&quot;_Template - Header&quot;&#125;</span></code></pre>
+<p>If you want to use the company tags inside content holders you will need to place the main include file in the content holder as liquid variables do not get passed in and our of content holders</p>
+<h2>Complete Documentation</h2>
+    <p><a href="http://support.solidskytech.com/customer/portal/articles/1795731-app-solid-company-settings" target="_blank">Complete Documentation & Installation Instructions</a></p>
+    <h2>Remove Solid Company Settings</h2>
+<p><strong>WARNING: </strong>Removing this application will delete the app and all app files. Company tags placed on your website will no longer work if you remove this application. No modifications will be made to your pages outside the app folder.</p>
+<button id = "delete-app" class="btn btn-danger">Delete App</button>
+</div>
+</body>
+</html>

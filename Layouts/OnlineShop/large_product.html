@@ -1,0 +1,107 @@
+<style>
+input#Units_10041844 {
+    width: 50%;
+    display: inline-block;
+}
+</style>
+<h1>{tag_name}</h1>
+<div class="columns large-4">
+<p style="font-size: 0.8em;">Please note that the following size combinations are not available:<br />
+	Green – Small and 5XL; Blue - Medium and 4XL</p>
+    <ul>
+        <li class="attributes">{tag_attributes}
+            <li>
+                <li class="price">
+                    <h4>Price:</h4><span>{tag_saleprice}</span>
+        </li>
+        {%comment%}
+        <li class="instock">In stock: <strong>{tag_instock}</strong></li>
+        {%endcomment%}
+        <li class="quantity">
+        	{tag_addtocartinputfield}
+            {tag_buynow}
+            </li>
+    </ul>
+    <div class="description">{tag_description}</div>
+</div>
+<div class="columns large-8">
+    {%comment%}<img alt="" src="{tag_largeimage_path}" class="scale-with-grid" />{%endcomment%}
+    <div class="prod_large_image">
+        <img alt="{tag_name}" src="{{this.largeImageUrl}}?Action=thumbnail&amp;Width=600&amp;Height=750&amp;Algorithm=proportional" id="zoom1" class="jetzoom"
+        data-jetzoom="zoomImage: '{{this.largeImageUrl}}', lensAutoCircle :true" />
+    </div>
+    <div class="poplets">
+    {% for poplet in this.poplets -%}
+        <div class="poplets_item">
+        <img class="jetzoom-gallery" src="{{poplet.url}}?Action=thumbnail&amp;Width=100&amp;Height=100&amp;Algorithm=fill_proportional" data-jetzoom="useZoom: '#zoom1', image: '{{poplet.url}}?Action=thumbnail&amp;Width=600&amp;Height=750&amp;Algorithm=proportional', zoomImage: '{{poplet.url}}'" />
+        </div>
+    {% endfor -%}
+    </div>
+</div>
+{%comment%}
+<div class="row">
+    <div class="columns large-12">
+        <h4>Comments</h4> {module_ratingfeedback}
+        <h4>Leave a Comments</h4>
+        <form name="catratingform2343" onsubmit="return checkWholeForm2343(this)" method="post" action="/RatingProcess.aspx?OID={module_oid}&amp;OTYPE={module_otype}">
+            <div class="row">
+                <div class="columns large-6">
+                    <div class="row collapse">
+                        <div class="small-10 columns">
+                            <input class="cat_textbox_small" type="text" name="FullName" id="RFullName" maxlength="255" placeholder="Full Name" />
+                        </div>
+                        <!-- //.columns.large-10 -->
+                        <div class="small-2 columns"> <span class="postfix radius"><em class="icon-user"></em></span> </div>
+                        <!-- //.columns.large-2 -->
+                    </div>
+                    <!-- //.row -->
+                    <div class="row collapse">
+                        <div class="small-10 columns">
+                            <input class="cat_textbox_small" type="text" name="Website" id="RWebsite" maxlength="255" placeholder="Website" />
+                        </div>
+                        <!-- //.columns.large-10 -->
+                        <div class="small-2 columns"> <span class="postfix radius"><em class="icon-globe"></em></span> </div>
+                        <!-- //.columns.large-2 -->
+                    </div>
+                    <!-- //.row -->
+                    <div class="row collapse">
+                        <div class="small-10 columns">
+                            <input class="cat_textbox_small" type="email" name="EmailAddress" id="REmailAddress" maxlength="255" placeholder="Email Address" />
+                        </div>
+                        <!-- //.columns.large-10 -->
+                        <div class="small-2 columns"> <span class="postfix radius"><em class="icon-envelope-alt"></em></span> </div>
+                        <!-- //.columns.large-2 -->
+                    </div>
+                    <!-- //.row -->
+                </div>
+                <div class="columns large-6">
+                    <label>
+                        <textarea name="Feedback" id="RFeedback" cols="10" rows="4" placeholder="Comment in here"></textarea>
+                    </label>
+                    <label> Enter Word Verification in box below
+                        <br /> {module_captchav2}
+                    </label>
+                    <input type="submit" value="Submit" class="button small secondary" />
+                </div>
+                <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+                <script type="text/javascript">
+                    //<![CDATA[
+                    function checkWholeForm2343(theForm) {
+                        var why = "";
+                        if (theForm.EmailAddress)
+                            if (theForm.EmailAddress.value.length > 0) why += checkEmail(theForm.EmailAddress.value);
+                        if (theForm.CaptchaV2) why += isEmpty(theForm.CaptchaV2.value, "Enter Word Verification in box below");
+                        if (why != "") {
+                            alert(why);
+                            return false;
+                        }
+                        theForm.submit();
+                        return false;
+                    }
+                    //]]>
+                </script>
+            </div>
+        </form>
+    </div>
+</div>
+{%endcomment%}

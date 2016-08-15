@@ -1,0 +1,73 @@
+<article>
+    <img alt="" src="{tag_blogpostfeaturedimageurl}" />
+	<aside>
+		<p><span class="enlarge">{tag_blogpostday}</span> {tag_blogpostmonth} {tag_blogpostyear}</p>
+		<p><span class="enlarge">{tag_commentcount}</span> Comments</p>
+	</aside>
+	<div class="small-12 columns">
+    <h1>{tag_blogposttitle}</h1>
+	{tag_blogpostbody}
+    </div>
+	<div class="small-12 columns hide">
+    <h4>Comments</h4>
+	{tag_commentspaged}
+	<p>&nbsp;</p>
+	<h4>Leave a Comment</h4>
+	<form onsubmit="return checkWholeForm(this)" action="/RatingProcess.aspx?OID={tag_blogpostid}&amp;OTYPE={tag_blogposttype}" method="post">
+	    <div class="row">
+		    <div class="columns large-6">
+		    <div class="row collapse">
+			    <div class="small-10 columns">
+			    	<input maxlength="255" name="fullname" placeholder="Full Name" type="text" />
+			    </div>
+			    <!-- //.columns.large-10 -->
+			    <div class="small-2 columns"> <span class="postfix radius"><em class="icon-user"></em></span> </div>
+			    <!-- //.columns.large-2 -->
+			    </div>
+			    <!-- //.row -->
+			    <div class="row collapse">
+			    <div class="small-10 columns">
+			    	<input maxlength="255" name="website" placeholder="Website" type="text" />
+			    </div>
+			    <!-- //.columns.large-10 -->
+			    <div class="small-2 columns"> <span class="postfix radius"><em class="icon-globe"></em></span> </div>
+			    <!-- //.columns.large-2 -->
+			    </div>
+			    <!-- //.row -->
+			    <div class="row collapse">
+			    <div class="small-10 columns">
+			    	<input maxlength="255" name="emailaddress" placeholder="Email Address" type="email" />
+			    </div>
+			    <!-- //.columns.large-10 -->
+			    <div class="small-2 columns"> <span class="postfix radius"><em class="icon-envelope-alt"></em></span> </div>
+			    <!-- //.columns.large-2 -->
+			    </div>
+		    <!-- //.row -->
+		    </div>
+		    <!-- //.columns.large-6 -->
+		    <div class="columns large-6">
+		    <label>
+		    <textarea name="Feedback" class="cat_listbox_small" placeholder="Your comment here"></textarea>
+		    </label>
+		    <label> Enter Word Verification in box below<br />
+		    {module_captchav2}</label>
+		    <input type="submit" value="Submit" class="button small radius" />
+		    </div>
+		    <!-- //.columns.large-6 -->
+	    </div>
+	    <!-- //.row -->
+	    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+	    <script type="text/javascript">
+	      //<![CDATA[
+	      function checkWholeForm(theForm) {
+	        var why = "";
+	        if (theForm.EmailAddress) if (theForm.EmailAddress.value.length > 0) why += checkEmail(theForm.EmailAddress.value);
+	        if (theForm.CaptchaV2) why += isEmpty(theForm.CaptchaV2.value, "Enter Word Verification in box below");
+	        if (why != "") { alert(why); return false; }
+	        return true;
+	      }
+	      //]]>
+	      </script>
+	</form>
+</div>
+</article>

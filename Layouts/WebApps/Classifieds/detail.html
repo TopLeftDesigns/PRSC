@@ -1,0 +1,48 @@
+<script type="text/javascript" src="/_assets/js/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="/_assets/css/jquery.fancybox.css?v=2.1.5" media="screen" />
+<div class="row ad-detail-view">
+    <div class="columns medium-4 small-12">
+        {tag_image_nolink}
+        <div class="image-poplet-holder">
+            <ul id="lightgallery" class="list-unstyled row">
+                {%if image2_value != ""%}
+                	<a class="fancybox" href="{tag_image2_value}" data-fancybox-group="gallery" title=""><img src="{tag_image2_value}" alt="" /></a>
+                {%endif%}
+                {%if image3_value != ""%}
+                	<a class="fancybox" href="{tag_image3_value}" data-fancybox-group="gallery" title=""><img src="{tag_image3_value}" alt="" /></a>
+                {%endif%}
+                {%if image4_value != ""%}
+                	<a class="fancybox" href="{tag_image4_value}" data-fancybox-group="gallery" title=""><img src="{tag_image4_value}" alt="" /></a>
+                {%endif%}
+                {%if image5_value != ""%}
+                	<a class="fancybox" href="{tag_image5_value}" data-fancybox-group="gallery" title=""><img src="{tag_image5_value}" alt="" /></a>                    
+                {%endif%}
+            </ul>
+        </div>
+    </div>
+    <div class="columns medium-8 small-12 detail-holder">
+        <h2>{tag_name}</h2>
+        <span class="date-posted">Date Posted: {{releasedate | date: "MMM %d yyyy"}}</span>
+        <span class="display-name"><strong>Display Name:</strong> {tag_displayname}</span>
+        {%if contactphone != ""%}
+          <span class="contact-phone"><strong>Contact Phone:</strong> {tag_contactphone}</span>
+        {%endif%}
+        {%if contactemail != ""%}
+          <span class="contact-email"><strong>Contact Email:</strong> {tag_contactemail}</span>
+        {%endif%}
+        <span class="display-name"><strong>Selling Price:</strong> {tag_sellprice}</span>
+        <span class="item-condition-holder"><strong>Condition:</strong> {tag_condition}</span>
+    </div>
+    <div class="columns medium-12 small-12">
+        <h4>Description</h4>
+        <div class="item-description">
+          {tag_description}
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.fancybox').fancybox();
+    });
+</script>

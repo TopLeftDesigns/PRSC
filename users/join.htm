@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js"><!-- InstanceBegin template="/Templates/Default.dwt" codeOutsideHTMLIsLocked="false" -->
+    <!--<![endif]-->
+    
+    <head>
+        <meta charset="utf-8" />
+        <meta id="p7PM3" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <!-- InstanceBeginEditable name="doctitle" --><title>Join - Create Account</title><!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+
+
+
+
+<!-- InstanceEndEditable -->
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/home_badge_64.png" />
+        <link rel="apple-touch-icon-precomposed" href="/home_badge_64.png" />
+        <link rel="stylesheet" href="/_assets/css/normalize.css" />
+        <link rel="stylesheet" href="/_assets/css/font-awesome.css" />
+        <link rel="stylesheet" href="/_assets/css/foundation.css" />
+        <link rel="stylesheet" href=" /_assets/css/animate.css" />
+        <link rel="stylesheet" href="/_assets/css/styles.css" />
+        <link rel="stylesheet" href="/_assets/css/custom.css" />
+        <link rel="stylesheet" href="/_assets/css/jetzoom.css">
+        <script src="//use.edgefonts.net/pt-serif:n4,i4,n7,i7;source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+        <script src="/_assets/js/custom.modernizr.js"></script>
+        <script src=" /_assets/js/jquery-2.1.3.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.4/jquery.touchSwipe.min.js"></script>
+        <script src=" /_assets/js/moment.js"></script>
+        <script type="text/javascript">
+            function nextpage() {
+                if ($('#slides > .slides_container').hasClass('show-page-1')) {
+                    $('#slides > .slides_container').removeClass('show-page-1').addClass('show-page-2');
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 2000);
+                    return false;
+                }
+            }
+            
+            function previouspage() {
+                if ($('#slides > .slides_container').hasClass('show-page-2')) {
+                    $('#slides > .slides_container').removeClass('show-page-2').addClass('show-page-1');
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 2000);
+                    return false;
+                }
+            }
+        </script>
+        <!-- menu -->
+        <link href="/p7pm3/p7PM3-01.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="/p7pm3/p7PM3scripts.js"></script>
+        <script src="//use.typekit.net/ngg2icc.js"></script>
+        <script>
+            try {
+                Typekit.load();
+            } catch (e) {}
+        </script>
+        <script type="text/javascript">
+            // Will retun 1 or 0 based on if user is logged in(1) or not logged in(0)
+            var _isLoggedIn = !!parseInt("{module_isloggedin}");
+        </script>
+        {% include "/_System/apps/solid-company-settings/_data/company-rich.inc" -%}
+    </head>
+    
+    <body class="antialiased inner">
+        {module_contentholder, name="_Template - innerHeader"}
+        <!-- //header.row -->
+        <div class="omega delta">
+            <div class="row">
+                <div class="columns large-9" role="main"> <!-- InstanceBeginEditable name="ContentArea" -->
+<div class="row">
+  <div class="medium-8 columns">
+    <h1>PRSCi NEW Membership Application Form</h1>
+  </div>
+  <p style="text-align: center; font-size: 0.9em;">Current PRSCi Members must login and use <br />
+    the&nbsp;RENEW MEMBERSHIP&nbsp;form <br />
+    <a href="/users/account" class="button radius" style="padding: 0.5em;">Login</a> </p>
+  <div class="medium-4 columns"> 
+    <!-- <a id="renew-link" href="/users/renewing-member-form" class="button radius" style="float: right;display:none">RENEWING MEMEBERS<br /> Click Here</a> --> 
+  </div>
+</div>
+<form data-bc-formmagic="validateMode:inline; multistep:true; containers:#formStep1,#formStep2; continueButton:#btnContinue,#btnContinue2,#catwebformbutton; backButton:#btnBack,#btnBack2;" name="catwebformform52510" method="post" onsubmit="return checkWholeForm52510(this)" enctype="multipart/form-data" action="https://prsci.worldsecuresystems.com/FormProcessv2.aspx?WebFormID=98188&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}&amp;CC={module_urlcountrycode}&amp;Referrer={module_siteurl,true,true}&amp;OPTIN=true&amp;PageID=/users/donation&amp;SendInvoice=true" class="form-a">
+  <div id="slides">
+    <div class="slides_container show-page-1">
+      <div id="formStep1">
+        <div class="page-btn">
+          <h2 class="left">Personal Details</h2>
+          <a class="right button radius" id="btnContinue" href="#"><em class="icon-circle-arrow-right">&nbsp;</em> NEXT</a> </div>
+        <div class="clearfix" style="clear: both;">&nbsp;</div>
+        <p>This form is for those wishing to join PRSCi as
+          <g class="gr_ gr_28 gr-alert gr_gramm Grammar multiReplace" id="28" data-gr-id="28">a NEW</g>
+          member and includes payment of all fees.&nbsp;</p>
+        <fieldset class="half">
+          <input type="email" autocomplete="OFF" maxlength="4000" name="EmailAddress" id="EmailAddress" class="cat_textbox" placeholder="Email Address*">
+          <input type="text" name="Username" id="Username" class="hidden-item" maxlength="255">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" autocomplete="OFF" maxlength="4000" name="FirstName" id="FirstName" class="required cat_textbox" placeholder="First Name*">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" autocomplete="OFF" maxlength="4000" name="LastName" id="LastName" class="required cat_textbox" placeholder="Last Name*">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" autocomplete="OFF" name="CAT_Custom_20072496_204784" id="CAT_Custom_20072496_204784" class="cat_textbox" placeholder="Middle Name">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" name="DOB" id="DOB" class="required cat_textbox" readonly style="background-color:#F0F0F0;" onfocus="displayDatePicker('DOB');return false;" placeholder="Date Of Birth">
+        </fieldset>
+        <fieldset class="half">
+          <label>Gender <span class="req">*</span> </label>
+          <input type="radio" name="CAT_Custom_20063431_204784" id="CAT_Custom_20063431_204784_0" value="Male">
+          Male
+          <input type="radio" name="CAT_Custom_20063431_204784" id="CAT_Custom_20063431_204784_1" value="Female">
+          Female
+        </fieldset>
+        <!-- end personal details  -->
+        <h2>Home Address</h2>
+        <fieldset class="full">
+          <input type="text" autocomplete="OFF" maxlength="4000" name="HomeAddress" id="HomeAddress" class="cat_textbox" placeholder="Residential Address">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" autocomplete="OFF" maxlength="4000" name="HomeCity" id="HomeCity" class="cat_textbox" placeholder="Suburb">
+        </fieldset>
+        <fieldset class="quarter">
+          <input type="text" autocomplete="OFF" maxlength="4000" name="HomeState" id="HomeState" class="cat_textbox" placeholder="State">
+        </fieldset>
+        <fieldset class="quarter">
+          <input type="text" autocomplete="OFF" maxlength="4000" name="HomeZip" id="HomeZip" class="cat_textbox" placeholder="Postal Code">
+          <select name="HomeCountry" id="HomeCountry" class="hidden-item">
+            <option value="AU" selected="selected">AUSTRALIA</option>
+          </select>
+        </fieldset>
+        <!-- end home address  -->
+        <h2 style="width: auto; display:inline-block;">Postal Address (as above) OR...</h2>
+        <span class="postal-check">
+        <input type="checkbox" name="CAT_Custom_19991888" id="CAT_Custom_19991888_0" value="Yes">
+        I wish to use a different postal address</span>
+        <div id="postal-address" style="display: none;">
+          <fieldset class="full">
+            <input type="text" maxlength="4000" name="CAT_Custom_20060784_204784" id="CAT_Custom_20060784_204784" class="cat_textbox" placeholder="Postal Address">
+          </fieldset>
+          <fieldset class="half">
+            <input type="text" maxlength="4000" name="CAT_Custom_20060785_204784" id="CAT_Custom_20060785_204784" class="cat_textbox" placeholder="Postal Suburb">
+          </fieldset>
+          <fieldset class="quarter">
+            <input type="text" maxlength="4000" name="CAT_Custom_20060786_204784" id="CAT_Custom_20060786_204784" class="cat_textbox" placeholder="Postal State">
+          </fieldset>
+          <fieldset class="quarter">
+            <input type="text" maxlength="4000" name="CAT_Custom_20060787_204784" id="CAT_Custom_20060787_204784" class="cat_textbox" placeholder="Postal Code">
+          </fieldset>
+        </div>
+        <h2>Personal Details</h2>
+        <fieldset class="full">
+          <input type="email" maxlength="4000" name="CAT_Custom_20072497_204784" id="CAT_Custom_20072497_204784" class="cat_textbox" placeholder="Secondary Email">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" autocomplete="OFF" maxlength="4000" name="HomePhone" id="HomePhone" class="cat_textbox" placeholder="Home Phone">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" autocomplete="OFF" maxlength="4000" name="WorkPhone" id="WorkPhone" class="cat_textbox" placeholder="Work Phone">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" maxlength="4000" name="CellPhone" id="CellPhone" class="cat_textbox" placeholder="Mobile Phone">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" maxlength="4000" name="HomeFax" id="HomeFax" class="cat_textbox" placeholder="Fax">
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" maxlength="4000" name="CAT_Custom_20060801_204784" id="CAT_Custom_20060801_204784" class="cat_textbox" placeholder="Your Occupation">
+        </fieldset>
+        <fieldset class="quarter">
+          <input type="checkbox" name="CAT_Custom_20060802_204784" id="CAT_Custom_20060802_204784" value="1">
+          <span class="smlprnt">I hold a First Aid Certificate</span>
+        </fieldset>
+        <fieldset class="quarter">
+          <input type="text" name="CAT_Custom_20060803_204784" id="CAT_Custom_20060803_204784" class="cat_textbox" readonly style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060803_204784');return false;" placeholder="Certificate Expiry Date">
+        </fieldset>
+        <h2>Eligibility to Join</h2>
+        <fieldset class="half">
+          <input type="checkbox" name="CAT_Custom_20063578_204784" id="CAT_Custom_20063578_204784" value="1">
+          <span class="smlprnt">Are you a current member of another shooting organisation?</span>
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" maxlength="4000" name="CAT_Custom_20063579_204784" id="CAT_Custom_20063579_204784" class="cat_textbox" placeholder="Shooting organisation details">
+        </fieldset>
+        <fieldset class="half">
+          <input type="checkbox" name="CAT_Custom_20063580_204784" id="CAT_Custom_20063580_204784" value="1">
+          <span class="smlprnt">Do you hold current firearms licences?</span>
+        </fieldset>
+        <fieldset class="half">
+          <input type="text" maxlength="4000" name="CAT_Custom_20063581_204784" id="CAT_Custom_20063581_204784" class="cat_textbox" placeholder="Firearms licence No.">
+        </fieldset>
+        <div class="half">
+          <label>Do you hold Category H Small Arms Licence</label>
+          <fieldset class="half">
+            <input type="text" maxlength="4000" name="CAT_Custom_20060790_204784" id="CAT_Custom_20060790_204784" class="cat_textbox" placeholder="Licence No">
+          </fieldset>
+          <fieldset class="half">
+            <input type="text" name="CAT_Custom_20060791_204784" id="CAT_Custom_20060791_204784" class="cat_textbox" readonly style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060791_204784');return false;" placeholder="Expiry Date">
+          </fieldset>
+        </div>
+        <div class="half">
+          <label>Do you hold a Category A/B Long Arms Licence</label>
+          <fieldset class="half">
+            <input type="text" maxlength="4000" name="CAT_Custom_20060792_204784" id="CAT_Custom_20060792_204784" class="cat_textbox" placeholder="Licence No">
+          </fieldset>
+          <fieldset class="half">
+            <input type="text" name="CAT_Custom_20060793_204784" id="CAT_Custom_20060793_204784" class="cat_textbox" readonly style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060793_204784');return false;" placeholder="Expiry Date">
+          </fieldset>
+        </div>
+        <fieldset class="quarter">
+          <input type="text" maxlength="4000" name="CAT_Custom_20060815_204784" id="CAT_Custom_20060815_204784" class="cat_textbox" placeholder="Other Licence No's">
+        </fieldset>
+        <fieldset class="quarter">
+          <input type="text" name="CAT_Custom_20060794_204784" id="CAT_Custom_20060794_204784" class="cat_textbox" readonly style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060794_204784');return false;" placeholder="Other Expiry Date">
+        </fieldset>
+        <fieldset class="quarter">
+          <input type="text" maxlength="4000" name="CAT_Custom_20060804_204784" id="CAT_Custom_20060804_204784" class="cat_textbox" placeholder="Range/Amen PassCard#">
+        </fieldset>
+        <fieldset class="quarter">
+          <select name="CAT_Custom_20060805_204784" id="CAT_Custom_20060805_204784" class="cat_dropdown">
+            <option value=" ">-- Payment Rate --</option>
+            <option value="Junior">Junior</option>
+            <option value="ORD-Adult">ORD-Adult</option>
+            <option value="ORD-Pensioner">ORD-Pensioner</option>
+            <option value="Pensioner">Pensioner</option>
+            <option value="Pensioner +">Pensioner +</option>
+            <option value="RA-Adult">RA-Adult</option>
+            <option value="RP-Adult">RP-Adult</option>
+            <option value="Special">Special</option>
+            <option value="Visitor">Visitor</option>
+          </select>
+        </fieldset>
+        <!-- end Membership Reference  -->
+        <div class="page-btn"><a class="right button radius" id="btnContinue2" href="#"><em class="icon-circle-arrow-right">&nbsp;</em> NEXT</a> </div>
+      </div>
+      <!-- end of first slide -->
+      <div id="formStep2">
+        <div class="page-btn"><a class="right button radius" href="#" id="btnBack2"><em class="icon-circle-arrow-left">&nbsp;</em> PREVIOUS</a> </div>
+        <h2>Membership Fees Due</h2>
+        <!-- pricing web app -->
+        <input type="hidden" name="CAT_Custom_20060830_204784" id="CAT_Custom_20060830_204784_3" value="Full">
+        {module_webapps,26967,i,5335921,,,true,,false,} 
+        <!-- end pricing web app -->
+        <p class="membership" style="width: 77%; text-align: right;"> <strong>TOTAL</strong> </p>
+        <p class="amount-wrapper" style="margin-bottom: 20px;"> <span id="sum-amount"></span> </p>
+         <div class="clear">
+                <h2>Attached Forms and Documents</h2>
+                <div class="columns large-5">
+                  <p>Please be sure to provide copies of the following documents and forms. Failure to do so will mean that your membership renewal cannot be processed until such documents are provided. </p>
+                </div>
+                <div class="columns large-7">
+                <ol>
+                  <li>
+                    <label for="FileAttachment1">Attach Statement of Statement of Eligibility</label>
+                    <input type="file" name="FileAttachment1" id="FileAttachment1" class="cat_textbox" />
+                  </li>
+                  <li>
+                    <label for="FileAttachment2">Attach 2 References<span class="req">*</span></label>
+                    <input type="file" name="FileAttachment2" id="FileAttachment2" class="required cat_textbox" />
+                  </li>
+                  <li>
+                    <label for="FileAttachment3">Attach copy of Current Firarms Licence(s)<span class="req">*</span></label>
+                    <input type="file" name="FileAttachment3" id="FileAttachment3" class="required cat_textbox" />
+                  </li>
+                  <li>
+                    <label for="FileAttachment4">Attach copy of Photo ID<span class="req">*</span></label>
+                    <input type="file" name="FileAttachment4" id="FileAttachment4" class="required cat_textbox" />
+                  </li>
+                  <li>
+                    <label for="FileAttachment5">Declaration of Membership to other club</label>
+                    <input type="file" name="FileAttachment5" id="FileAttachment5" class="required cat_textbox" />
+                  </li>
+                  </ol>
+                </div>
+              </div>
+
+        
+        <p class="acceptance-wrapper">
+          <input type="checkbox" name="AcceptanceCondition" id="AcceptanceCondition"/>
+          <label for="AcceptanceCondition">I have read and accept the PRSCi Drug and Alcohol Policy and agree to abide by the Club Constitution and its related policies whilst a member of PRSCi as a condition of my membership application</label>
+        </p>
+        <p>Completion of this application is only possible upon acceptance of the above. </p>
+        <div id="payment-wrapper" class="is-hidden">
+          <h2>Payment</h2>
+          <fieldset class="half">
+            <input type="text" autocomplete="off" id="CardName" class="required cat_textbox" name="CardName" placeholder="Name on Card">
+          </fieldset>
+          <fieldset class="half">
+            <input type="text" autocomplete="off" id="CardNumber" class="required cat_textbox" name="CardNumber" placeholder="Card Number">
+          </fieldset>
+          <fieldset class="quarter">
+            <select id="CardExpiryMonth" class="required cat_dropdown_smaller" name="CardExpiryMonth">
+              <option>Expiry Month</option>
+              <option value="01">01</option>
+              <option value="02">02</option>
+              <option value="03">03</option>
+              <option value="04">04</option>
+              <option value="05">05</option>
+              <option value="06">06</option>
+              <option value="07">07</option>
+              <option value="08">08</option>
+              <option value="09">09</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+            </select>
+          </fieldset>
+          <fieldset class="quarter">
+            <select id="CardExpiryYear" class="required cat_dropdown_smaller" name="CardExpiryYear">
+              <option>Expiry Year</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+            </select>
+          </fieldset>
+          <fieldset class="quarter">
+            <input type="text" autocomplete="off" id="CardCCV" class="required cat_textbox" name="CardCCV" placeholder="CCV Numbeer">
+          </fieldset>
+          <fieldset class="quarter">
+            <select id="CardType" class="required cat_dropdown" name="CardType">
+              <option>Card Type</option>
+              <option value="1">Visa</option>
+              <option value="2">Mastercard</option>
+            </select>
+          </fieldset>
+          <div class="clearfix"></div>
+          <!-- Begin eWAY Linking Code -->
+          <fieldset id="eWAYBlock" class="half">
+            <div style="text-align: left;"> <a rel="nofollow" target="_blank" title="eWAY Payment Gateway" href="http://www.eway.com.au/secure-site-seal?i=10&amp;s=3&amp;pid=087f6e19-c60e-4d4d-abb6-25392e87bfa7"> <img src="https://www.eway.com.au/developer/payment-code/verified-seal.ashx?img=10&amp;size=3&amp;pid=087f6e19-c60e-4d4d-abb6-25392e87bfa7" alt="eWAY Payment Gateway"> </a> </div>
+          </fieldset>
+          <!-- End eWAY Linking Code -->
+          <fieldset class="half">
+          	<span id="total-amount" style="display: none;"></span>
+            <input type="hidden" maxlength="4000" name="CAT_Custom_20060831_204784" id="CAT_Custom_20060831_204784" class="cat_textbox">
+            <input type="hidden" id="Amount" class="cat_textbox" name="Amount">
+            <input type="hidden" id="ExpiryDate" name="ZoneExpiry">
+            <input type="hidden" name="CAT_Custom_19993306_167502" id="CAT_Custom_19993306_167502" class="cat_textbox">
+            <div style="display: none;">
+              <input type="checkbox" name="CampaignList_23481" checked="checked">
+              <!-- Subscribe to: Newsletter  --> 
+            </div>
+            <label id="amount_label"></label>
+            <input type="submit" value="Submit" id="catwebformbutton" class="cat_button">
+          </fieldset>
+          <!-- end payment details  --> </div>
+        <div class="page-btn"><a class="right button radius" href="#" id="btnBack"><em class="icon-circle-arrow-left">&nbsp;</em> PREVIOUS</a> </div>
+      </div>
+      <!-- end div --> 
+    </div>
+    <!-- end slides container --> 
+  </div>
+  <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b2024.r490259-phase1"></script> 
+  <script type="text/javascript" src="/CatalystScripts/Java_DatePicker.js?vs=b2024.r490259-phase1"></script> 
+  <script type="text/javascript">
+                //<![CDATA[
+
+                $(document).ready(function() {
+                    // determine expiry date for CTCC Member
+                    // greater than Oct 1 is membership up to the following year
+                    var dat = new Date();
+                    if (dat.getMonth() > 8) {
+                        var year = dat.getFullYear() + 1;
+                    } else {
+                        var year = dat.getFullYear();
+                    };
+                    var expire = "30-Jun-" + year;
+                    $('#ExpiryDate').attr('value', expire);
+
+                    // determine if renew link should be present
+                    var currentDate = moment();
+
+                    var enddate = moment("{{ webapps_10.items[0].Renew_End_Date }}", "DD-MMM-YYYY");
+                    var startdate = moment("{{ webapps_10.items[0].Renew_Start_Date }}", "DD-MMM-YYYY");
+
+                    console.log(currentDate.diff(startdate));
+                    console.log(enddate.diff(currentDate));
+
+                    if (currentDate.diff(startdate) > 0 && enddate.diff(currentDate) > 0) {
+                        $('#renew-link').show();
+                    }
+
+
+                    // Open-Membership by default is selected
+                    $('#CAT_Custom_20012668_167502_0').attr('checked', 'checked');
+
+                    // Calculate initial Total Amount
+
+                    var clubMemberAmount = $('#Full').text();
+                    var clubMemberValue = Number(clubMemberAmount.substring(1));
+                    $('#CAT_Custom_20012669_167502').val(clubMemberValue);
+
+                    var levy = Number($('#levy-amount').data('levy'));
+                    var qctalevy = Number($('#qctalevy-amount').data('qctalevy'));
+                    var fullmembershipAmount = $('#fullmembership').text();
+                    var fullmembershipValue = Number(fullmembershipAmount.substring(1));
+
+                    var total = (clubMemberValue + levy + fullmembershipValue + qctalevy).toFixed(2);
+                    $('#sum-amount').html('$' + clubMemberValue);
+                    $('#Amount').attr('value', clubMemberValue);
+                    $('#total-amount').html('$' + clubMemberValue);
+                    $("#CAT_Custom_20060831_204784").val(clubMemberValue);
+					$('#amount_label').html('Total: $' + clubMemberValue);
+
+                });
+
+                // close calendars
+                $(".page-btn").click(function() {
+                    $("#datepicker").css("visibility", "hidden");
+                });
+
+                // Set Email as Username
+                $('#EmailAddress').focusout(function() {
+                    $('#Username').val($('#EmailAddress').val());
+                });
+
+                // Calculate total after clicking CCTA Membership Level Options
+                $('.cctc-membership-level > input').click(function() {
+
+                    var clubMemberLevel = $(this).attr('value');
+                    var clubMemberLevelID = '#' + clubMemberLevel;
+                    var clubMemberLevelAmount = $(clubMemberLevelID).text();
+                    var clubMemberLevelValue = Number(clubMemberLevelAmount.substring(1));
+
+                    $("#CAT_Custom_20060830_204784_3").val(clubMemberLevel);
+                    $('#sum-amount').html('$' + clubMemberLevelValue);
+                    $('#Amount').attr('value', clubMemberLevelValue);
+                    $('#total-amount').html('$' + clubMemberLevelValue);
+                    $("#CAT_Custom_20060831_204784").val(clubMemberLevelValue);
+
+                });
+
+                // Copy Home Address to Postal Address
+                $('#HomeAddress').focusout(function(e) {
+                    if (!$('#CAT_Custom_19991888_0').is(':checked')) {
+                        $('#CAT_Custom_20060784_204784').attr('value', $('#HomeAddress').val());
+                    }
+                });
+                $('#HomeCity').focusout(function(e) {
+                    if (!$('#CAT_Custom_19991888_0').is(':checked')) {
+                        $('#CAT_Custom_20060785_204784').attr('value', $('#HomeCity').val());
+                    }
+                });
+                $('#HomeState').focusout(function(e) {
+                    if (!$('#CAT_Custom_19991888_0').is(':checked')) {
+                        $('#CAT_Custom_20060786_204784').attr('value', $('#HomeState').val());
+                    }
+                });
+                $('#HomeZip').focusout(function(e) {
+                    if (!$('#CAT_Custom_19991888_0').is(':checked')) {
+                        $('#CAT_Custom_20060787_204784').attr('value', $('#HomeZip').val());
+                    }
+                });
+
+                function getHomeAddress() {
+                    $('#CAT_Custom_20060784_204784').attr('value', $('#HomeAddress').val());
+                    $('#CAT_Custom_20060785_204784').attr('value', $('#HomeCity').val());
+                    $('#CAT_Custom_20060786_204784').attr('value', $('#HomeState').val());
+                    $('#CAT_Custom_20060787_204784').attr('value', $('#HomeZip').val());
+                }
+
+                $('#CAT_Custom_19991888_0').click(function() {
+                    if ($('#CAT_Custom_19991888_0').is(':checked')) {
+                        $('#postal-address').show(1000);
+                        $('#CAT_Custom_20060784_204784').attr('value', '');
+                        $('#CAT_Custom_20060785_204784').attr('value', '');
+                        $('#CAT_Custom_20060786_204784').attr('value', '');
+                        $('#CAT_Custom_20060787_204784').attr('value', '');
+                    } else {
+                        $('#postal-address').hide(1000);
+                        getHomeAddress()
+                    };
+                });
+				
+				$('#AcceptanceCondition').click(function(){
+					if($(this).prop('checked')){
+						$('#payment-wrapper').slideDown();
+					}else{
+						$('#payment-wrapper').slideUp();
+					}
+				});
+				
+				$('#club-membership-amount input[name="CAT_Custom_20012668_167502"]').change(function(){
+					if($(this).val() == 'Associate'){
+						$('#associated_wrapper > .cat_textbox').addClass('required');
+						$('#associated_wrapper').slideDown();
+					}else{
+						$('#associated_wrapper > .cat_textbox').removeClass('required');
+						$('#associated_wrapper > .cat_textbox').val('');
+						$('#associated_wrapper').slideUp();
+					}
+				});  
+
+                function checkWholeForm52510(theForm) { 
+					var why = '';
+					var associatedChecked = false;
+					if($('#CAT_Custom_20012668_167502_4').prop('checked')){
+						if(theForm.CAT_Custom_20074017_204784.value.length > 0){
+							associatedChecked = true;
+						}
+					}else{
+						associatedChecked = true;
+					}
+                    if (theForm.FileAttachment2) why += isEmpty(theForm.FileAttachment2.value, "2 References");					
+                    if (theForm.FileAttachment3) why += isEmpty(theForm.FileAttachment3.value, "Copies of Current Firearms Licence(s)");
+                    if (theForm.FileAttachment4) why += isEmpty(theForm.FileAttachment4.value, "Copy of Photo ID");																			
+                    if (theForm.CardName) why += isEmpty(theForm.CardName.value, "Name on Card");
+					if (theForm.CardNumber) why += isNumeric(theForm.CardNumber.value, "Card Number");
+					if (theForm.Amount) why += isCurrency(theForm.Amount.value, "Amount");	
+					if (why == "" && associatedChecked) {
+						theForm.submit();
+					}else{
+						//$("#catwebformbutton").css("display", "inline-block !important");
+                        //document.getElementById("catwebformbutton").disabled = false;
+						alert('Please fill up the required fields')
+                        return false;
+					}
+				}
+				//]]>
+            </script>
+</form>
+
+<!-- InstanceEndEditable --> </div>
+                <div class="columns large-3" role="complementary">
+                    <aside> {module_contentholder, name="_aside - Search Form"} {module_contentholder, name="_aside - Question Form"} </aside>
+                </div>
+            </div>
+            <!-- //.row -->
+        </div>
+        <!-- //.omega "Tour"-->
+        {module_contentholder, name="_Template - Footer"} {module_contentholder, name="_Template - Scripts"}
+        <script src="/_assets/js/jetzoom.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function() {
+                JetZoom.quickStart();
+            });
+        </script>
+    </body>
+    
+<!-- InstanceEnd --></html>

@@ -1,0 +1,1 @@
+{module_json,json="/_System/apps/solid-company-settings/_data/sitesettings.json" template="/_System/apps/solid-company-settings/_config/schema-json.tpl" collection="company"}

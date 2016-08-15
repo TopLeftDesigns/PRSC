@@ -1,0 +1,120 @@
+<!DOCTYPE html><html class="no-js" lang="en"><!-- InstanceBegin template="/Templates/Account.dwt" codeOutsideHTMLIsLocked="false" -->
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta id="p7PM3" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <!-- InstanceBeginEditable name="doctitle" --><title>My Account</title><!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+
+
+                
+    
+<!-- InstanceEndEditable -->
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/home_badge_64.png" />
+        <link rel="apple-touch-icon-precomposed" href="/home_badge_64.png" />
+        <link rel="stylesheet" href="/_assets/css/normalize.css" />
+        <link rel="stylesheet" href="/_assets/css/font-awesome.css" />
+        <link rel="stylesheet" href="/_assets/css/foundation.css" />
+        <link rel="stylesheet" href="/_assets/css/styles.css" />
+        <link rel="stylesheet" href="/_assets/css/custom.css" />
+        <script src="//use.edgefonts.net/pt-serif:n4,i4,n7,i7;source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+        <script src="/_assets/js/custom.modernizr.js"></script>
+        <script src="/_assets/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+	function nextpage(){
+		if($('#slides > .slides_container').hasClass('show-page-1')){
+			$('#slides > .slides_container').removeClass('show-page-1').addClass('show-page-2');
+				$("html, body").animate({
+				 scrollTop:0
+				 },2000);
+				return false;
+			}
+		}
+	function previouspage(){
+		if($('#slides > .slides_container').hasClass('show-page-2')){
+			$('#slides > .slides_container').removeClass('show-page-2').addClass('show-page-1');
+				$("html, body").animate({
+				 scrollTop:0
+				 },2000);
+				return false;
+			}	
+		}
+</script>        
+        <!-- menu -->
+        <link href="/p7pm3/p7PM3-01.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="/p7pm3/p7PM3scripts.js"></script>
+        <script src="//use.typekit.net/ngg2icc.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript">
+    // Will retun 1 or 0 based on if user is logged in(1) or not logged in(0)
+    var _isLoggedIn = !!parseInt("{module_isloggedin}");
+    </script>
+    </head>
+    <body class="antialiased inner">
+        {module_contentholder, name="_Template - innerHeader"}
+        <!-- //header.row -->
+        <div class="omega delta">
+        <div class="row">
+        <div class="columns large-9" role="main">
+        <!-- InstanceBeginEditable name="ContentArea" -->
+        <h1>My Account -&nbsp;{module_fullname}<span>(Member No:{module_customerfield,204784,20060798})</span></h1>
+        <input type="hidden" value="{{globals.user.entityId}}" id="userIdHolder">
+        <p>Welcome {module_firstname}&nbsp;as a member of the Pine Rivers Shooting Club.</p>
+    <p style="display: none;">{module _subscriptions,show_expiry,false,false,false}</p>
+        <h2>Some helpful information:</h2>
+        <p>Your membership will be renewable each year by the 30th June. Membership renewals can be completed online however be sure to login first as this way you will not have to re-enter your personal details. You will receive an email reminding you at least 2 weeks prior to this date.</p>
+        <p>All payments are fully secured so you may be rest assured that you will not have your privacy or credit card details compromised (refer our Privacy Policy and Terms and Conditions statement)</p>
+        <p>Your personal details are kept confidential and should your circumstances change, we ask that you update them by way of the link to the right.</p>
+        <h2>Just for Members</h2>
+        <p>At this point we have not created any content for just our members to share but we will have some soon so just watch this space.</p>
+        <br />          
+<h2>Online Membership Renewal Checklist</h2>
+<p>The Pine Rivers Shooting Club has a  responsibility to report to Weapons Licensing QLD as required by them. The  following details may be requested by the Weapons Licensing QLD so please fill  in all the sections. Some of the information requested may be for the benefit  of record keeping by the PRSCi. We have compiled this check list to assist you.</p>
+<p>You  will not be able to complete your renewal if mandatory fields are not completed.</p>
+<ul>
+  <li>Read  the PRSCi's Drug and Alcohol Policy tick the box to accept this Policy. We are  not able to accept your renewal without this being accepted</li>
+  <li>Scan  and Upload your completed <a href="/_assets/files/QP 0515 Statement of Eligibility to Join an Approved Pistol Shooting Club.pdf" target="new">Statement of Participation (Form QP0515)</a>. </li>
+  <li>If  you have a category H Licence and own a firearm, attach a copy of your  Participation Record or documentation explaining why you have not been able to  meet your competition requirements.</li>
+  <li>Scan  and upload copies of your current firearms licences.</li>
+  <li>Scan  and upload and SSAA range cards that you have to be able to claim your  discounted range fee.</li>
+</ul>    
+<!-- InstanceEndEditable -->
+        </div>
+        <div class="columns large-3" role="complementary">
+        <aside>
+        <h4>Member Options</h4>
+        {module_menu, version="2", menuId="644460", moduleTemplateGroup="Side-nav"}
+        {module_contentholder, name="_aside - Search Form"}
+        {module_contentholder, name="_aside - Question Form"}
+        </aside>
+        </div>
+        </div>
+        <!-- //.row -->
+        </div>
+        <!-- //.omega "Tour"-->
+        {module_contentholder, name="_Template - Footer"}
+        <ul style="display: none;">{module_subscriptions,false,false,,false}
+        </ul>
+        {module_contentholder, name="_Template - Scripts"}
+        <script type="text/javascript">
+		$(document).ready(function () {
+    
+
+	if ($(".zoneName > a:contains('Renewing Member Form')").length < 1) {
+        console.log("need to subscribed");
+        var requestData = {
+            FirstName: '{module_firstname}',
+            LastName: '{module_lastname}',
+            EmailAddress: '{module_emailaddress}',
+            //ZoneExpiry: expire
+        };
+        $.post("/FormProcessv2.aspx?WebFormID=98816", requestData, function (responseData) {
+            
+        })
+    }else{
+    	console.log("already subscribed");
+    };
+})
+</script>
+    </body>
+<!-- InstanceEnd --></html>

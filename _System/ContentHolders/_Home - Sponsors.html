@@ -1,0 +1,54 @@
+<section class="home-sponsors">
+    <h2 class="title">Our Sponsors</h2>
+    {module_webapps id="26845" filter="all" collection="sponsors" template=""}
+    <div class="sponsor-slider">
+    {%for sponsor in sponsors.items%}
+        {%if sponsor["Image 180px by 180px"] != "" %}
+        <div class="sponsor-item">
+        	<a href="{{sponsor.url}}"><img src="{{sponsor["Image 180px by 180px"]}}" alt="{{sponsor.name}}"></a>
+        </div>
+        {%else%}
+        	<div class="sponsor-item"><h4>{{sponsor.name}}</h4></div>
+        {%endif%}
+    {%endfor%}
+    </div>
+</section>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.sponsor-slider').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+          ]
+        });
+    });
+</script>

@@ -1,0 +1,31 @@
+<script>
+/*
+$(document).ready(function() {
+   str = $('div.address{tag_counter}').text();
+   if($.trim(str) === "") {
+     $('div.address{tag_counter}').hide();
+   }
+});
+$(document).ready(function() {
+   str = $('div.descn{tag_counter}').text();
+   if($.trim(str) === "") {
+     $('div.descn{tag_counter}').hide();
+   }
+});
+*/
+</script>
+<div class="small-12 medium-6 columns sponsors" style="min-height: 270px;">
+<div class="image">
+<a href="{tag_itemurl_nolink}" title="PRSC Sponsor - {tag_name_nolink}">
+<img alt="" height="80" src="{tag_image 180px by 180px_value}?Action=thumbnail&amp;Height=80&amp;algorithm=fill_proportional" />
+</a>
+</div>
+<h3>{tag_name}</h3>
+<div class="address">
+<p>{tag_address1}<br />
+{tag_addresscity} {tag_addressstate} {tag_addresszipcode}</p>
+</div>
+<div class="phone">Phone:&nbsp;<span class="phone-info">{tag_phone}</span></div>
+<div class="email">Email:&nbsp;<span class="email-info">{tag_email}</span></div>
+<div class="website">Web:&nbsp;<span class="website-info">{tag_website}</span></div>
+</div>

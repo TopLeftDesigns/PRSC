@@ -1,0 +1,84 @@
+<script type="text/javascript">
+$(function () {
+	// When user clicks on forgot password link:
+	// Sign In form hides, Forgot password form shows
+    $("#btn-password").on('click', function (e) {
+        e.preventDefault();
+        $("#form-login").fadeOut(function(){
+		   $("#form-password").fadeIn();
+		});
+    });
+	// When user clicks on Nevermind link:
+	// Sign In form shows, Forgot password form hides
+    $("#btn-login").on('click', function (e) {
+        e.preventDefault();
+        $("#form-password").fadeOut(function(){
+			$("#form-login").fadeIn();
+		});
+    });
+	// Will show the Create Account form once clicked
+    $("#needCreate").on('click', function (e) {
+        e.preventDefault();
+        $(".create-form").fadeIn();
+    });
+});
+</script>
+<div class="row">
+<div class="columns large-6 large-offset-2">
+<div id="form-login">
+<h4>Current Members</h4>
+<form name="catseczoneform56429" onsubmit="return checkWholeForm56429(this)" method="post" action="/ZoneProcess.aspx?ZoneID=51&amp;Referrer={module_siteUrl,true,true}&amp;OID={module_oid}&amp;OTYPE={module_otype}">
+    <!-- Update Secure Zone ID -->
+    <fieldset>
+    <label for="SZUsername"><strong>Username</strong>
+    <input type="text" maxlength="255" id="SZUsername" name="Username" />
+    </label>
+    <label for="SZPassword"><strong>Password</strong>
+    <input type="password" maxlength="255" id="SZPassword" name="Password" />
+    </label>
+    <label for="RememberMe">
+    <input type="checkbox" id="RememberMe" name="RememberMe" /> Remember Me
+    </label>
+    <input type="submit" value="Sign In" class="button radius" />
+    <a href="#" id="btn-password" class="half-bottom">Forgot your password?</a>
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+    <script type="text/javascript">
+//<![CDATA[
+function checkWholeForm56429(theForm){var why = "";if (theForm.Username) why += isEmpty(theForm.Username.value, "Username");if (theForm.Password) why += isEmpty(theForm.Password.value, "Password");if (why != ""){alert(why);return false;}theForm.submit();return false;}
+//]]>
+</script>
+    </fieldset>
+</form>
+</div>
+<div style="display: none;" id="form-password">
+<h4>Forgot Password?</h4>
+<form action="/LostPasswordProcess.aspx" method="post" name="catseczonelpform12264">
+    <fieldset>
+    <p>Enter your email address below and we'll send your password within a few seconds.</p>
+    <label for="SZUsername"><strong>Email Address</strong>
+    <input type="text" maxlength="255" id="SZUsername" name="Username" />
+    </label>
+    <input type="submit" value="Send my password" class="button radius" />
+    <p>Nevermind, <a href="#" id="btn-login">send me back to the sign in screen</a></p>
+    </fieldset>
+</form>
+</div>
+</div>
+<!-- //.columsn.large-6 -->
+    <div class="columns large-6" style="display: none;">
+<div id="new-account">
+<h4>Create New Account</h4>
+<p>Save time and stay informed: track your order online, view your order history, create your favorites wishlist, and more!</p>
+<p>
+<button class="button" id="needCreate" value="Create Account" type="button radius">Create Account</button>
+</p>
+<div class="hide create-form">
+<!-- Create Account form - Update Form ID -->
+{module_webform,36831}
+<!-- Update Form ID -->
+</div>
+</div>
+</div>
+<!-- //.columns.large-6 -->
+</div>
+<!-- //.row -->

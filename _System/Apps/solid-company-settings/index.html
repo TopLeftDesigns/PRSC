@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Solid Company Settings</title>
+<link href="/_System/apps/solid-company-settings/_assets/css/app.css" type="text/css" rel="stylesheet" media="screen" />
+<script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.3.1/jquery.cookie.min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+<script type="text/javascript" src="//cdn.worldsecuresystems.com/bcapi/bcapi-0.1.0.min.js"></script>
+<script type="text/javascript" src="/_System/apps/solid-company-settings/_assets/js/app.js"></script>
+<meta name="robots" content="noindex">
+{%include "/_System/apps/solid-company-settings/_data/company.inc"%}
+</head>
+<body>
+<ul class="bcam-tabs">
+  <li class="active"> <a id="tab-labels" href="/_System/Apps/solid-company-settings/index.html">Company Settings</a> </li>
+  <li> <a id="tab-instructions" href="/_System/Apps/solid-company-settings/instructions.html">Instructions</a> </li>
+</ul>
+<div id="container-body">
+  <h1><span>Company Information</span></h1>
+  <form id="companySettingsForm" >
+    <p>
+      <label for="companyName">Name</label>
+      <input type="text" id="companyName" name="name" value="{{company.name}}"/>
+      <label for="companySlogan">Slogan</label>
+      <input type="text" id="companySlogan" name="slogan" value="{{company.slogan}}"/>
+    </p>
+    <p>
+      <label for="companyLogo">Logo</label>
+      <input type="text" id="companyZip" name="logo" value="{{company.logo}}"/>
+      <label for="companyEmail">Email</label>
+      <input type="text" id="companyEmail" name="email" value="{{company.email}}"/>
+    </p>
+    <p>
+      <label for="companyType">Type</label>
+      <input type="text" id="companyType" name="type" value="{{company.type}}"/>
+      <label for="companyDomain">Domain</label>
+      <input type="text" id="companyDomain" name="domain" value="{{company.domain}}"/>
+    </p>
+    <h1><span>Primary Location</span></h1>
+    <p>
+      <label for="companyAddress">Address</label>
+      <input type="text" id="companyAddress" name="address" value="{{company.address}}"/>
+      <label for="companyAddress2">Address2</label>
+      <input type="text" id="companyAddress2" name="address2" value="{{company.address2}}"/>
+    </p>
+    <p>
+      <label for="companyCity">City</label>
+      <input type="text" id="companyCity" name="city" value="{{company.city}}"/>
+      <label for="companyState">State</label>
+      <input type="text" id="companyState" name="state" value="{{company.state}}"/>
+    </p>
+    <p>
+      <label for="companyZip">Zip</label>
+      <input type="text" id="companyZip" name="zip" value="{{company.zip}}"/>
+      <label for="companyCountry">Country</label>
+      <input type="text" id="companyCountry" name="country" value="{{company.country}}"/>
+    </p>
+    <p>
+      <label for="companyPhone">Phone</label>
+      <input type="text" id="companyPhone" name="phone" value="{{company.phone}}"/>
+      <label for="companyPhone2">Phone 2</label>
+      <input type="text" id="companyPhone2" name="phone2" value="{{company.phone2}}"/>
+      </p>
+    <p>
+      <label for="companyPhone3">Phone 3</label>
+      <input type="text" id="companyPhone3" name="phone3" value="{{company.phone3}}"/>
+      <label for="companyFax">Fax</label>
+      <input type="text" id="companyFax" name="fax" value="{{company.fax}}"/>
+    </p>
+    <h1><span>Additional Location</span></h1>
+    <p>
+      <label for="companyAddress">Address</label>
+      <input type="text" id="companyAddress" name="location2-address" value="{{company.location2-address}}"/>
+      <label for="companyAddress2">Address2</label>
+      <input type="text" id="companyAddress2" name="location2-address2" value="{{company.location2-address2}}"/>
+    </p>
+    <p>
+      <label for="companyCity">City</label>
+      <input type="text" id="companyCity" name="location2-city" value="{{company.location2-city}}"/>
+      <label for="companyState">State</label>
+      <input type="text" id="companyState" name="location2-state" value="{{company.location2-state}}"/>
+    </p>
+    <p>
+      <label for="companyZip">Zip</label>
+      <input type="text" id="companyZip" name="location2-zip" value="{{company.location2-zip}}"/>
+      <label for="companyCountry">Country</label>
+      <input type="text" id="companyCountry" name="location2-country" value="{{company.location2-country}}"/>
+    </p>
+    <p>
+      <label for="location2Phone">Phone</label>
+      <input type="text" id="location2Phone" name="location2-phone" value="{{company.location2-phone}}"/>
+      <label for="location2Phone2">Phone 2</label>
+      <input type="text" id="location2Phone2" name="location2-phone2" value="{{company.location2-phone2}}"/>
+      </p>
+    <p>
+      <label for="location2Phone3">Phone 3</label>
+      <input type="text" id="location2Phone3" name="location2-phone3" value="{{company.location2-phone3}}"/>
+      <label for="companyFax">Fax</label>
+      <input type="text" id="companyFax" name="location2-fax" value="{{company.location2-fax}}"/>
+    </p>
+    <p class="submit">
+      <input type="submit" value="Save"/>
+      <span id="confirmation"></span> </p>
+  </form>
+</div>
+</body>
+</html>

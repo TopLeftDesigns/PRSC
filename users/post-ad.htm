@@ -1,0 +1,183 @@
+<!DOCTYPE html><html class="no-js" lang="en"><!-- InstanceBegin template="/Templates/Account.dwt" codeOutsideHTMLIsLocked="false" -->
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta id="p7PM3" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <!-- InstanceBeginEditable name="doctitle" --><title></title><!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" --><!-- InstanceEndEditable -->
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/home_badge_64.png" />
+        <link rel="apple-touch-icon-precomposed" href="/home_badge_64.png" />
+        <link rel="stylesheet" href="/_assets/css/normalize.css" />
+        <link rel="stylesheet" href="/_assets/css/font-awesome.css" />
+        <link rel="stylesheet" href="/_assets/css/foundation.css" />
+        <link rel="stylesheet" href="/_assets/css/styles.css" />
+        <link rel="stylesheet" href="/_assets/css/custom.css" />
+        <script src="//use.edgefonts.net/pt-serif:n4,i4,n7,i7;source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+        <script src="/_assets/js/custom.modernizr.js"></script>
+        <script src="/_assets/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+	function nextpage(){
+		if($('#slides > .slides_container').hasClass('show-page-1')){
+			$('#slides > .slides_container').removeClass('show-page-1').addClass('show-page-2');
+				$("html, body").animate({
+				 scrollTop:0
+				 },2000);
+				return false;
+			}
+		}
+	function previouspage(){
+		if($('#slides > .slides_container').hasClass('show-page-2')){
+			$('#slides > .slides_container').removeClass('show-page-2').addClass('show-page-1');
+				$("html, body").animate({
+				 scrollTop:0
+				 },2000);
+				return false;
+			}	
+		}
+</script>        
+        <!-- menu -->
+        <link href="/p7pm3/p7PM3-01.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="/p7pm3/p7PM3scripts.js"></script>
+        <script src="//use.typekit.net/ngg2icc.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript">
+    // Will retun 1 or 0 based on if user is logged in(1) or not logged in(0)
+    var _isLoggedIn = !!parseInt("{module_isloggedin}");
+    </script>
+    </head>
+    <body class="antialiased inner">
+        {module_contentholder, name="_Template - innerHeader"}
+        <!-- //header.row -->
+        <div class="omega delta">
+        <div class="row">
+        <div class="columns large-9" role="main">
+        <!-- InstanceBeginEditable name="ContentArea" --><div class="post-ad-section">
+    <h1>Post an Ad</h1>
+    <form name="catcustomcontentform68745" onsubmit="return checkWholeForm68745(this)" enctype="multipart/form-data" method="post" action="/CustomContentProcess.aspx?CCID=27426&OID={module_oid}&OTYPE={module_otype}">
+    <label for="ItemName">Item Name</label>
+    <input class="cat_textbox_small" type="text" name="ItemName" id="ItemName" maxlength="255" />
+    
+    <label for="ItemDescription">Item Description</label>
+    <textarea name="ItemDescription" id="ItemDescription" cols="10" rows="4" class="cat_listbox" text=""></textarea>
+    
+    <label for="CAT_Custom_1">image</label>
+    <input type="file" name="CAT_Custom_1" id="CAT_Custom_1" class="cat_textbox" />
+    
+    <label for="CAT_Custom_3">OwnerName <span class="req">*</span>
+    </label>
+    <input type="text" maxlength="4000" value="{module_firstname} {module_lastname}" name="CAT_Custom_3" id="CAT_Custom_3" class="cat_textbox" />
+    
+    <label for="CAT_Custom_4">DisplayName</label>
+    <input type="text" maxlength="4000" name="CAT_Custom_4" id="CAT_Custom_4" class="cat_textbox" />
+    
+    <label for="CAT_Custom_2">Licence No <span class="req">*</span>
+    </label>
+    <input type="text" maxlength="4000" name="CAT_Custom_2" id="CAT_Custom_2" class="cat_textbox" />
+    
+    <label for="CAT_Custom_5">Location</label>
+    <input type="text" maxlength="4000" name="CAT_Custom_5" id="CAT_Custom_5" class="cat_textbox" />
+    
+    <label for="CAT_Custom_6">ContactPhone</label>
+    <input type="text" maxlength="4000" name="CAT_Custom_6" id="CAT_Custom_6" class="cat_textbox" />
+    
+    <label for="CAT_Custom_7">contactEmail</label>
+    <input type="text" value="{module_emailaddress}" maxlength="4000" name="CAT_Custom_7" id="CAT_Custom_7" class="cat_textbox" />
+    
+    <label for="CAT_Custom_10">Serial Number <span class="req">*</span>
+    </label>
+    <input type="text" maxlength="4000" name="CAT_Custom_10" id="CAT_Custom_10" class="cat_textbox" />
+    
+    <label for="CAT_Custom_8">SellPrice <span class="req">*</span>
+    </label>
+    <input type="text" maxlength="4000" name="CAT_Custom_8" id="CAT_Custom_8" class="cat_textbox" />
+    
+    <label for="CAT_Custom_9">Condition <span class="req">*</span>
+    </label>
+    
+    <input type="text" maxlength="4000" name="CAT_Custom_9" id="CAT_Custom_9" class="cat_textbox" />
+        
+    <label for="CAT_Custom_11">Thumbnail 1</label>
+    <input type="file" name="CAT_Custom_11" id="CAT_Custom_11" class="cat_textbox" />
+    
+    <label for="CAT_Custom_12">Thumbnail 2</label>
+    <input type="file" name="CAT_Custom_12" id="CAT_Custom_12" class="cat_textbox" />
+    
+    <label for="CAT_Custom_13">Thumbnail 3</label>
+    <input type="file" name="CAT_Custom_13" id="CAT_Custom_13" class="cat_textbox" />
+    
+    <label for="CAT_Custom_14">Thumbnail 4</label>
+    <input type="file" name="CAT_Custom_14" id="CAT_Custom_14" class="cat_textbox" />
+    
+    <input class="hidden-item" type="text" name="CAT_Custom_16" id="CAT_Custom_16" class="cat_textbox" readonly="readonly" value="{{ globals.site.dateNow | date | date_add: 1, "month"}}" />
+        
+    <input class="cat_button" type="submit" value="Submit Ad for Review" id="catcustomcontentbutton" />
+    
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b2024.r490259-phase1"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        var submitcount68745 = 0;
+        
+        function checkWholeForm68745(theForm) {
+            var why = "";
+            if (theForm.ItemName) why += isEmpty(theForm.ItemName.value, "Item Name");
+            if (theForm.CAT_Custom_3) why += isEmpty(theForm.CAT_Custom_3.value, "OwnerName");
+            if (theForm.CAT_Custom_2) why += isEmpty(theForm.CAT_Custom_2.value, "Licence No");
+            if (theForm.CAT_Custom_10) why += isEmpty(theForm.CAT_Custom_10.value, "Serial Number");
+            if (theForm.CAT_Custom_8) why += isEmpty(theForm.CAT_Custom_8.value, "SellPrice");
+            if (theForm.CAT_Custom_9) why += isEmpty(theForm.CAT_Custom_9.value, "Condition");
+            if (why != "") {
+                alert(why);
+                return false;
+            }
+            if (submitcount68745 == 0) {
+                submitcount68745++;
+                theForm.submit();
+                return false;
+            } else {
+                alert("Form submission is in progress.");
+                return false;
+            }
+        }
+        //]]>
+    </script>
+</form>
+</div><!-- InstanceEndEditable -->
+        </div>
+        <div class="columns large-3" role="complementary">
+        <aside>
+        <h4>Member Options</h4>
+        {module_menu, version="2", menuId="644460", moduleTemplateGroup="Side-nav"}
+        {module_contentholder, name="_aside - Search Form"}
+        {module_contentholder, name="_aside - Question Form"}
+        </aside>
+        </div>
+        </div>
+        <!-- //.row -->
+        </div>
+        <!-- //.omega "Tour"-->
+        {module_contentholder, name="_Template - Footer"}
+        <ul style="display: none;">{module_subscriptions,false,false,,false}
+        </ul>
+        {module_contentholder, name="_Template - Scripts"}
+        <script type="text/javascript">
+		$(document).ready(function () {
+    
+
+	if ($(".zoneName > a:contains('Renewing Member Form')").length < 1) {
+        console.log("need to subscribed");
+        var requestData = {
+            FirstName: '{module_firstname}',
+            LastName: '{module_lastname}',
+            EmailAddress: '{module_emailaddress}',
+            //ZoneExpiry: expire
+        };
+        $.post("/FormProcessv2.aspx?WebFormID=98816", requestData, function (responseData) {
+            
+        })
+    }else{
+    	console.log("already subscribed");
+    };
+})
+</script>
+    </body>
+<!-- InstanceEnd --></html>

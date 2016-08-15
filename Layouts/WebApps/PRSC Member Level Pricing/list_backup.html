@@ -1,0 +1,49 @@
+<div class="club-membership"> <span class="club-membership">
+    <p>PRSC Fee Pricing</p>
+    <p id="lifetime-member-true" style="display: none;">No fee applicable to Lifetime members</p>
+    </span>
+    <span id="club-membership-amount">
+        <div class="columns large-12 cctc-membership">
+            <p class="cctc-membership-level">
+                <input type="radio" data-specialmembership="{tag_club member half}" value="Full" id="CAT_Custom_20012668_167502_0" class="checkbox" name="CAT_Custom_20012668_167502" />
+                Club Membership: </p>
+            <p class="amount-wrapper"> <span id="Full" class="amount">${tag_club membership}</span> </p>
+        </div>
+        <div class="columns large-12 cctc-membership">
+            <p class="cctc-membership-level">
+                <input type="radio" data-specialmembership="{tag_associate member}" value="Associate" name="CAT_Custom_20012668_167502" id="CAT_Custom_20012668_167502_4"
+                class="checkbox" /> Associate Member </p>
+            <p class="amount-wrapper"> <span id="Associate" class="amount">${tag_associate member}</span> </p>
+            <div id="associated_wrapper" style="display:none;">
+              <input type="text" name="CAT_Custom_20074017_204784" id="CAT_Custom_20074017_204784" class="cat_textbox" placeholder="Associated Member ID" />
+            </div>
+        </div>
+        <div class="columns large-12 cctc-membership">
+            <p class="cctc-membership-level">
+                <input type="radio" data-specialmembership="{tag_veteren half}" value="Pensioner" name="CAT_Custom_20012668_167502" id="CAT_Custom_20012668_167502_2"
+                class="checkbox" /> Pensioner  </p>
+            <p class="amount-wrapper"> <span id="Pensioner" class="amount">${tag_veteren}</span> </p>
+        </div>
+        <div class="columns large-12 cctc-membership">
+            <p class="cctc-membership-level">
+                <input type="radio" data-specialmembership="{tag_junior half}" value="Junior" name="CAT_Custom_20012668_167502" id="CAT_Custom_20012668_167502_3"
+                class="checkbox" /> Junior</p>
+            <p class="amount-wrapper"> <span id="Junior" class="amount">${tag_junior}</span> </p>
+        </div>
+        <!-- for testing membership fee 
+        <div class="columns large-12 cctc-membership">
+            <p class="cctc-membership-level">
+                <input type="radio" data-specialmembership="{tag_lady}" value="Test" name="CAT_Custom_20012668_167502" id="CAT_Custom_20012668_167502_3"
+                class="checkbox" /> Test</p>
+            <p class="amount-wrapper"> <span id="Test" class="amount">${tag_lady}</span> </p>
+        </div>
+        -->
+        <!-- for testing membership fee -->
+    </span>
+</div>
+<div id="qcta-levy" class="columns large-12 noshow_{tag_qcta levy}">
+    <p class="membership">Compulsory QCTA Levy</p>
+    <span data-qctalevy="{tag_qcta levy}" id="qctalevy-amount">
+        <p class="amount-wrapper">${tag_qcta levy}</p>
+    </span> 
+</div>

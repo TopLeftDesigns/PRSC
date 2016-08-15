@@ -1,0 +1,122 @@
+<!DOCTYPE html><html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta id="p7PM3" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <!-- TemplateBeginEditable name="doctitle" --><title></title><!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+        <meta name="google-site-verification" content="Z_yz4ABV5dtjOUUeWnCOt8QMSx1eIFbqo8-vzWBK1ys" />
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/home_badge_64.png" />
+        <link rel="apple-touch-icon-precomposed" href="/home_badge_64.png" />
+        <link rel="stylesheet" href="/_assets/css/normalize.css" />
+        <link rel="stylesheet" href="/_assets/css/font-awesome.css" />
+        <link rel="stylesheet" href="/_assets/css/foundation.css" />
+        <link rel="stylesheet" href="/_assets/css/styles.css" />
+        <link rel="stylesheet" href="/_assets/css/custom.css" />
+        <script src="//use.edgefonts.net/pt-serif:n4,i4,n7,i7;source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+        <script src="/_assets/js/custom.modernizr.js"></script>
+        <script src=" /_assets/js/jquery-2.1.3.min.js"></script>
+        <!-- menu -->
+        <link href="p7pm3/p7PM3-01.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="p7pm3/p7PM3scripts.js"></script>
+        <script src="//use.typekit.net/ngg2icc.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+    </head>
+    <body class="antialiased">
+        {module_contentholder, name="_Template - Header"}
+        <!-- //header.row -->
+        {module_contentholder, name="_Home - Hero Slider"}
+        <!-- //.slideshow-wrapper -->
+        <!--  Special announcement displayed if exisst -->
+        <div class="row club-notice">
+        <div class="columns large-12">
+        <p>
+        Pine Rivers Shooting Club<br />
+        {module_adrotator render="item" adrotatorid="5391"}</p>
+        </div>
+        </div>
+        <!--   //End special announcement  -->
+        <div class="omega mu services" role="main">
+        <div class="row">
+        {module_webapps,1319,a}
+        </div>
+        <!-- //.row -->
+        </div>
+        <!-- //.omega "Features"-->
+        <div class="sigma events">
+<div class="row">
+<div class="columns large-12 text-center">
+<div class="circle">
+<span><em class="icon-calendar"></em></span>
+</div>
+<h2>Upcoming Events</h2>
+</div>
+<!-- //.columns.large-12 -->
+</div>
+<!-- //.row -->
+<div class="row" id="latestevents">{% assign rg-GroupBy = "Event-Date" %}{% assign rg-Template = "/_System/layouts/web-apps/events/list.tpl" %}{% include "/_System/includes/lib/web-apps/results-grouping.inc" %}
+</div>
+<!-- //.row -->
+<div class="row">
+<div class="columns large-12 text-center">
+<p>
+* Please note:  All participants must wear enclosed footwear and we strongly recommend the wearing of eye and hearing protection (earplugs are provided free-of-charge).*</p>
+</div>
+<!-- //.columns.large-12 -->
+</div>
+<!-- //.row -->
+        </div>
+        <!-- //.sigma "Events"-->
+        <div class="omega main-content">
+        <div class="row">
+        <div class="large-8 columns">
+        <!-- TemplateBeginEditable name="ContentArea" -->{tag_pagecontent}<!-- TemplateEndEditable -->
+        </div>
+        <div class="large-4 columns">
+        <aside>
+        {module_contentholder, name="_aside - Home"}
+        </aside>
+        </div>
+        </div>
+        </div>
+        <div class="searchresults" style="display: none;"></div>
+        <form id="search-event" style="display: none;" name="catcustomcontentform63982" method="post" action="/Default.aspx?CCID=26905&FID=167250&ExcludeBoolFalse=True&PageID={module_oid}">
+            <label>Event Date Min/Max:</label>
+            <br />
+            <input type="text" name="CAT_Custom_1_Min" id="CAT_Custom_1_Min" class="cat_textbox" style="background-color: #f0f0f0;" />
+            And
+            <input type="text" name="CAT_Custom_1_Max" id="CAT_Custom_1_Max" class="cat_textbox" style="background-color: #f0f0f0;" />
+            <input id="submit" class="cat_button" type="submit" value="Search" />
+        </form>
+        <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b1702.r463035-phase1"></script>
+        <script type="text/javascript" src="/CatalystScripts/Java_DatePicker.js?vs=b1702.r463035-phase1"></script>
+        <!-- //.omega -->
+        {module_contentholder, name="_Template - Footer"}
+        {module_contentholder, name="_Template - Scripts"}
+        <script type="text/javascript">
+    var today = new Date();
+    var day = today.getDate();
+    var month = today.getMonth();
+    var nextmonth = today.getMonth() + 1;
+    var year = today.getFullYear();
+	
+    var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+    var minday = day + "-" + MONTHS[month] + "-" + year;
+	console.log('Min Day: ' + minday );
+
+    var maxday = day + "-" + MONTHS[nextmonth] + "-" + year;
+	console.log('Max Day: ' + maxday);
+
+    $('#CAT_Custom_1_Min').val(minday);
+    $('#CAT_Custom_1_Max').val(maxday);
+    var eventdates = [];
+    var latestdates = [];
+    var datekey = "";
+    var id;
+
+    var $form = $('#search-event');
+	$form.submit();
+
+        </script>
+    </body>
+</html>

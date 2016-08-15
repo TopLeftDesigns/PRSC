@@ -1,0 +1,24 @@
+<div class="system-error-message">
+<h1>Credit Card Payment Failed</h1>
+<p>There was an error processing your credit card. Please correct this and try again.</p>
+<p>{module_error}</p>
+</div>
+<script>
+var siteUrl = 'http://psci.com.au';
+var links = document.getElementsByTagName('A');
+
+for (i = 0; i < links.length; i++)
+{
+	if (links[i].getAttribute('href'))
+	{
+		var href = links[i].getAttribute('href');
+		if (href.substring(0,4) != 'http' && href.substring(0,1) == '/')
+		{
+			//this example requires your links to have absolute paths.
+			//document-relative paths and absolute URLs are not supported.
+			links[i].setAttribute('href', siteUrl + href);
+		} 
+	}
+}
+
+</script>

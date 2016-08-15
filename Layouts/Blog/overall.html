@@ -1,0 +1,22 @@
+	<div class="omega delta">
+		<div class="row">
+			<div class="columns large-9" role="main">
+				{tag_postlist,2}
+				<hr />
+				<p class="page-nav">{tag_previouspage} {tag_pagination} {tag_nextpage}</p>
+			</div>
+			<div class="columns large-3" role="complementary">
+				<aside>
+					<h4>Recent Posts</h4>
+					{tag_blogrecentpost}
+					<h4>Tags</h4>
+					{tag_blogtagcloud}
+					<h4>Archive</h4>
+					{tag_blogpostarchive}
+					{module_contentholder, name="_aside - Search Form"}
+			    </aside>
+			</div>
+		</div>
+		<!-- //.row --> 
+	</div>
+	<!-- //.omega "Tour"-->

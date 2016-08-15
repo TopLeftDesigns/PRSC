@@ -1,0 +1,46 @@
+<header class="alpha" role="banner">
+    <div class=" solid-bg">
+        <div class="row">
+            <div class="columns large-12">
+                <div class="utility">
+                    {% if globals.user.isLoggedIn == 'false' -%} {module_menu, version="2", menuId="644465", moduleTemplateGroup="UtilityNav"} {% else -%}
+                    <ul class="left member-wrapper">
+                        <li class="uty0 login">
+                            <a href="/users/account">{{ globals.user.firstname }} {{ globals.user.lastname }}</a>
+                        </li>
+                        <li class="uty0 member"><a id="renew-link" href="/users/renewing-member-form" style="display:none"><i class="fa icon-user"></i>&nbsp;RENEW Your Membership</a>
+                        </li>
+                    </ul>
+                    {% endif -%} {module_menu, version="2", menuId="644464", moduleTemplateGroup="Social"}
+                </div>
+                <!-- //.utility -->
+            </div>
+            <!-- //.columns.large-12 -->
+        </div>
+        <!-- //.row -->
+    </div>
+    <div class="solid-grey">
+        <div class="row collapse">
+            {%comment%}
+            <!--
+            <div class="columns large-2 small-3">
+                <a id="logo" href="/"><img alt="logo" src="/_assets/images/PRSC-Club-Logo-transp.png" />
+                </a>
+            </div>
+            <div class="columns large-10 small-9">
+                <div id="p7PM3_1" class="p7PM3-01 p7PM3 p7PM3noscript horiz responsive menu-centered rounded auto-subs sub-left">
+                    <div id="p7PM3tb_1" class="pmm3-toolbar closed"><a href="#" title="Hide/Show Menu">&equiv;</a>
+                    </div>
+                    {module_menu,644463}
+                    <script type="text/javascript">
+                        P7_PM3op('p7PM3_1', 1, 2, -5, -5, 0, 1, 0, 1, 0, 1, 1, 1, 0, 900, 1, 0)
+                    </script>
+                </div>
+            </div>
+            -->
+            {%endcomment%}
+            {module_menu version="2" menuId="1775409" moduleTemplateGroup="Centered Logo Menu"}
+        </div>
+        <!-- //.row -->
+    </div>
+</header>

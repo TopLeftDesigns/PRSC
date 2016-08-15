@@ -1,0 +1,53 @@
+<!DOCTYPE html><html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta id="p7PM3" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <!-- TemplateBeginEditable name="doctitle" --><title>{module_pagename}</title><!-- TemplateEndEditable --><!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/home_badge_64.png" />
+        <link rel="apple-touch-icon-precomposed" href="/home_badge_64.png" />
+        <link rel="stylesheet" href="/_assets/css/normalize.css" />
+        <link rel="stylesheet" href="/_assets/css/font-awesome.css" />
+        <link rel="stylesheet" href="/_assets/css/foundation.css" />
+        <link rel="stylesheet" href="/_assets/css/styles.css" />
+        <link rel="stylesheet" href="/_assets/css/custom.css" />
+        <script src="//use.edgefonts.net/pt-serif:n4,i4,n7,i7;source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+        <script src="/_assets/js/custom.modernizr.js"></script>
+        <script src="/_assets/js/jquery-1.10.2.min.js"></script>
+
+        <!-- menu -->
+        <link href="/p7pm3/p7PM3-01.css" rel="stylesheet" type="text/css" media="all">
+        <script type="text/javascript" src="/p7pm3/p7PM3scripts.js"></script>
+        
+        <script src="//use.typekit.net/ngg2icc.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript">
+    // Will retun 1 or 0 based on if user is logged in(1) or not logged in(0)
+    var _isLoggedIn = !!parseInt("{module_isloggedin}");
+    </script>
+    </head>
+    <body class="antialiased inner">
+        {module_contentholder, name="_Template - innerHeader"}
+        <!-- //header.row -->
+        <div class="omega delta">
+        <div class="row">
+        <div class="columns large-9" role="main">
+        <!-- TemplateBeginEditable name="ContentArea" -->{tag_pagecontent}<!-- TemplateEndEditable -->
+        </div>
+        <div class="columns large-3" role="complementary">
+        <aside>
+        <h4>Features</h4>
+        {module_menu, version="2", menuId="644461", moduleTemplateGroup="Side-nav"}
+        {module_contentholder, name="_aside - Search Form"}
+        {module_contentholder, name="_aside - Question Form"}
+        </aside>
+        </div>
+        </div>
+        <!-- //.row -->
+        </div>
+        <!-- //.omega "Tour"-->
+        {module_contentholder, name="_Template - Footer"}
+        {module_contentholder, name="_Template - Scripts"}
+    </body>
+</html>

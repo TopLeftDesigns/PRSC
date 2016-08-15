@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<title>Website Documentation - BC Site Technical Guide</title>
+ 	<meta name="description" content="This document provides technical descriptions of how your Business Catalyst site has been developed and should be used by the site owner or their web master as a reference for making custom changes or understanding how the particular features of BC have been implemented for this particular website">
+	<meta name="author" content="Greg Tomkins">
+	<meta name="copyright" content="Greg Tomkins">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2015-05-30T00:00:00+02:00">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/documenter_style.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+	
+	<style>
+		html, body{background-color:#E9E9E9;color:#14115C;}
+		h1,h2,h3,h4,h5,h6{color:#14115C;}
+		section table{background-color:#E9E9E9;}
+		::-moz-selection{background:#FF9900;color:#424242;}
+		::selection{background:#FF9900;color:#424242;}
+		a.brand{background-image:url();}
+		a, a:hover, a:active{color:#FF9900;}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #F7F7F7;}
+		div.navbar-inner, .navbar .nav li ul{background:#BCBCBC;color:#222222;}
+		a.btn-navbar{background:#BCBCBC;color:#222222;}
+		.navbar .nav li a{color:#222222;text-shadow:1px 1px 0px #DBDBDB;}
+		.navbar .nav li a:hover, .navbar .nav li.active a{text-shadow:none;}
+		div.navbar-inner ul{}
+		.marketing-byline{color:#F7F7F7;}
+		.navbar .nav > li a{color:#424242;}
+		.navbar .nav > li a:hover, a.btn-navbar:hover{background:#FF9900;color:#424242;}
+		.navbar .nav .active > a, .navbar .nav .active > a:hover, a.btn-navbar:active{background-color:#FF9900;color:#424242;}
+		.navbar .nav li ul li a:hover{background:#FF9900;color:#424242;}
+		.navbar .nav li ul li a:active{background:#FF9900;color:#424242;}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #FFFFFF, #B56D00);
+			  background-image: -ms-linear-gradient(top, #FFFFFF, #B56D00);
+			  background-image: -webkit-gradient(linear, 0 0, 0 FFFFFF%, from(#BCBCBC), to(#B56D00));
+			  background-image: -webkit-linear-gradient(top, #FFFFFF, #B56D00);
+			  background-image: -o-linear-gradient(top, #FFFFFF, #B56D00);
+			  background-image: linear-gradient(top, #FFFFFF, #B56D00);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#B56D00', GradientType=0);
+			  border-color: #B56D00 #B56D00 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  background-color: #B56D00;
+		}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+	
+	
+    <meta name="robots" content="noindex" />
+</head>
+    
+<body class="documenter-project-website-documentation" data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container"> 
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+			<a class="brand" href="#">Website Documentation - BC Site Technical Guide</a>
+			<div class="nav-collapse">
+			<ul class="nav">
+					
+			<li><a href="#architecture" title="Architecture">Architecture</a></li>
+			<li><a href="#features" title="Features">Features</a></li>
+			<li><a href="#web_apps" title="Web Apps">Web Apps</a></li>
+			<li><a href="#forms" title="Forms">Forms</a></li>
+			<li><a href="#images_videos" title="Images | Videos">Images | Videos</a></li>
+			<li><a href="#modules" title="Modules">Modules</a></li>
+			<li><a href="#social_integration" title="Social Integration">Social Integration</a></li>
+			<li><a href="#site_settings" title="Site Settings">Site Settings</a></li>
+			<li><a href="#training" title="Training">Training</a></li>
+
+			</ul>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of Navbar -->
+
+<!-- Main Container Beginning -->			
+			
+<div class="container" id="documenter_content">
+    
+	<div id="documenter-cover">
+	<div class="masthead">
+	    <h1>Website Documentation - BC Site Technical Guide</h1>
+	    <p>This document provides technical descriptions of how your Business Catalyst site has been developed and should be used by the site owner or their web master as a reference for making custom changes or understanding how the particular features of BC have been implemented for this particular website</p>
+	    <ul class="marketing-byline">
+			<li>created: 05/24/2015</li>
+			<li>latest update: 05/30/2015</li>
+			<li>by: Greg Tomkins</li>
+			<li><a href=""></a></li>
+		</ul>
+	    <p class="download-info">
+			<a href="http://bc.topleftdesigns.com.au" class="btn btn-primary btn-large">Log Support Ticket</a> <a href="mailto:&#99;&#117;&#115;&#116;&#115;&#101;&#114;&#118;&#105;&#99;&#101;&#64;&#116;&#111;&#112;&#108;&#101;&#102;&#116;&#100;&#101;&#115;&#105;&#103;&#110;&#115;&#46;&#99;&#111;&#109;&#46;&#97;&#117;" class="btn btn-large">Email Support Ticket</a> 
+		</p>
+		
+	</div> <!-- masthead -->
+	
+   <div id="intro">
+    <p class="highlight hero-unit">This site should provide you with sufficient detail to allow you to understand how the different features incorporated into your website have been implemented by way of BC modules. The details provided are for your own particular website and assume you already have a working knowledge in the use of Business Catalyst.<br>
+
+We do not encourage clients to make changes to the layouts in any site templates or module layouts unless you have a deep understanding of HTML and CSS and invariably, some understanding of Javascript. Making such changes will impact many parts of your site and can lead to serious problems.<br>
+
+If you are at all unsure about what you want to do, please contact us through the support portal (see buttons above) or phone us on 0419 706 325.
+
+All change requests or problems with your site MUST be logged by way of a support ticket by either logging into our support portal or by sending an email to us via the above button.</p>
+   </div> <!-- intro -->
+   
+	</div>
+      
+  <section id="architecture">
+	<div class="page-header"><h3>Architecture</h3><hr class="notop"></div>
+<h4 id="architecture_site_design_template_framework">Site Design - Template / Framework</h4>
+<div class="clearfix">
+	<table border="1" cellpadding="5" class="span9">
+		<tbody>
+			<tr>
+				<td align="left" valign="top" width="30%">
+					BC Template</td>
+				<td align="left" colspan="3" valign="top">
+					Custom redesign from original WP theme</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					Base template/theme</td>
+				<td align="left" colspan="3" valign="top">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					<blockquote>
+						Source</blockquote>
+				</td>
+				<td align="left" colspan="3" valign="top">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					Responsive Layout</td>
+				<td align="left" colspan="3" valign="top">
+					<p>
+						<label><input id="ResponsiveLayout_0" name="Responsive Layout" type="radio" value="true"> Yes</label> <label> <input id="ResponsiveLayout_1" name="Responsive Layout" type="radio" value="false"> No</label></p>
+				</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					Responsive Framework</td>
+				<td align="left" valign="top">
+					Bootstrap</td>
+				<td align="left" valign="top" width="15%">
+					Version</td>
+				<td align="left" valign="top" width="15%">
+					3.1.1</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					&nbsp;</td>
+				<td align="left" colspan="3" rowspan="1" valign="top">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>
+	&nbsp;</p>
+<p>
+	Your website has been developed on the Adobe Business Catalyst platform. If you have not yet acquainted yourself with this system and its wide range of features and modules you may do so by either reviewing these at our website at <a href="http://topleftdesigns.com.au/services/business_catalyst.htm" target="_blank">http://topleftdesigns.com.au/services/business_catalyst.htm</a> or for more detail by visiting the main website at Business Catalyst <a href="http://businesscatalyst.com/features" target="_blank">http://businesscatalyst.com/features</a></p>
+<p>
+	Access to online training for Business Catalyst can be found at <a href="http://docs.businesscatalyst.com/support" target="_blank">http://docs.businesscatalyst.com/support</a></p>
+<p>
+	Access to your site is via your usual domain with /admin appended to the end. You will then be required to login to the BC administration console via the admin username and password we have setup for you.</p>
+<p>
+	Once in to the site you will find the administration dashboard and menu options giving you access to the full range of options available to you.</p>
+<h4 id="architecture_data_content_types">Data / Content Types</h4>
+<p>
+	Your site is comprised of different data that makes up your overall site. The sorts of data held in yru BC site to which you have access is:</p>
+<ul>
+	<li>
+		Site Templates for controlling how yur overal lpages ae presented in a consistent manner</li>
+	<li>
+		Module templates that control how data held in specific BC Modules are presented</li>
+	<li>
+		System Pages and email layouts &amp; content</li>
+	<li>
+		static web pages</li>
+	<li>
+		Web Forms used for capture of information on different pages of your site</li>
+	<li>
+		Content Holders for commonly used HTML code in any part of your site</li>
+	<li>
+		CSS files that control the style settings for the content presented</li>
+	<li>
+		JS or Javascript files that provide certain processing of page content within your browser</li>
+	<li>
+		Images and Videos used witin your site&#39;s pages and modules</li>
+	<li>
+		CRM data</li>
+	<li>
+		Web Apps which ae custom databases utilised witin your site</li>
+	<li>
+		Module data</li>
+	<li>
+		Site Settings</li>
+</ul>
+<h4 id="architecture_folder_content">Folder Content</h4>
+<p>
+	If you manage your site pages via the Tree View or view your site via the file manager you will see the overall file structure for your site as illustrated below. The details of what is held in any of these folders which you need to be concerned follow.</p>
+<div class="RadTreeView RadTreeView_Default" id="ctl00_cp_uc_rt">
+	<!-- 2011.2.712.35 -->
+	<ul class="rtUL rtLines">
+		<li class="rtLI rtFirst rtLast">
+			<div class="rtTop">
+				<span class="rtIn folder treenode">/</span></div>
+			<ul class="rtUL">
+				<li class="rtLI">
+					<div class="rtTop">
+						<span class="rtIn folder treenode">_assets</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">_dev</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">fonts</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">interventions</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">ModuleTemplates</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">stylesheets</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">uploads</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">Workshops</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<a class="rtIn webpage treenode" href="/Admin/WebPages_Detail.aspx?PageID=13482461" title="/index">Index (Start Page for soul-healers.worldsecuresystems.com and 1 others)</a></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<h4 id="architecture_site_templates">Site Templates</h4>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<th scope="col" style="width: 30%;">
+				Template name</th>
+			<th scope="col" style="width: 50px;">
+				ID</th>
+			<th scope="col">
+				Details</th>
+		</tr>
+		<tr>
+			<td>
+				About Us</td>
+			<td>
+				1623166</td>
+			<td>
+				Applied to About Us page - no heading banner image</td>
+		</tr>
+		<tr>
+			<td>
+				Contact us</td>
+			<td>
+				1623404</td>
+			<td>
+				Displays map of service locations in full width banner strip</td>
+		</tr>
+		<tr>
+			<td>
+				Default Template (Default)</td>
+			<td>
+				1623144</td>
+			<td>
+				Used in all inner pages - includes full width banner</td>
+		</tr>
+		<tr>
+			<td>
+				Default template - white BG</td>
+			<td>
+				1623173</td>
+			<td>
+				Full width 1 col inner content - Used on How It Works page</td>
+		</tr>
+		<tr>
+			<td>
+				Index Template</td>
+			<td>
+				1623051</td>
+			<td>
+				Home page template&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Locations template</td>
+			<td>
+				1623838</td>
+			<td>
+				Used for Srvice Locations web app items</td>
+		</tr>
+	</tbody>
+</table>
+<h4 id="architecture_custom_module_list_templates">Custom Module List Templates</h4>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<th scope="col" style="width: 50%;">
+				Template name</th>
+			<th scope="col" style="width: 50px;">
+				ID</th>
+			<th scope="col">
+				Details</th>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<h4 id="architecture_content_holders">Content Holders</h4>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<th scope="col" style="width: 30%;">
+				Content Holder name</th>
+			<th scope="col" style="width: 50px;">
+				ID</th>
+			<th scope="col">
+				Details</th>
+		</tr>
+		<tr>
+			<td>
+				Footer Text</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Credits and copyright text and links shown at bottom of footer in each page</td>
+		</tr>
+		<tr>
+			<td>
+				Footer Utility Section</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Footer content&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Main Logo</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Logo image shown in masthead on all pages</td>
+		</tr>
+		<tr>
+			<td>
+				Modal - Call Back Form</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Popup Form for capturing call back details</td>
+		</tr>
+		<tr>
+			<td>
+				Modal - Change Location Form</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Popup form for changing default location</td>
+		</tr>
+		<tr>
+			<td>
+				Postcode coverage modal display</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Popup displayed containing message to be shown for results on postcode coerage search</td>
+		</tr>
+		<tr>
+			<td>
+				Secure to non-secure url&nbsp;redirection</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				This code redirects all links back to standard domain on Confirmation page</td>
+		</tr>
+		<tr>
+			<td>
+				Social Links</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Social icons and link settings</td>
+		</tr>
+	</tbody>
+</table>
+<h4 id="architecture__nbsp">&nbsp;</h4>
+</section>
+<section id="features">
+	<div class="page-header"><h3>Features</h3><hr class="notop"></div>
+<p>	Your website includes a number of functional features to enhance the customer experience.</p>
+<p>	Features included in your site are:</p>
+<p>	<strong>Listing of Service Locations</strong></p>
+<p>	The system maintains a list of current service locations in the web app &quot;Locations&quot;. Postcodes covered are linked back to a locations web app item. Content for each service location is uniquely set within the web app item definition.</p>
+<p>	<strong>Checking Postcode coverage</strong></p>
+<p>	The system enables visitors to enter their postcode to check on the level of coverage. System looks up the postcodes web app checking on coverage level if poscode is present.</p>
+<p>	Type 1: Fully covered<br>
+	Type 2: Fringe coverage<br>
+	Type 3: No cover at present but possibly coming</p>
+<p>	<strong>Autodetection of current location</strong></p>
+<p>	The system uses HTML5 geocoding to determine current location of visitor. If on desktop the browser will prompt aking visitor to give permissin to shae their current location. This is displayed by te site</p>
+<p>	<strong>Direct Call to Customer Service Centre</strong></p>
+<p>	ll references to the phone numbers provide direct call capability. The use of this feature is dircetly aimed at smart phones</p>
+<p>	<strong>Online Booking Form</strong></p>
+<p>	Visitors amy also register their booking request which raises an email back to DTY callcentre who will ring the client once the call centre is open for bookings</p>
+<p>	<strong>Other forms of contact</strong></p>
+<ol>
+	<li>		Contact Us</li>
+	<li>		Pre-Registration - Form for registration for poscodes not covered (type 3)</li>
+	<li>		Call Me Back - Form to email call centre for call back</li>
+</ol>
+</section>
+<section id="web_apps">
+	<div class="page-header"><h3>Web Apps</h3><hr class="notop"></div>
+<p>	Your site includes a number of web apps. These are customised databases holding data that is uesed within your site for controlling content that is displayed within pages or prsenitng information relevant to your site.</p>
+<p>	The web apps set up for your website are as follows.</p>
+<h5>
+	Home Slider</h5>
+<p>	This web app &nbsp;identifies the details of the home page banner images rotated in the slider. You can have as many images as yu like however we suggest that 3 be the mximum. Each &quot;enabled&quot; item will be shown in the lsider which means you can turn banner images on / off as you please.</p>
+<p>	You simply select the image you wish to use as a banenr image and enter the text to overlay the image displayed.</p>
+<p>	As with the location web app, you can define t text to be displayed on button that is displayed (this button will invoke a phone call to 1300 30 38 34 by default).</p>
+<p>	The &quot;Banner Link&quot; field can be used to direct a visitor to a desired destination if they click on the overlay text. If this is an internal destination then you only need enter it as a relative URL otherwise a full URL is required.</p>
+<h5>
+	Inner Banner</h5>
+<p>	This web app &nbsp;identifies the details of the single page banner image shown in the top of the page for any page using the template &quot;Default Template - with BG Image&quot;. You can have as many images as you like however in the template we choose a single particular image form the list of images available. If you wish to change the image or details we suggest yu simply edit the item already in place.</p>
+<p>	You simply select the image you wish to use as a banenr image and enter the text to overlay the image displayed.</p>
+<p>	As with the location web app, you can define t text to be displayed on button that is displayed (this button will invoke a phone call to 1300 30 38 34 by default).</p>
+<p>	The &quot;Banner Link&quot; field can be used to direct a visitor to a desired destination if they click on the overlay text. If this is an internal destination then you only need enter it as a relative URL otherwise a full URL is required.</p>
+<h5>
+	Location</h5>
+<p>	This web app is used to hold the content for each service location page. In order to deliver consistency across all location pages yet still provide nique content, these pages have been set up as a web app. One item exists for each location.</p>
+<p>	The data held on each location in the web app item is:</p>
+<ul>	<li>		name - name of yoru location. This is displayed on the pages and should be unbique</li>
+	<li>		Franchise ID - unique identifier that is not used within the site at this stage in any way</li>
+	<li>		Status - set to available / not available as a future feature for controlling how a location is presented. At this stage this feature is not being used</li>
+	<li>		Banner image - you select the image to be shown as a banner in the top of the page. the image must be 1920 x 720 px in size</li>
+	<li>		Banner text - this is teh text yu wish to display overlaying your bannre image</li>
+	<li>		Banner button (not used) at this point simply enter &quot;#&#39;</li>
+	<li>		Banner lin (not use) at this point simply enter a &#39;#&#39;</li>
+	<li>		Call button text usually consistent use the following format with the &lt;span&gt; tags<br>
+		&lt;span&gt;CALL: 1300 30 38 34&lt;/span&gt; CALL ANYTIME<br>
+		where the Call anytime will show on the 2nd line</li>
+	<li>		Contact Number - this is the phone number that will be called if a visitor clicks on the button</li>
+	<li>		Introduction - this sia &nbsp;block of formatted text appearing at the top of yrou page as the first paragraph</li>
+	<li>		ITEM ADDRESS - enter these feilds to denote the physical location of the geaographical centre of your location</li>
+	<li>		ITEM DESCRIPTION - Enter the content yu wish to display within the page at this particular service location</li>
+</ul>
+<div>
+	&nbsp;</div>
+<div>
+	<a href="https://youtu.be/XEE3l_kz-zs" target="_blank"><img alt="" src="https://www.youtube.com/upload_thumbnail?v=XEE3l_kz-zs&amp;t=hqdefault&amp;ts=1432177120298" style="width: 120px; height: 90px; float: left; margin-left: 12px; margin-right: 12px;"></a></div>
+<p>	The video tutorial for maintaining this web app, Managing setup of your service location pages, can be seen by clicking the image to your left or by going to&nbsp;<a href="https://youtu.be/XEE3l_kz-zs" target="_blank">https://youtu.be/XEE3l_kz-zs</a></p>
+<p>	&nbsp;</p>
+<p>	&nbsp;</p>
+<p>	&nbsp;</p>
+<p>	<strong>Postcodes</strong></p>
+<p>	<a href="https://youtu.be/XEE3l_kz-zs" target="_blank"><img alt="" src="https://www.youtube.com/upload_thumbnail?v=wxPmJGkIh10&amp;t=hqdefault&amp;ts=1432176292934" style="width: 120px; height: 90px; margin-left: 12px; margin-right: 12px; float: left;"></a>The video tutorial for maintaining this web app, Managing your postcode coverage, can be viewed by clicking the image to your left or by going to&nbsp;<br>
+	<a href="https://youtu.be/wxPmJGkIh10" target="_blank">https://youtu.be/wxPmJGkIh10</a></p>
+</section>
+<section id="forms">
+	<div class="page-header"><h3>Forms</h3><hr class="notop"></div>
+<p>
+	Your site is incusive of certain Web Forms used for capture of information by visitors to the site who wish to submit general enquiries, bookings or purchase goods. The forms used within your site are as follows:</p>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 500px;">
+	<thead>
+		<tr>
+			<th scope="col" style="width: 30%;">
+				Form name</th>
+			<th scope="col" style="width: 50px;">
+				ID</th>
+			<th scope="col">
+				Details</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				Ask Us to Call You</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Used to capture details of visitors wishing to be called back&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Contact Us Form</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				General contact Us form for all corporate communications - workflow set to be directed to &#105;&#110;&#102;&#111;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;</td>
+		</tr>
+		<tr>
+			<td>
+				DTY Patient Booking Form</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Used by visitors wishing to book themselves in for a doctor appointment</td>
+		</tr>
+		<tr>
+			<td>
+				DTY Practice Booking Form</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Event Booking Form</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Not applicable/used in this site</td>
+		</tr>
+		<tr>
+			<td>
+				Fridge Magnet Request Form</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Info Pack</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				This form is to be made redundant</td>
+		</tr>
+		<tr>
+			<td>
+				Online Shop Purchase Form</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Not applicable/used in this site</td>
+		</tr>
+		<tr>
+			<td>
+				Online Shop Quote Form</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				Not applicable/used in this site</td>
+		</tr>
+		<tr>
+			<td>
+				Pre-Registration Form</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				<p>
+					In the message box that shows when users check their postcode, for postcodes of type/level 3, there is a button to pre-register personal details.</p>
+				<p>
+					Visitors completing this form are also added to a maillist call &quot;Pre-registrations&quot;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	<meta charset="utf-8">
+</p>
+<h3>
+	Roles</h3>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 500px;">
+	<tbody>
+		<tr>
+			<td valign="top">
+				<p>
+					Role</p>
+			</td>
+			<td valign="top">
+				<p>
+					Member name</p>
+			</td>
+			<td valign="top">
+				<p>
+					Email</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					Administrators</p>
+			</td>
+			<td valign="top">
+				<p>
+					Julie Simmons</p>
+			</td>
+			<td valign="top">
+				<p>
+					<a href="mailto:J&#117;&#108;&#105;&#101;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;">J&#117;&#108;&#105;&#101;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					Business relations Enquiry</p>
+			</td>
+			<td valign="top">
+				<p>
+					&mdash;</p>
+			</td>
+			<td valign="top">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					GP Relations</p>
+			</td>
+			<td valign="top">
+				<p>
+					&mdash;</p>
+			</td>
+			<td valign="top">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					Patient Booking enquiries</p>
+			</td>
+			<td valign="top">
+				<p>
+					&mdash;</p>
+			</td>
+			<td valign="top">
+				<p>
+					&nbsp;</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					Users</p>
+			</td>
+			<td valign="top">
+				<p>
+					Jade Astelle<br>
+					Diana M</p>
+			</td>
+			<td valign="top">
+				<p>
+					<a href="mailto:&#106;&#97;&#100;&#101;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;">&#106;&#97;&#100;&#101;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;</a><br>
+					&#100;&#105;&#97;&#110;&#97;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h3>
+	Email Notifications</h3>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 500px;">
+	<tbody>
+		<tr>
+			<td valign="top">
+				<p>
+					Communication</p>
+			</td>
+			<td valign="top">
+				<p>
+					Responsible Role</p>
+			</td>
+			<td valign="top">
+				<p>
+					Members</p>
+			</td>
+			<td valign="top">
+				<p>
+					Workflow</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					PATIENT BOOKING - CALL BACK REQUEST</p>
+			</td>
+			<td rowspan="2">
+				<p>
+					Patient Bookings</p>
+			</td>
+			<td rowspan="2">
+				<p>
+					Onlinebookings@</p>
+			</td>
+			<td rowspan="2">
+				<p>
+					Patient Booking enquiries</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					PATIENT BOOKING - ONLINE BOOKING</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					CLINIC BOOKINGS</p>
+			</td>
+			<td colspan="3" valign="top">
+				<p>
+					Change request but will follow definition of Patient Online bookings</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					BOOKINGS HOURS VM - (VOICE MAIL WHEN CALL IS MISSED)</p>
+			</td>
+			<td colspan="3" valign="top">
+				<p>
+					Not handled by website but instead handled within this 3rd party system</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					FRIDGE MAGNET REQUEST</p>
+			</td>
+			<td valign="top">
+				<p>
+					Community</p>
+			</td>
+			<td valign="top">
+				<p>
+					community@</p>
+			</td>
+			<td valign="top">
+				<p>
+					Community admin</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					ZOPIM</p>
+			</td>
+			<td colspan="3" valign="top">
+				<p>
+					Not handled by website but instead handled within this 3rd party system</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					CONTACT</p>
+			</td>
+			<td rowspan="2">
+				<p>
+					Business Relations</p>
+			</td>
+			<td rowspan="2">
+				<p>
+					info@</p>
+			</td>
+			<td rowspan="2">
+				<p>
+					Business enquiries</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					INFO</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					DOCTORS JOBS&nbsp;</p>
+			</td>
+			<td valign="top">
+				<p>
+					GP Relations</p>
+			</td>
+			<td valign="top">
+				<p>
+					gpjobs@</p>
+			</td>
+			<td valign="top">
+				<p>
+					GP Relations</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h3>
+	Workflow Definitions</h3>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 500px;">
+	<tbody>
+		<tr>
+			<td valign="top">
+				<p>
+					Workflow</p>
+			</td>
+			<td valign="top">
+				<p>
+					Notification Type</p>
+			</td>
+			<td valign="top">
+				<p>
+					Role</p>
+			</td>
+			<td valign="top">
+				<p>
+					Additional emails</p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					Business Enquiries</p>
+			</td>
+			<td valign="top">
+				<p>
+					Email</p>
+			</td>
+			<td valign="top">
+				<p>
+					&mdash;</p>
+			</td>
+			<td valign="top">
+				<p>
+					<a href="mailto:&#105;&#110;&#102;&#111;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;">&#105;&#110;&#102;&#111;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					Community admin</p>
+			</td>
+			<td valign="top">
+				<p>
+					Email</p>
+			</td>
+			<td valign="top">
+				<p>
+					&mdash;</p>
+			</td>
+			<td valign="top">
+				<p>
+					<a href="mailto:&#99;&#111;&#109;&#109;&#117;&#110;&#105;&#116;&#121;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;">&#99;&#111;&#109;&#109;&#117;&#110;&#105;&#116;&#121;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					GP Relations</p>
+			</td>
+			<td valign="top">
+				<p>
+					Email</p>
+			</td>
+			<td valign="top">
+				<p>
+					&mdash;</p>
+			</td>
+			<td valign="top">
+				<p>
+					<a href="mailto:&#103;&#112;&#106;&#111;&#98;&#115;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;">&#103;&#112;&#106;&#111;&#98;&#115;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;</a></p>
+			</td>
+		</tr>
+		<tr>
+			<td valign="top">
+				<p>
+					Patient Booking enquiries</p>
+			</td>
+			<td valign="top">
+				<p>
+					Email</p>
+			</td>
+			<td valign="top">
+				<p>
+					&mdash;</p>
+			</td>
+			<td valign="top">
+				<p>
+					&#111;&#110;&#108;&#105;&#110;&#101;&#98;&#111;&#111;&#107;&#105;&#110;&#103;&#115;&#64;&#100;&#111;&#99;&#116;&#111;&#114;&#116;&#111;&#121;&#111;&#117;&#46;&#99;&#111;&#109;&#46;&#97;&#117;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+</section>
+<section id="images_videos">
+	<div class="page-header"><h3>Images | Videos</h3><hr class="notop"></div>
+<p>	There are only 2 sets of images with which you need to familiarise yoruslf with.</p>
+<ol>
+	<li>		Home banner Images - these MUST be 920 x 760 px in dimension</li>
+	<li>		Inner page banner - these MUST be 1920 x 720 px in demension</li>
+</ol>
+</section>
+<section id="modules">
+	<div class="page-header"><h3>Modules</h3><hr class="notop"></div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/blogs"><img alt="Blogs" src="assets/images/image_2.png" style="border-width: 0px; border-style: solid; float: left; margin-left: 11px; margin-right: 11px;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_blogs"blogs_a_nbsp_not_used_"><a href="http://docs.businesscatalyst.com/user-manual/modules/blogs">Blogs</a>&nbsp;(not used)</h4>
+	</div>
+	<div class="mod_dets span8">
+		Create, configure, customize and integrate with social media. Make your blog part of your online business.</div>
+	<div class="mod_dets span8">
+		&nbsp;</div>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/media-downloads"><img alt="Media downloads" src="assets/images/image_4.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_media_downloads"media_downloads_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/media-downloads">Media downloads</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Let users download media such as PDF files, Word documents, videos, and music.</div>
+	<div class="mod_dets span8">
+		&nbsp;</div>
+	<div class="mod_dets span8">
+		In your site there i3 files setup available for download being:</div>
+	<ol>
+		<li class="mod_dets span8">
+			A4 Flyer - Childcare&nbsp;</li>
+		<li class="mod_dets span8">
+			Flyer and Magnet V5&nbsp;</li>
+		<li class="mod_dets span8">
+			Patient Information Sheet (May 2015)&nbsp;</li>
+	</ol>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/faq"><img alt="FAQ" src="assets/images/image_3.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_faq"faq_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/faq">FAQ</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Users will always have questions. Stay prepared and provide essential answers through the AJAX enabled FAQ module.</div>
+	<div class="mod_dets span8">
+		&nbsp;</div>
+	<div class="mod_dets span8">
+		The FAQ module has been set up with a list of FAQ&#39;s and their answers. The list is displayed on the FAQ page and the order of listing is controlled using the &quot;Weighting&quot; field under MORE OPTIONS. Items are listed from teh highest weighting first.</div>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/ad-rotators"><img alt="Ad Rotators" src="assets/images/image_1.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_ad_rotators"ad_rotators_a_nbsp_not_used_at_this_stage_"><a href="http://docs.businesscatalyst.com/user-manual/modules/ad-rotators">Ad Rotators</a>&nbsp;(Not used at this stage)</h4>
+	</div>
+	<div class="mod_dets span8">
+		Use the ad rotator module and spare the time to code scripts that automatically swap images.</div>
+</div>
+<p>	&nbsp;</p>
+</section>
+<section id="social_integration">
+	<div class="page-header"><h3>Social Integration</h3><hr class="notop"></div>
+<p>
+	Integration of your website with your social profiles can occur in a number of ways either by way of allowing people to &quot;LIKE&quot; pages in your site, &quot;Share&quot; pages within their social network or to &quot;Follow&quot; your own social profile</p>
+<p>
+	Your site has been set up with integration to the following social profiles</p>
+<h4 id="social_integration_business_profiles">Business Profiles</h4>
+<ul>
+	<li>
+		Facebook - https://www.facebook.com/doctortoyou</li>
+	<li>
+		Twitter -&nbsp;https://twitter.com/homedoctortoyou</li>
+	<li>
+		Google+ -&nbsp;https://plus.google.com/103928273647554408450</li>
+	<li>
+		Linkedin -&nbsp;http://www.linkedin.com/company/doctor-for-you-pty-ltd</li>
+</ul>
+<h4 id="social_integration_page_sharing">Page Sharing</h4>
+<p>
+	Page sharing has been enabled on the Service Location pages with all the above social media channels. The icons and related links are set within the web app detailed layout definition.</p>
+<h4 id="social_integration_following">Following</h4>
+<p>
+	In the footer of all pages, there are icons with links set up to allow visitors to follow each of the social profiles listed above. These are set up in the content holder &quot;Social links&quot;</p>
+</section>
+<section id="site_settings">
+	<div class="page-header"><h3>Site Settings</h3><hr class="notop"></div>
+<h4 id="site_settings_domain_dns_nbsp_settings">Domain DNS&nbsp; Settings</h4>
+<h4 id="site_settings__nbsp">&nbsp;</h4>
+<p>
+	Your email is being hosted with Google Apps but BC BC has set up appropriate DNS records to recognise this so all email systems shall remain as they were prior to moving to BC.</p>
+<p>
+	The following domains are being managed internally within your BC site:</p>
+<ol>
+	<li>
+		www.doctortoyou.com.au -&nbsp;this domain has been redirected to the default domain</li>
+	<li>
+		doctortoyou.com.au - set as the default domain</li>
+</ol>
+<h4 id="site_settings_secure_zones">Secure Zones</h4>
+<h4 id="site_settings__nbsp">&nbsp;</h4>
+<p>
+	No secure zones have been implemented within your site at this stage however a request to setup a zone for authorised doctors to access has been received.</p>
+<h4 id="site_settings_categories">Categories</h4>
+<h4 id="site_settings__nbsp">&nbsp;</h4>
+<p>
+	No specific&nbsp; categories have been utilised within yur site</p>
+<h4 id="site_settings_google_analytics">Google Analytics</h4>
+<h4 id="site_settings__nbsp">&nbsp;</h4>
+<p>
+	Google Analytics and Webmaster Tools have been set up on your default domain through you rexisting Google Analytics account.. Your site has been submitted to Google for indexing on 30th May and will take some time before all pages for the new site are indexed. In the meantime, your old site pages already indexed in Google are being redirected to the new site equiavalent pages through the redirect facility within your BC site.</p>
+<p>
+	You have full access to these accounts through your existing Google Accounts.</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+<section id="training">
+	<div class="page-header"><h3>Training</h3><hr class="notop"></div>
+<h3>
+	Introduction to Business Catalyst</h3>
+<p>
+	To familiarise yourself with Business Catalyst you should take a look at this video -</p>
+<p>
+	<a href="http://docs.businesscatalyst.com/videos/getting-started/what-is-business-catalyst-2">What is Business Catalyst?</a>&nbsp;&ndash;&nbsp;also see this video&nbsp;&nbsp; <a href="http://www.youtube.com/watch?v=V5q-h-mDn7M">http://www.youtube.com/watch?v=V5q-h-mDn7M</a></p>
+<p>
+	Other topics we have selected from those available we suggest you look at by way of an introduction to BC are as follows:</p>
+<ol>
+	<li>
+		<a href="http://docs.businesscatalyst.com/getting-started/introducing-the-business-catalyst-admin-console" title="Introducing the Business Catalyst Admin Console">Introducing the Business Catalyst Admin Console</a><br>
+		Discover the admin interface and learn about every step involved in using it, from login and password recovery to dashboard layout and functionality.</li>
+	<li>
+		<a href="http://docs.businesscatalyst.com/getting-started/understanding-the-BC-concepts-and-features" title="Understanding the BC concepts and features">Understanding the BC concepts and features</a>&nbsp;<br>
+		A step-by-step thorough description of the entire process involved in the usage of the Business Catalyst platform. All the features, described in detail, allowing you to see the big picture and understanding how the service can help you build an online business.</li>
+	<li>
+		<a href="http://docs.businesscatalyst.com/getting-started/how-to-add-or-edit-your-website-content" title="How to add or edit your website's content">How to add or edit your website&#39;s content</a>&nbsp;<br>
+		The WYSIWYG. The Develop tab. Dreamweaver. Muse. The In Context Editor.</li>
+	<li>
+		<a href="http://docs.businesscatalyst.com/getting-started/the-wysiwyg-editor" title="The WYSIWYG content editor">The WYSIWYG content editor</a>&nbsp;<br>
+		Learn how to use the What You See Is What You Get editor. Customize editor options such as fonts and CSS rules.</li>
+</ol>
+<p>
+	Following this we have a number of tutorials on our own site that you can log into from this link - <a href="http://topleftdesigns.com.au/resources/bc-training-tutorials">http://topleftdesigns.com.au/resources/bc-training-tutorials</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width:359px;height:37px;">
+				<p>
+					<strong>YOUR LOGIN CREDENTIALS ARE</strong>-</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:359px;">
+				<p>
+					<strong>Username</strong>: DTY</p>
+				<p>
+					<strong>Password</strong>: bctraining</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	Once the library loads you will find a range of videos not all of which are relevant. I would however suggest the following to introduce you to BC concepts and general features&hellip;</p>
+<ol>
+	<li>
+		Getting Started: &nbsp;Logging Into Your Admin Backend</li>
+	<li>
+		Content Editing: Uploading and Inserting Photos, Positioning and Styling Photos ; Learn to enter content with copy and paste</li>
+	<li>
+		Customers: Managing Customer Records</li>
+	<li>
+		Marketing: Organizing, Editing, Deleting Email Campaigns</li>
+</ol>
+<h4 id="training_custom_training_videos_for_your_site">Custom Training Videos for Your Site</h4>
+<p>
+	The following videos have been put together specific to yuor site and provide more indepth information on how to maintain key aspects of your website.</p>
+<p>
+	A playlist for all tutorial videos specifically created for Doctor To You can be found on YouTube under the following unlisted playlist:&nbsp;<a href="https://www.youtube.com/playlist?list=PLBL6MuNafagI8b-Ft3g815KbuGWgReQo8" target="_blank">https://www.youtube.com/playlist?list=PLBL6MuNafagI8b-Ft3g815KbuGWgReQo8</a></p>
+<p>
+	&nbsp;</p>
+<p>
+	&nbsp;</p>
+</section>
+
+
+
+    <hr />
+
+<footer>
+    <p>Copyright Greg Tomkins 2015 made with the <a href="http://rxa.li/documenter">Documenter v2.0</a></p>
+</footer>
+
+</div><!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script>document.createElement('section');var duration='400',easing='swing';</script>
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/jquery.scrollTo.js"></script>
+<script src="assets/js/jquery.easing.js"></script>
+<script src="assets/js/scripts.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-min.js"></script> 
+</body>
+</html>

@@ -1,0 +1,46 @@
+<div class="announcement-details">
+<h1>{tag_subject}</h1>
+<span class="rel-date">{tag_releasedate}</span> 
+<span class="news-body">{tag_body}</span>
+<!--
+<h4><em class="icon-comments-alt"></em> Comment</h4>
+{module_ratingfeedback}
+<h4><em class="icon-edit"></em> Leave a Comment</h4>
+<div class="row">
+<form name="catratingform2343" onsubmit="return checkWholeForm2343(this)" method="post" action="/RatingProcess.aspx?OID={module_oid}&amp;OTYPE={module_otype}">
+    <div class="columns large-6">
+    <div class="row collapse">
+    <div class="small-10 columns">
+    <input name="FullName" type="text" placeholder="Full Name" />
+    </div>
+    <div class="small-2 columns"> <span class="postfix radius"><em class="icon-user"></em></span> </div>
+    </div>
+    <div class="row collapse">
+    <div class="small-10 columns">
+    <input name="website" type="text" placeholder="Website" />
+    </div>
+    <div class="small-2 columns"> <span class="postfix radius"><em class="icon-globe"></em></span> </div>
+    </div>
+    <div class="row collapse">
+    <div class="small-10 columns">
+    <input placeholder="Email Address" type="text" name="EmailAddress" />
+    </div>
+    <div class="small-2 columns"> <span class="postfix radius"><em class="icon-envelope"></em></span> </div>
+    </div>
+    </div>
+    <div class="columns large-6">
+    <label>
+    <textarea class="cat_listbox_small" name="Feedback" placeholder="Comment Here"></textarea>
+    </label>
+    <label>Enter Word Verification in box below {module_captchav2}</label>
+    <input class="secondary small button" type="submit" value="Submit" />
+    </div>
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+    <script type="text/javascript">   //<![CDATA[
+   function checkWholeForm2343(theForm){var why = "";if (theForm.EmailAddress) if (theForm.EmailAddress.value.length > 0) why += checkEmail(theForm.EmailAddress.value);if (theForm.CaptchaV2) why += isEmpty(theForm.CaptchaV2.value, "Enter Word Verification in box below");if (why != ""){alert(why);return false;}return true;}   
+//]]>   </script>
+</form>
+</div>
+-->
+<div class="goBack">{module_referreraddress,,Go Back}</div>
+</div>

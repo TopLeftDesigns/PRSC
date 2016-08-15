@@ -1,0 +1,535 @@
+html, body, p, h1, h2, h3, h4 {
+	font-family: "futura-pt", sans-serif
+}
+/* Basscss Utility White Space */
+.m0 {
+  margin: 0;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mr0 {
+  margin-right: 0;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.ml0 {
+  margin-left: 0;
+}
+
+.m1 {
+  margin: 0.25em;
+}
+
+.mt1 {
+  margin-top: 0.25em;
+}
+
+.mr1 {
+  margin-right: 0.25em;
+}
+
+.mb1 {
+  margin-bottom: 0.25em;
+}
+
+.ml1 {
+  margin-left: 0.25em;
+}
+
+.m2 {
+  margin: 0.5em;
+}
+
+.mt2 {
+  margin-top: 0.5em;
+}
+
+.mr2 {
+  margin-right: 0.5em;
+}
+
+.mb2 {
+  margin-bottom: 0.5em;
+}
+
+.ml2 {
+  margin-left: 0.5em;
+}
+
+.m3 {
+  margin: 1em;
+}
+
+.mt3 {
+  margin-top: 1em;
+}
+
+.mr3 {
+  margin-right: 1em;
+}
+
+.mb3 {
+  margin-bottom: 1em;
+}
+
+.ml3 {
+  margin-left: 1em;
+}
+
+.m4 {
+  margin: 3em;
+}
+
+.mt4 {
+  margin-top: 3em;
+}
+
+.mr4 {
+  margin-right: 3em;
+}
+
+.mb4 {
+  margin-bottom: 3em;
+}
+
+.ml4 {
+  margin-left: 3em;
+}
+
+.m5 {
+  margin: 5em;
+}
+
+.mt5 {
+  margin-top: 5em;
+}
+
+.mr5 {
+  margin-right: 5em;
+}
+
+.mb5 {
+  margin-bottom: 5em;
+}
+
+.ml5 {
+  margin-left: 5em;
+}
+
+.m6 {
+  margin: 7em;
+}
+
+.mt6 {
+  margin-top: 7em;
+}
+
+.mr6 {
+  margin-right: 7em;
+}
+
+.mb6 {
+  margin-bottom: 7em;
+}
+
+.ml6 {
+  margin-left: 7em;
+}
+
+.mxn1 {
+  margin-left: -0.25em;
+  margin-right: -0.25em;
+}
+
+.mxn2 {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+}
+
+.mxn3 {
+  margin-left: -1em;
+  margin-right: -1em;
+}
+
+.mxn4 {
+  margin-left: -3em;
+  margin-right: -3em;
+}
+
+.mxn5 {
+  margin-left: -5em;
+  margin-right: -5em;
+}
+
+.mxn6 {
+  margin-left: -7em;
+  margin-right: -7em;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.p0 {
+  padding: 0;
+}
+
+.p1 {
+  padding: 0.25em;
+}
+
+.py1 {
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+.px1 {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+
+.pl1 {
+  padding-left: 0.25em;
+}
+
+.pr1 {
+  padding-right: 0.25em;
+}
+
+.p2 {
+  padding: 0.5em;
+}
+
+.py2 {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.px2 {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.pl2 {
+  padding-left: 0.5em;
+}
+
+.pr2 {
+  padding-right: 0.5em;
+}
+
+.p3 {
+  padding: 1em;
+}
+
+.py3 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.px3 {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.pl3 {
+  padding-left: 1em;
+}
+
+.pr3 {
+  padding-right: 1em;
+}
+
+.p4 {
+  padding: 3em;
+}
+
+.py4 {
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
+
+.px4 {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.pl4 {
+  padding-left: 3em;
+}
+
+.pr4 {
+  padding-right: 3em;
+}
+
+.p5 {
+  padding: 5em;
+}
+
+.py5 {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.px5 {
+  padding-left: 5em;
+  padding-right: 5em;
+}
+
+.pl5 {
+  padding-left: 5em;
+}
+
+.pr5 {
+  padding-right: 5em;
+}
+
+.p6 {
+  padding: 7em;
+}
+
+.py6 {
+  padding-top: 7em;
+  padding-bottom: 7em;
+}
+
+.px6 {
+  padding-left: 7em;
+  padding-right: 7em;
+}
+
+.pl6 {
+  padding-left: 7em;
+}
+
+.pr6 {
+  padding-right: 7em;
+}
+
+/*===============================
+=            Buttons            =
+===============================*/
+.button {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button.secondary {
+  color: #464646;
+}
+
+.button.tertiary {
+  background: #e6e6e6;
+  color: #464646;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button.tertiary:hover {
+  opacity: .8;
+}
+
+.button.stroke {
+  background: transparent;
+  box-shadow: 0 0 0 3px #e6e6e6 inset;
+  color: #376092;
+}
+
+.button.stroke:hover {
+  background: #e6e6e6;
+}
+
+/*=============================
+=            Forms            =
+=============================*/
+label {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: .75rem;
+  margin-bottom: .5rem;
+}
+
+.form-button__option {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+legend {
+  font-size: .75rem;
+  font-weight: 700;
+  color: #464646;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+fieldset label {
+  font-size: .9rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+[type='checkbox'] + label, [type='radio'] + label {
+  margin-left: .25rem;
+}
+
+/*==============================
+=            Tables            =
+==============================*/
+table {
+  width: 100%;
+}
+
+table tr {
+  border-bottom: solid 1px #e6e6e6;
+}
+
+table th {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*==========================================
+=            Style Guide Styles            =
+==========================================*/
+/*----------  Dividers  ----------*/
+.divider {
+  height: 1px;
+  margin: 1em 0;
+}
+
+.divider--large {
+  height: 1px;
+  margin: 3em 0;
+}
+
+/*----------  Style Guide Header  ----------*/
+.sg__header {
+  padding: 1.675rem 0;
+  border-bottom: solid 1px #e6e6e6;
+}
+
+/*----------  Style Guide Labels  ----------*/
+.sg__title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.sg__label, .swatch__hex {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-size: .75rem;
+  color: #acacac;
+  padding-bottom: 0.5em;
+  margin-bottom: 3em;
+  border-bottom: solid 1px #e6e6e6;
+}
+
+/*----------  Additional Text Styles  ----------*/
+.text--light {
+  font-weight: 300;
+}
+
+/*----------  Swatches  ----------*/
+.swatch__hues div {
+  height: 40px;
+}
+
+.swatch {
+  border-radius: 5px;
+}
+
+.swatch__color {
+  position: relative;
+  height: 90px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.swatch__hex {
+  margin: 0;
+  background: white;
+  border: solid 1px #e6e6e6;
+  border-top: 0;
+  padding: 0.5em;
+  text-align: center;
+  color: #464646;
+}
+
+.swatch--primary .swatch__hue--1 {
+  background: #A91919;
+}
+
+.swatch--primary .swatch__hue--2 {
+  background: #620000;
+}
+
+.swatch--primary .swatch__hue--3 {
+  background: #3A0000;
+}
+
+.swatch--primary .swatch__color {
+  background: #880202; 
+}
+
+.swatch--secondary .swatch__hue--1 {
+  background: #CA7A38;
+}
+
+.swatch--secondary .swatch__hue--2 {
+  background: #A95A19;
+}
+
+.swatch--secondary .swatch__hue--3 {
+  background: #622D00;
+}
+
+.swatch--secondary .swatch__color {
+  background: #883F02;
+}
+
+.swatch--black .swatch__hue--1 {
+  background: #217979;
+}
+
+.swatch--black .swatch__hue--2 {
+  background: #0F6565;
+}
+
+.swatch--black .swatch__hue--3 {
+  background: #003B3B;
+}
+
+.swatch--black .swatch__color {
+  background: #015252;
+}
+
+.swatch--gray .swatch__hue--1 {
+  background: #2DA12D;
+}
+
+.swatch--gray .swatch__hue--2 {
+  background: #148714;
+}
+
+.swatch--gray .swatch__hue--3 {
+  background: #004F00;
+}
+
+.swatch--gray .swatch__color {
+  background: #026D02;
+}

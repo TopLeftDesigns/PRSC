@@ -1,0 +1,423 @@
+<!DOCTYPE html><html class="no-js" lang="en"><!-- InstanceBegin template="/Templates/Account.dwt" codeOutsideHTMLIsLocked="false" -->
+    <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta id="p7PM3" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+        <!-- InstanceBeginEditable name="doctitle" --><title>Account Settings</title><!-- InstanceEndEditable --><!-- InstanceBeginEditable name="head" -->
+
+
+        
+    
+<!-- InstanceEndEditable -->
+        <link rel="shortcut icon" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/home_badge_64.png" />
+        <link rel="apple-touch-icon-precomposed" href="/home_badge_64.png" />
+        <link rel="stylesheet" href="/_assets/css/normalize.css" />
+        <link rel="stylesheet" href="/_assets/css/font-awesome.css" />
+        <link rel="stylesheet" href="/_assets/css/foundation.css" />
+        <link rel="stylesheet" href="/_assets/css/styles.css" />
+        <link rel="stylesheet" href="/_assets/css/custom.css" />
+        <script src="//use.edgefonts.net/pt-serif:n4,i4,n7,i7;source-sans-pro:n3,i3,n4,i4,n6,i6,n7,i7.js"></script>
+        <script src="/_assets/js/custom.modernizr.js"></script>
+        <script src="/_assets/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+	function nextpage(){
+		if($('#slides > .slides_container').hasClass('show-page-1')){
+			$('#slides > .slides_container').removeClass('show-page-1').addClass('show-page-2');
+				$("html, body").animate({
+				 scrollTop:0
+				 },2000);
+				return false;
+			}
+		}
+	function previouspage(){
+		if($('#slides > .slides_container').hasClass('show-page-2')){
+			$('#slides > .slides_container').removeClass('show-page-2').addClass('show-page-1');
+				$("html, body").animate({
+				 scrollTop:0
+				 },2000);
+				return false;
+			}	
+		}
+</script>        
+        <!-- menu -->
+        <link href="/p7pm3/p7PM3-01.css" rel="stylesheet" type="text/css" media="all" />
+        <script type="text/javascript" src="/p7pm3/p7PM3scripts.js"></script>
+        <script src="//use.typekit.net/ngg2icc.js"></script>
+        <script>try{Typekit.load();}catch(e){}</script>
+        <script type="text/javascript">
+    // Will retun 1 or 0 based on if user is logged in(1) or not logged in(0)
+    var _isLoggedIn = !!parseInt("{module_isloggedin}");
+    </script>
+    </head>
+    <body class="antialiased inner">
+        {module_contentholder, name="_Template - innerHeader"}
+        <!-- //header.row -->
+        <div class="omega delta">
+        <div class="row">
+        <div class="columns large-9" role="main">
+        <!-- InstanceBeginEditable name="ContentArea" -->
+        <h1>Member's Personal Settings</h1>
+        <h2>Update Your Information</h2>
+        <div>
+            <form data-bc-formmagic="validateMode:inline;" class="form-a" name="catupdatedetailsformform20152" method="post" enctype="multipart/form-data" onsubmit="return checkWholeForm20152(this)" action="/MemberProcess.aspx">
+                <div class="row">
+                  <h2>General Details</h2>
+                    <fieldset class="half">
+                        <label for="EmailAddress">Email Address <span class="req">*</span>
+                        </label>
+                        <br />
+                        <input type="text" value="{module_emailaddress}" maxlength="4000" name="EmailAddress" id="EmailAddress" class="required cat_textbox"/>
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="LastName">Surname <span class="req">*</span>
+                        </label>
+                        <br />
+                        <input type="text" value="{module_lastname}" maxlength="4000" name="LastName" id="LastName" class="required cat_textbox"/>
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="CAT_Custom_20063429_204784">Given Name <span class="req">*</span>
+                        </label>
+                        <br />
+                        <input type="text" value="{module_firstname}" maxlength="4000" name="FirstName" id="FirstName" class="required cat_textbox"/>
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="CAT_Custom_20060787_204784">Middle Name</label>
+                        <br />
+                        <input type="text" value="{module_customerfield,204784,20072496}" maxlength="4000" name="CAT_Custom_20072496_204784" id="CAT_Custom_20072496_204784" class="cat_textbox"/>
+                    </fieldset>
+                        <fieldset class="full">
+                        <label>Gender</label>
+                        <br />
+                        <input type="radio" name="CAT_Custom_20060799_204784" id="CAT_Custom_20060799_204784_0" value="Male" />Male
+                        <input type="radio" name="CAT_Custom_20060799_204784" id="CAT_Custom_20060799_204784_1" value="Female" />Female
+                        <script type="text/javascript">
+                            function setCheckedValue(radioObj, newValue) {
+                                for (var i = 0; i < radioObj.length; i++) {
+                                    radioObj[i].checked = false;
+                                    if (radioObj[i].value == newValue.toString()) {
+                                        radioObj[i].checked = true;
+                                    }
+                                }
+                            };
+                            setCheckedValue(document.getElementsByName('CAT_Custom_20060799_204784'), '{module_customerfield,204784,20060799}');
+                        </script>
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="DOB">Date Of Birth <span class="req">*</span>
+                        </label>
+                        <br />
+                        <input type="text" value="{module_DOB}" name="DOB" id="CAT_Custom_20063432_204784" class="required cat_textbox"
+                        readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('DOB');return false;" />
+                    </fieldset> 
+                    <fieldset class="half">
+                        <label for="CAT_Custom_20060789_204784">DateJoined</label>
+                        <br />
+                        <input type="text" value="{module_customerfield,204784,20060789}" name="CAT_Custom_20060789_204784" id="CAT_Custom_20060789_204784" class="required cat_textbox"
+                        readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060789_204784');return false;" />
+                    </fieldset>               
+                </div>
+                <div class="row">
+                  <h2>Login Details</h2>
+                  <fieldset class="full">
+                      <label for="Username">Username</label>
+                      <br />
+                      <input type="text" name="Username" id="Username" value="{module_username}" class="required cat_textbox" maxlength="255" />
+                  </fieldset>
+                  <fieldset class="half">
+                      <label for="Password">Password</label>
+                      <br />
+                      <input type="password" name="Password" id="Password" value="{module_password}" class="required cat_textbox" maxlength="255" autocomplete="off" />
+                  </fieldset>
+                  <fieldset class="half">
+                      <label for="PasswordConfirm">Confirm Password</label>
+                      <br />
+                      <input type="password" name="PasswordConfirm" id="PasswordConfirm" value="{module_password}" class="required cat_textbox" maxlength="255" autocomplete="off" />
+                  </fieldset>
+                </div>
+                <div class="row">
+                    <h2>Address Details</h2>
+                    <fieldset class="full">
+                        <label for="HomeAddress">Residential Address</label>
+                        <br />
+                        <input type="text" value="{module_homeaddress}" maxlength="4000" name="HomeAddress" id="HomeAddress" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="HomeCity">Suburb</label>
+                        <br />
+                        <input type="text" value="{module_homecity}" maxlength="4000" name="HomeCity" id="HomeCity" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="quarter">
+                        <label for="HomeState">State</label>
+                        <br />
+                        <input type="text" value="{module_homestate}" maxlength="4000" name="HomeState" id="HomeState" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="quarter">
+                        <label for="HomeZip">Postcode</label>
+                        <br />
+                        <input type="text" value="{module_homezip}" maxlength="4000" name="HomeZip" id="HomeZip" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <hr/>
+                    <fieldset class="full">
+                        <label for="CAT_Custom_20060784_204784">PostalAddress</label>
+                        <br />
+                        <input type="text" value="{module_customerfield,204784,20060784}" maxlength="4000" name="CAT_Custom_20060784_204784" id="CAT_Custom_20060784_204784" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="CAT_Custom_20060785_204784">PostalSuburb</label>
+                        <br />
+                        <input type="text" value="{module_customerfield,204784,20060785}" maxlength="4000" name="CAT_Custom_20060785_204784" id="CAT_Custom_20060785_204784" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="quarter">
+                        <label for="CAT_Custom_20060786_204784">PostalState</label>
+                        <br />
+                        <input type="text" value="{module_customerfield,204784,20060786}" maxlength="4000" name="CAT_Custom_20060786_204784" id="CAT_Custom_20060786_204784" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="quarter">
+                        <label for="CAT_Custom_20060787_204784">PostalCode</label>
+                        <br />
+                        <input type="text" value="{module_customerfield,204784,20060787}" maxlength="4000" name="CAT_Custom_20060787_204784" id="CAT_Custom_20060787_204784" class="cat_textbox"
+                        />
+                    </fieldset> 
+                </div>
+                <div class="row">
+                    <h2>Personal Details</h2>
+                    <fieldset class="full">
+                        <label for="CAT_Custom_20072497_204784">Secondary e-mail address</label>
+                        <br />
+                        <input type="text" value="{module_customerfield,204784,20072497}" maxlength="4000" name="CAT_Custom_20072497_204784" id="CAT_Custom_20072497_204784" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="CAT_Custom_20063438_204784">Fax</label>
+                        <br />
+                        <input type="text" value="{module_homefax}" maxlength="4000" name="HomeFax" id="HomeFax" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="HomePhone">Home Phone</label>
+                        <br />
+                        <input type="text" value="{module_homephone}" maxlength="4000" name="HomePhone" id="HomePhone" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="WorkPhone">Work Phone</label>
+                        <br />
+                        <input type="text" value="{module_workphone}" maxlength="4000" name="WorkPhone" id="WorkPhone" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="half">
+                        <label for="CellPhone">Mobile Phone</label>
+                        <br />
+                        <input type="text" value="{module_cellphone}" maxlength="4000" name="CellPhone" id="CellPhone" class="cat_textbox"
+                        />
+                    </fieldset>
+                </div>
+                <div class="row">
+                    <!-- <h2>Eligibility to Join</h2> -->
+                    <fieldset class="half">
+                        <input type="checkbox" name="CAT_Custom_20063578_204784" id="CAT_Custom_20063578_204784" value="1" />
+                        <span class="smlprnt">Are you a current member of another shooting organisation?</span>
+                    </fieldset>
+                    <script type='text/javascript'>
+                        function setCheckedValue(radioObj, newValue) {
+                            for (var i = 0; i < radioObj.length; i++) {
+                                radioObj[i].checked = false;
+                                if (radioObj[i].value == newValue.toString()) {
+                                    radioObj[i].checked = true;
+                                }
+                            }
+                        };
+                        setCheckedValue(document.getElementsByName('CAT_Custom_20063578_204784'), '{module_customerfield,204784,20063578}');
+                    </script>
+                    <fieldset class="half">
+                        <input type="text" value="{module_customerfield,204784,20063579}" maxlength="4000" name="CAT_Custom_20063579_204784" id="CAT_Custom_20063579_204784" class="cat_textbox" placeholder="Other Organization Details" />
+                    </fieldset>
+                    <fieldset class="half">
+                        <input type="checkbox" name="CAT_Custom_20063580_204784" id="CAT_Custom_20063580_204784" value="1" />
+                         <span class="smlprnt">Do you hold current firearms licences?</span>
+                    </fieldset>
+                    <script type='text/javascript'>
+                        function setCheckedValue(radioObj, newValue) {
+                            for (var i = 0; i < radioObj.length; i++) {
+                                radioObj[i].checked = false;
+                                if (radioObj[i].value == newValue.toString()) {
+                                    radioObj[i].checked = true;
+                                }
+                            }
+                        };
+                        setCheckedValue(document.getElementsByName('CAT_Custom_20063580_204784'), '{module_customerfield,204784,20063580}');
+                    </script>
+                    <fieldset class="half">
+                        <input type="text" value="{module_customerfield,204784,20063581}" maxlength="4000" name="CAT_Custom_20063581_204784" id="CAT_Custom_20063581_204784" class="cat_textbox" placeholder="current firearm license details" />
+                    </fieldset> 
+                    <div class="half">
+                      <label>Do you hold Category H Small Arms Licence</label>
+                      <fieldset class="half">
+                          <input type="text" value="{module_customerfield,204784,20060790}" maxlength="4000" name="CAT_Custom_20060790_204784" id="CAT_Custom_20060790_204784" class="cat_textbox" placeholder="License No." />
+                      </fieldset>
+                      <fieldset class="half">
+                          <input type="text" value="{module_customerfield,204784,20060791}" name="CAT_Custom_20060791_204784" id="CAT_Custom_20060791_204784" class="cat_textbox"
+                          readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060791_204784');return false;" placeholder="Expiry Date" />
+                      </fieldset>
+                    </div>
+                    <div class="half">
+                      <label>Do you hold Cath A/B Long Arms Licence</label>
+                      <fieldset class="half">
+                          <input type="text" value="{module_customerfield,204784,20060792}" maxlength="4000" name="CAT_Custom_20060792_204784" id="CAT_Custom_20060792_204784" class="cat_textbox" placeholder="License No." />
+                      </fieldset>
+                      <fieldset class="half">
+                          <input type="text" value="{module_customerfield,204784,20060793}" name="CAT_Custom_20060793_204784" id="CAT_Custom_20060793_204784" class="cat_textbox" readonly style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060793_204784');return false;" placeholder="Expiry Date" />
+                      </fieldset>
+                    </div>
+                    <fieldset class="quarter">
+                        <input type="text" value="{module_customerfield,204784,20060815}" maxlength="4000" name="CAT_Custom_20060815_204784" id="CAT_Custom_20060815_204784" class="cat_textbox" placeholder="Other License No's" />
+                    </fieldset>
+                    <fieldset class="quarter">
+                        <input type="text" value="{module_customerfield,204784,20060794}" name="CAT_Custom_20060794_204784" id="CAT_Custom_20060794_204784" class="cat_textbox"
+                        readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060794_204784');return false;" placeholder="Other Expiry Date" />
+                    </fieldset>
+                    <fieldset class="half">
+                        <input type="text" value="{module_customerfield,204784,20060801}" maxlength="4000" name="CAT_Custom_20060801_204784" id="CAT_Custom_20060801_204784" class="cat_textbox" placeholder="Occupation" />
+                    </fieldset>
+                    <fieldset class="quarter">
+                        <input type="checkbox" name="CAT_Custom_20060802_204784" id="CAT_Custom_20060802_204784" value="1" />
+                        <span class="smlprnt">I hold a First Aid Certificate</span>
+                    </fieldset>
+                    <script type='text/javascript'>
+                        function setCheckedValue(radioObj, newValue) {
+                            for (var i = 0; i < radioObj.length; i++) {
+                                radioObj[i].checked = false;
+                                if (radioObj[i].value == newValue.toString()) {
+                                    radioObj[i].checked = true;
+                                }
+                            }
+                        };
+                        setCheckedValue(document.getElementsByName('CAT_Custom_20060802_204784'), '{module_customerfield,204784,20060802}');
+                    </script>
+                    <fieldset class="quarter">
+                        <input type="text" value="{module_customerfield,204784,20060803}" name="CAT_Custom_20060803_204784" id="CAT_Custom_20060803_204784" class="cat_textbox"
+                        readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060803_204784');return false;" placeholder="Certificate Expiry Date" />
+                    </fieldset> 
+                    <fieldset class="quarter">
+                        <label for="CAT_Custom_20060804_204784">Range Pass Card No</label>
+                        <br />
+                        <input type="text" value="{module_customerfield,204784,20060804}" maxlength="4000" name="CAT_Custom_20060804_204784" id="CAT_Custom_20060804_204784" class="cat_textbox"
+                        />
+                    </fieldset>
+                    <fieldset class="quarter">
+                        <label for="CAT_Custom_20060805_204784">Payment Rate</label>
+                        <br />
+                        <select name="CAT_Custom_20060805_204784" id="CAT_Custom_20060805_204784" class="cat_dropdown">
+                            <option value=" ">-- Please select --</option>
+                            <option value="Junior">Junior</option>
+                            <option value="ORD-Adult">ORD-Adult</option>
+                            <option value="ORD-Pensioner">ORD-Pensioner</option>
+                            <option value="Pensioner">Pensioner</option>
+                            <option value="Pensioner &#43;">Pensioner &#43;</option>
+                            <option value="RA-Adult">RA-Adult</option>
+                            <option value="RP-Adult">RP-Adult</option>
+                            <option value="Special">Special</option>
+                            <option value="Visitor">Visitor</option>
+                        </select>
+                        <script type='text/javascript'>
+                            document.getElementById('CAT_Custom_20060805_204784').value = '{module_customerfield,204784,20060805}';
+                        </script>
+                    </fieldset>                    
+                </div>
+                <div class="row">                                       
+                    <fieldset class="full">
+                        <label for="CAT_Custom_20060797_204784">Note</label>
+                        <br />
+                        <textarea name="CAT_Custom_20060797_204784" id="CAT_Custom_20060797_204784" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);">{module_customerfield,204784,20060797}</textarea>
+                    </fieldset>                 
+                </div>
+                <div class="row">
+                  <input type="hidden" name="FormID" id="FormID" value="204784,210868,210869" />
+                  <fieldset class="half">
+                      <input class="cat_button" type="submit" value="Update" id="catupdatedetailsformbutton" />
+                  </fieldset>
+                </div>
+                <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b2024.r490259-phase1"></script>
+                <script type="text/javascript" src="/CatalystScripts/Java_DatePicker.js?vs=b2024.r490259-phase1"></script>
+                <script type="text/javascript">
+                    //<![CDATA[
+
+                    var submitcount20152 = 0;
+                    
+                    function checkWholeForm20152(theForm) {
+                        var why = "";
+                                      
+                        if (theForm.Password && theForm.PasswordConfirm) {
+                            if (theForm.Password.value.length > 0 || theForm.PasswordConfirm.value.length > 0) {
+                                if (theForm.Password.value != theForm.PasswordConfirm.value) why += appendBreak(
+                                    "- Password and its confirmation do not match.");
+                                if (theForm.Password.value.length < 6) why += appendBreak("- Password must be 6 characters or longer.");
+                            }
+                        }
+                        
+                        if (why != "") {
+                            alert(why);
+                            return false;
+                        }
+                        if (submitcount20152 == 0) {
+                            submitcount20152++;
+                            theForm.submit();
+                            return false;
+                        } else {
+                            alert("Form submission is in progress.");
+                            return false;
+                        }
+                    }
+                    //]]>
+                </script>
+            </form>
+        </div>
+    
+<!-- InstanceEndEditable -->
+        </div>
+        <div class="columns large-3" role="complementary">
+        <aside>
+        <h4>Member Options</h4>
+        {module_menu, version="2", menuId="644460", moduleTemplateGroup="Side-nav"}
+        {module_contentholder, name="_aside - Search Form"}
+        {module_contentholder, name="_aside - Question Form"}
+        </aside>
+        </div>
+        </div>
+        <!-- //.row -->
+        </div>
+        <!-- //.omega "Tour"-->
+        {module_contentholder, name="_Template - Footer"}
+        <ul style="display: none;">{module_subscriptions,false,false,,false}
+        </ul>
+        {module_contentholder, name="_Template - Scripts"}
+        <script type="text/javascript">
+		$(document).ready(function () {
+    
+
+	if ($(".zoneName > a:contains('Renewing Member Form')").length < 1) {
+        console.log("need to subscribed");
+        var requestData = {
+            FirstName: '{module_firstname}',
+            LastName: '{module_lastname}',
+            EmailAddress: '{module_emailaddress}',
+            //ZoneExpiry: expire
+        };
+        $.post("/FormProcessv2.aspx?WebFormID=98816", requestData, function (responseData) {
+            
+        })
+    }else{
+    	console.log("already subscribed");
+    };
+})
+</script>
+    </body>
+<!-- InstanceEnd --></html>

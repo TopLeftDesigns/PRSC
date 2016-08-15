@@ -1,0 +1,729 @@
+<form name="catupdatedetailsformform9055" method="post" enctype="multipart/form-data" onsubmit="return checkWholeForm9055(this)" action="/MemberProcess.aspx">
+    <p>&bull; Required</p>
+    <table class="webform" cellspacing="0" cellpadding="2" border="0">
+        <tr>
+            <td>
+                <label for="Title">Title</label>
+                <br />
+                <select name="Title" id="Title" class="cat_dropdown_smaller">
+                    <option value="1292724">DR</option>
+                    <option value="1292723">MISS</option>
+                    <option value="1292720" selected="selected">MR</option>
+                    <option value="1292721">MRS</option>
+                    <option value="1292722">MS</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="FirstName">First Name</label>
+                <br />
+                <input type="text" name="FirstName" id="FirstName" value="{module_firstname}" class="cat_textbox" maxlength="255" /> &bull;</td>
+        </tr>
+        <tr>
+            <td>
+                <label for="LastName">Last Name</label>
+                <br />
+                <input type="text" name="LastName" id="LastName" value="{module_lastname}" class="cat_textbox" maxlength="255" /> &bull;</td>
+        </tr>
+        <tr>
+            <td>
+                <label for="EmailAddress">Email Address</label>
+                <br />
+                <input type="text" name="EmailAddress" id="EmailAddress" value="{module_emailaddress}" class="cat_textbox" maxlength="255" /> &bull;</td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Company">Company</label>
+                <br />
+                <input type="text" name="Company" id="Company" value="{module_company}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="DOB">Date of Birth</label>
+                <br />
+                <input type="text" id="DOB" name="DOB" id="DOB" value="{module_dob}" class="cat_textbox" readonly="readonly" style="background-color:#F0F0F0;"
+                onfocus="displayDatePicker('DOB');return false;">
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <label for="WorkPhone">Work Phone Number</label>
+                <br />
+                <input type="text" name="WorkPhone" id="WorkPhone" value="{module_workphone}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="WorkFax">Work Fax Number</label>
+                <br />
+                <input type="text" name="WorkFax" id="WorkFax" value="{module_workfax}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="HomePhone">Home Phone Number</label>
+                <br />
+                <input type="text" name="HomePhone" id="HomePhone" value="{module_homephone}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="HomeFax">Home Fax Number</label>
+                <br />
+                <input type="text" name="HomeFax" id="HomeFax" value="{module_homefax}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CellPhone">Cell Phone Number</label>
+                <br />
+                <input type="text" name="CellPhone" id="CellPhone" value="{module_cellphone}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="WebAddress">Web Address</label>
+                <br />
+                <input type="text" name="WebAddress" id="WebAddress" value="{module_webaddress}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <label for="HomeAddress">Home Address</label>
+                <br />
+                <input type="text" name="HomeAddress" id="HomeAddress" value="{module_homeaddress}" class="cat_textbox" maxlength="500" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="HomeCity">City</label>
+                <br />
+                <input type="text" name="HomeCity" id="HomeCity" value="{module_homecity}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="HomeState">State</label>
+                <br />
+                <input type="text" name="HomeState" id="HomeState" value="{module_homestate}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="HomeZip">Zipcode/Postcode</label>
+                <br />
+                <input type="text" name="HomeZip" id="HomeZip" value="{module_homezip}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="HomeCountry">Country</label>
+                <br />
+                <select name="HomeCountry" id="HomeCountry" class="cat_dropdown">
+                    <option value=" ">-- Select Country --</option>
+              <option value="ZW">ZIMBABWE</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <label for="WorkAddress">Work Address</label>
+                <br />
+                <input type="text" name="WorkAddress" id="WorkAddress" value="{module_workaddress}" class="cat_textbox" maxlength="500" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="WorkCity">City</label>
+                <br />
+                <input type="text" name="WorkCity" id="WorkCity" value="{module_workcity}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="WorkState">State</label>
+                <br />
+                <input type="text" name="WorkState" id="WorkState" value="{module_workstate}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="WorkZip">Zipcode/Postcode</label>
+                <br />
+                <input type="text" name="WorkZip" id="WorkZip" value="{module_workzip}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="WorkCountry">Country</label>
+                <br />
+                <select name="WorkCountry" id="WorkCountry" class="cat_dropdown">
+                    <option value=" ">-- Select Country --</option>
+                    <option value="AF">AFGHANISTAN</option>
+                    <option value="AX">ALAND ISLANDS</option>
+                    <option value="ZW">ZIMBABWE</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Username">Username</label>
+                <br />
+                <input type="text" name="Username" id="Username" value="{module_username}" class="cat_textbox" maxlength="255" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="Password">Password</label>
+                <br />
+                <input type="password" name="Password" id="Password" value="{module_password}" class="cat_textbox" maxlength="255" autocomplete="off" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="PasswordConfirm">Confirm Password</label>
+                <br />
+                <input type="password" name="PasswordConfirm" id="PasswordConfirm" value="{module_password}" class="cat_textbox" maxlength="255" autocomplete="off"
+                />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060798_204784">Member No</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060798}" maxlength="4000" name="CAT_Custom_20060798_204784" id="CAT_Custom_20060798_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Membership Type <span class="req">*</span>
+                </label>
+                <br />
+                <input type="checkbox" name="CAT_Custom_20060830_204784" id="CAT_Custom_20060830_204784_0" value="Full" />Full
+                <br />
+                <input type="checkbox" name="CAT_Custom_20060830_204784" id="CAT_Custom_20060830_204784_1" value="Associate" />Associate
+                <br />
+                <input type="checkbox" name="CAT_Custom_20060830_204784" id="CAT_Custom_20060830_204784_2" value="Junior" />Junior
+                <br />
+                <input type="checkbox" name="CAT_Custom_20060830_204784" id="CAT_Custom_20060830_204784_3" value="Pensioner" />Pensioner
+                <script type='text/javascript'>
+                    function setSelectedCheckbox(radioObj, options) {
+                        optionsToSelect = options.split(',');
+                        for (var i = 0; i < radioObj.length; i++) {
+                            radioObj[i].checked = false;
+                            if (optionsToSelect.indexOf(radioObj[i].value) != -1) {
+                                radioObj[i].checked = true;
+                            }
+                        }
+                    };
+                    setSelectedCheckbox(document.getElementsByName('CAT_Custom_20060830_204784'), '{module_customerfield,204784,20060830}');
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060831_204784">Amount</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060831}" maxlength="4000" name="CAT_Custom_20060831_204784" id="CAT_Custom_20060831_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060789_204784">DateJoined</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060789}" name="CAT_Custom_20060789_204784" id="CAT_Custom_20060789_204784" class="cat_textbox"
+                readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060789_204784');return false;" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Gender</label>
+                <br />
+                <input type="radio" name="CAT_Custom_20060799_204784" id="CAT_Custom_20060799_204784_0" value="Male" />Male
+                <br />
+                <input type="radio" name="CAT_Custom_20060799_204784" id="CAT_Custom_20060799_204784_1" value="Female" />Female
+                <script type='text/javascript'>
+                    function setCheckedValue(radioObj, newValue) {
+                        for (var i = 0; i < radioObj.length; i++) {
+                            radioObj[i].checked = false;
+                            if (radioObj[i].value == newValue.toString()) {
+                                radioObj[i].checked = true;
+                            }
+                        }
+                    };
+                    setCheckedValue(document.getElementsByName('CAT_Custom_20060799_204784'), '{module_customerfield,204784,20060799}');
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060784_204784">PostalAddress</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060784}" maxlength="4000" name="CAT_Custom_20060784_204784" id="CAT_Custom_20060784_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060785_204784">PostalSuburb</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060785}" maxlength="4000" name="CAT_Custom_20060785_204784" id="CAT_Custom_20060785_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060786_204784">PostalState</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060786}" maxlength="4000" name="CAT_Custom_20060786_204784" id="CAT_Custom_20060786_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060787_204784">PostalCode</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060787}" maxlength="4000" name="CAT_Custom_20060787_204784" id="CAT_Custom_20060787_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060790_204784">CategoryH</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060790}" maxlength="4000" name="CAT_Custom_20060790_204784" id="CAT_Custom_20060790_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060791_204784">CatHExpiry</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060791}" name="CAT_Custom_20060791_204784" id="CAT_Custom_20060791_204784" class="cat_textbox"
+                readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060791_204784');return false;" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060792_204784">CategoryAB</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060792}" maxlength="4000" name="CAT_Custom_20060792_204784" id="CAT_Custom_20060792_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060793_204784">CatABExpiry</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060793}" name="CAT_Custom_20060793_204784" id="CAT_Custom_20060793_204784" class="cat_textbox"
+                readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060793_204784');return false;" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060815_204784">Other</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060815}" maxlength="4000" name="CAT_Custom_20060815_204784" id="CAT_Custom_20060815_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060794_204784">OtherExpiry</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060794}" name="CAT_Custom_20060794_204784" id="CAT_Custom_20060794_204784" class="cat_textbox"
+                readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060794_204784');return false;" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060795_204784">Instructors</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060795}" maxlength="4000" name="CAT_Custom_20060795_204784" id="CAT_Custom_20060795_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060796_204784">Inst expiry</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060796}" name="CAT_Custom_20060796_204784" id="CAT_Custom_20060796_204784" class="cat_textbox"
+                readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060796_204784');return false;" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060797_204784">Note</label>
+                <br />
+                <textarea name="CAT_Custom_20060797_204784" id="CAT_Custom_20060797_204784" cols="10" rows="4" class="cat_listbox" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);">{module_customerfield,204784,20060797}</textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060800_204784">Range Officer</label>
+                <br />
+                <input type="checkbox" name="CAT_Custom_20060800_204784" id="CAT_Custom_20060800_204784" value="1" />
+            </td>
+        </tr>
+        <script type='text/javascript'>
+            function setCheckedValue(radioObj, newValue) {
+                for (var i = 0; i < radioObj.length; i++) {
+                    radioObj[i].checked = false;
+                    if (radioObj[i].value == newValue.toString()) {
+                        radioObj[i].checked = true;
+                    }
+                }
+            };
+            setCheckedValue(document.getElementsByName('CAT_Custom_20060800_204784'), '{module_customerfield,204784,20060800}');
+        </script>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060801_204784">Occupation</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060801}" maxlength="4000" name="CAT_Custom_20060801_204784" id="CAT_Custom_20060801_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060802_204784">Holds First Aid Certificate</label>
+                <br />
+                <input type="checkbox" name="CAT_Custom_20060802_204784" id="CAT_Custom_20060802_204784" value="1" />
+            </td>
+        </tr>
+        <script type='text/javascript'>
+            function setCheckedValue(radioObj, newValue) {
+                for (var i = 0; i < radioObj.length; i++) {
+                    radioObj[i].checked = false;
+                    if (radioObj[i].value == newValue.toString()) {
+                        radioObj[i].checked = true;
+                    }
+                }
+            };
+            setCheckedValue(document.getElementsByName('CAT_Custom_20060802_204784'), '{module_customerfield,204784,20060802}');
+        </script>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060803_204784">First Aid Cert Expiry</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060803}" name="CAT_Custom_20060803_204784" id="CAT_Custom_20060803_204784" class="cat_textbox"
+                readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20060803_204784');return false;" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060804_204784">Range Pass Card No</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060804}" maxlength="4000" name="CAT_Custom_20060804_204784" id="CAT_Custom_20060804_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060805_204784">Payment Rate</label>
+                <br />
+                <select name="CAT_Custom_20060805_204784" id="CAT_Custom_20060805_204784" class="cat_dropdown">
+                    <option value=" ">-- Please select --</option>
+                    <option value="Junior">Junior</option>
+                    <option value="ORD-Adult">ORD-Adult</option>
+                    <option value="ORD-Pensioner">ORD-Pensioner</option>
+                    <option value="Pensioner">Pensioner</option>
+                    <option value="Pensioner &#43;">Pensioner &#43;</option>
+                    <option value="RA-Adult">RA-Adult</option>
+                    <option value="RP-Adult">RP-Adult</option>
+                    <option value="Special">Special</option>
+                    <option value="Visitor">Visitor</option>
+                </select>
+                <script type='text/javascript'>
+                    document.getElementById('CAT_Custom_20060805_204784').value = '{module_customerfield,204784,20060805}';
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060806_204784">Range Disc Fee</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20060806}" maxlength="4000" name="CAT_Custom_20060806_204784" id="CAT_Custom_20060806_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20060807_204784">Holster Competency</label>
+                <br />
+                <input type="checkbox" name="CAT_Custom_20060807_204784" id="CAT_Custom_20060807_204784" value="1" />
+            </td>
+        </tr>
+        <script type='text/javascript'>
+            function setCheckedValue(radioObj, newValue) {
+                for (var i = 0; i < radioObj.length; i++) {
+                    radioObj[i].checked = false;
+                    if (radioObj[i].value == newValue.toString()) {
+                        radioObj[i].checked = true;
+                    }
+                }
+            };
+            setCheckedValue(document.getElementsByName('CAT_Custom_20060807_204784'), '{module_customerfield,204784,20060807}');
+        </script>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063423_204784">Participation</label>
+                <br />
+                <input type="checkbox" name="CAT_Custom_20063423_204784" id="CAT_Custom_20063423_204784" value="1" />
+            </td>
+        </tr>
+        <script type='text/javascript'>
+            function setCheckedValue(radioObj, newValue) {
+                for (var i = 0; i < radioObj.length; i++) {
+                    radioObj[i].checked = false;
+                    if (radioObj[i].value == newValue.toString()) {
+                        radioObj[i].checked = true;
+                    }
+                }
+            };
+            setCheckedValue(document.getElementsByName('CAT_Custom_20063423_204784'), '{module_customerfield,204784,20063423}');
+        </script>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063428_204784">Surname <span class="req">*</span>
+                </label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063428}" maxlength="4000" name="CAT_Custom_20063428_204784" id="CAT_Custom_20063428_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063429_204784">Given Name <span class="req">*</span>
+                </label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063429}" maxlength="4000" name="CAT_Custom_20063429_204784" id="CAT_Custom_20063429_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063430_204784">Middle Name</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063430}" maxlength="4000" name="CAT_Custom_20063430_204784" id="CAT_Custom_20063430_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063432_204784">Date Of Birth <span class="req">*</span>
+                </label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063432}" name="CAT_Custom_20063432_204784" id="CAT_Custom_20063432_204784" class="cat_textbox"
+                readonly="readonly" style="background-color:#F0F0F0;" onfocus="displayDatePicker('CAT_Custom_20063432_204784');return false;" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063433_204784">Residential Address</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063433}" maxlength="4000" name="CAT_Custom_20063433_204784" id="CAT_Custom_20063433_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063434_204784">Suburb</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063434}" maxlength="4000" name="CAT_Custom_20063434_204784" id="CAT_Custom_20063434_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063435_204784">State</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063435}" maxlength="4000" name="CAT_Custom_20063435_204784" id="CAT_Custom_20063435_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063584_204784">Postcode</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063584}" maxlength="4000" name="CAT_Custom_20063584_204784" id="CAT_Custom_20063584_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063437_204784">Secondary e-mail address</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063437}" maxlength="4000" name="CAT_Custom_20063437_204784" id="CAT_Custom_20063437_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063438_204784">Fax</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063438}" maxlength="4000" name="CAT_Custom_20063438_204784" id="CAT_Custom_20063438_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063439_204784">Home</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063439}" maxlength="4000" name="CAT_Custom_20063439_204784" id="CAT_Custom_20063439_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063440_204784">Work</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063440}" maxlength="4000" name="CAT_Custom_20063440_204784" id="CAT_Custom_20063440_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063441_204784">Mobile</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063441}" maxlength="4000" name="CAT_Custom_20063441_204784" id="CAT_Custom_20063441_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063578_204784">OtherOrganization</label>
+                <br />
+                <input type="checkbox" name="CAT_Custom_20063578_204784" id="CAT_Custom_20063578_204784" value="1" />
+            </td>
+        </tr>
+        <script type='text/javascript'>
+            function setCheckedValue(radioObj, newValue) {
+                for (var i = 0; i < radioObj.length; i++) {
+                    radioObj[i].checked = false;
+                    if (radioObj[i].value == newValue.toString()) {
+                        radioObj[i].checked = true;
+                    }
+                }
+            };
+            setCheckedValue(document.getElementsByName('CAT_Custom_20063578_204784'), '{module_customerfield,204784,20063578}');
+        </script>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063579_204784">OtherOrganizationDetails</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063579}" maxlength="4000" name="CAT_Custom_20063579_204784" id="CAT_Custom_20063579_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063580_204784">has current firearm license</label>
+                <br />
+                <input type="checkbox" name="CAT_Custom_20063580_204784" id="CAT_Custom_20063580_204784" value="1" />
+            </td>
+        </tr>
+        <script type='text/javascript'>
+            function setCheckedValue(radioObj, newValue) {
+                for (var i = 0; i < radioObj.length; i++) {
+                    radioObj[i].checked = false;
+                    if (radioObj[i].value == newValue.toString()) {
+                        radioObj[i].checked = true;
+                    }
+                }
+            };
+            setCheckedValue(document.getElementsByName('CAT_Custom_20063580_204784'), '{module_customerfield,204784,20063580}');
+        </script>
+        <tr>
+            <td>
+                <label for="CAT_Custom_20063581_204784">current firearm license details</label>
+                <br />
+                <input type="text" value="{module_customerfield,204784,20063581}" maxlength="4000" name="CAT_Custom_20063581_204784" id="CAT_Custom_20063581_204784"
+                class="cat_textbox" />
+            </td>
+        </tr>
+        <input type="hidden" name="FormID" id="FormID" value="204784" />
+        <tr>
+            <td>
+                <input class="cat_button" type="submit" value="Submit" id="catupdatedetailsformbutton" />
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b2050.r494698-phase1"></script>
+    <script type="text/javascript" src="/CatalystScripts/Java_DatePicker.js?vs=b2050.r494698-phase1"></script>
+    <script type="text/javascript">
+        //<![CDATA[
+        if (document.getElementById('Title') != null) document.getElementById('Title').value = '{module_title}';
+        if (document.getElementById('HomeCountry') != null) document.getElementById('HomeCountry').value = '{module_homecountry}';
+        if (document.getElementById('WorkCountry') != null) document.getElementById('WorkCountry').value = '{module_workcountry}';
+        var submitcount9055 = 0;
+        
+        function checkWholeForm9055(theForm) {
+            var why = "";
+            if (theForm.FirstName) why += isEmpty(theForm.FirstName.value, "First Name");
+            if (theForm.LastName) why += isEmpty(theForm.LastName.value, "Last Name");
+            if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value);
+            if (theForm.Password && theForm.PasswordConfirm) {
+                if (theForm.Password.value.length > 0 || theForm.PasswordConfirm.value.length > 0) {
+                    if (theForm.Password.value != theForm.PasswordConfirm.value) why += appendBreak(
+                        "- Password and its confirmation do not match.");
+                    if (theForm.Password.value.length < 6) why += appendBreak("- Password must be 6 characters or longer.");
+                }
+            }
+            if (theForm.CAT_Custom_20060830_204784) why += checkSelected(theForm.CAT_Custom_20060830_204784, "Membership Type");
+            if (theForm.CAT_Custom_20060789_204784)
+                if (theForm.CAT_Custom_20060789_204784.value.length > 0) why += checkDate(theForm.CAT_Custom_20060789_204784.value, "DateJoined");
+            if (theForm.CAT_Custom_20060791_204784)
+                if (theForm.CAT_Custom_20060791_204784.value.length > 0) why += checkDate(theForm.CAT_Custom_20060791_204784.value, "CatHExpiry");
+            if (theForm.CAT_Custom_20060793_204784)
+                if (theForm.CAT_Custom_20060793_204784.value.length > 0) why += checkDate(theForm.CAT_Custom_20060793_204784.value, "CatABExpiry");
+            if (theForm.CAT_Custom_20060794_204784)
+                if (theForm.CAT_Custom_20060794_204784.value.length > 0) why += checkDate(theForm.CAT_Custom_20060794_204784.value, "OtherExpiry");
+            if (theForm.CAT_Custom_20060796_204784)
+                if (theForm.CAT_Custom_20060796_204784.value.length > 0) why += checkDate(theForm.CAT_Custom_20060796_204784.value, "Inst expiry");
+            if (theForm.CAT_Custom_20060803_204784)
+                if (theForm.CAT_Custom_20060803_204784.value.length > 0) why += checkDate(theForm.CAT_Custom_20060803_204784.value,
+                                                                                          "First Aid Cert Expiry");
+            if (theForm.CAT_Custom_20063428_204784) why += isEmpty(theForm.CAT_Custom_20063428_204784.value, "Surname");
+            if (theForm.CAT_Custom_20063429_204784) why += isEmpty(theForm.CAT_Custom_20063429_204784.value, "Given Name");
+            if (theForm.CAT_Custom_20063432_204784) why += checkDate(theForm.CAT_Custom_20063432_204784.value, "Date Of Birth");
+            if (why != "") {
+                alert(why);
+                return false;
+            }
+            if (submitcount9055 == 0) {
+                submitcount9055++;
+                theForm.submit();
+                return false;
+            } else {
+                alert("Form submission is in progress.");
+                return false;
+            }
+        }
+        //]]>
+    </script>
+</form><!DOCTYPE html>
+<html>
+    <head>
+        <title>Untitled page</title>
+        <meta name="description" content="" />
+    </head>
+    <body>
+    </body>
+</html>

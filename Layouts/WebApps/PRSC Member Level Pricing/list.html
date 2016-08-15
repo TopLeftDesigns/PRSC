@@ -1,0 +1,59 @@
+<div class="columns large-12"> <span class="club-membership">
+<p>PRSC Fee Pricing</p>
+<p id="lifetime-member-true" style="display: none;">No fee applicable to Lifetime members</p>
+</span> <span data-clubmembership="{tag_club membership}" id="club-membership-amount">
+<p style="display: inline;">${tag_club membership}</p>
+</span> </div>
+<div id="qcta-levy" class="columns large-12">
+<span class="club-membership">
+<p>Compulsory QCTA Levy</p>
+</span> <span data-qctalevy="{tag_qcta levy}" id="qctalevy-amount">
+<p style="display: inline;">${tag_qcta levy}</p>
+</span> </div>
+<h2>A.C.T.A. Membership</h2>
+<div class="columns large-12 acta-membership">
+<p class="membership">
+<input type="radio" data-specialmembership="{tag_after june 30 full membership fee}" value="fullmembership" name="CAT_Custom_19993305_167502" id="CAT_Custom_19993305_167502_6" class="radio" />
+Full Membership </p>
+<p class="amount-wrapper"> <span class="amount" id="fullmembership">${tag_full membership}</span> </p>
+</div>
+<div class="columns large-12 acta-membership">
+<p class="membership">
+<input type="radio" value="partnermember" name="CAT_Custom_19993305_167502" id="CAT_Custom_19993305_167502_5" class="checkbox" />
+Partner of Member </p>
+<p class="amount-wrapper"> <span id="partnermember" class="amount">${tag_partner of full member}</span> </p>
+</div>
+<div class="columns large-12 acta-membership">
+<p class="membership">
+<input type="radio" value="verteran" name="CAT_Custom_19993305_167502" id="CAT_Custom_19993305_167502_4" class="checkbox" />
+Veteren Concession (65 years and over at date of registration) </p>
+<p class="amount-wrapper"> <span id="verteran" class="amount">${tag_veteran concession}</span> </p>
+</div>
+<div class="columns large-12 acta-membership">
+<p class="membership">
+<input type="radio" value="longservice" name="CAT_Custom_19993305_167502" id="CAT_Custom_19993305_167502_3" class="checkbox" />
+Long Service Consession (30 years adult membership) </p>
+<p class="amount-wrapper"> <span id="longservice" class="amount">${tag_long service concession}</span> </p>
+</div>
+<div class="columns large-12 acta-membership">
+<p class="membership ">
+<input type="radio" value="juniormembership" name="CAT_Custom_19993305_167502" id="CAT_Custom_19993305_167502_2" class="checkbox" />
+Junior Membership </p>
+<p class="amount-wrapper"> <span id="juniormembership" class="amount">${tag_junior membership}</span> </p>
+</div>
+<div class="columns large-12 acta-membership">
+<p class="membership">
+<input type="radio" value="clubonly" name="CAT_Custom_19993305_167502" id="CAT_Custom_19993305_167502_1" class="checkbox" />
+Club Only Member </p>
+<p class="amount-wrapper"> <span id="clubonly" class="amount">${tag_club only member}</span> </p>
+</div>
+<div class="columns large-12 login-{module_isloggedin} acta-membership">
+<p class="membership">
+<input type="radio" value="newmember" name="CAT_Custom_19993305_167502" id="CAT_Custom_19993305_167502_0" class="checkbox" />
+New Start Membership </p>
+<p class="amount-wrapper"> <span id="newmember" class="amount">${tag_new start membership}</span> </p>
+</div>
+<div id="acta-levy" class="row acta-membership">
+<p class="membership " style="width: 77%;"> <strong>ACTA Levy (applies to all NEW members excl other club members)</strong> </p>
+<p class="amount-wrapper"> <span data-levy="{tag_member levy}" id="levy-amount">${tag_member levy}</span> </p>
+</div>

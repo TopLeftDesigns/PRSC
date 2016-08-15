@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+	<title>Website Documentation - BC Site Technical Guide</title>
+ 	<meta name="description" content="This document provides technical descriptions of how your Business Catalyst site has been developed and should be used by the site owner or their web master as a reference for making custom changes or understanding how the particular features of BC have been implemented for this particular website">
+	<meta name="author" content="Greg Tomkins">
+	<meta name="copyright" content="Greg Tomkins">
+	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
+	<meta name="date" content="2016-06-11T00:00:00+02:00">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/documenter_style.css" rel="stylesheet">
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    
+	
+	<style>
+		html, body{background-color:#E9E9E9;color:#14115C;}
+		h1,h2,h3,h4,h5,h6{color:#14115C;}
+		section table{background-color:#E9E9E9;}
+		::-moz-selection{background:#FF9900;color:#424242;}
+		::selection{background:#FF9900;color:#424242;}
+		a.brand{background-image:url();}
+		a, a:hover, a:active{color:#FF9900;}
+		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #F7F7F7;}
+		div.navbar-inner, .navbar .nav li ul{background:#BCBCBC;color:#222222;}
+		a.btn-navbar{background:#BCBCBC;color:#222222;}
+		.navbar .nav li a{color:#222222;text-shadow:1px 1px 0px #DBDBDB;}
+		.navbar .nav li a:hover, .navbar .nav li.active a{text-shadow:none;}
+		div.navbar-inner ul{}
+		.marketing-byline{color:#F7F7F7;}
+		.navbar .nav > li a{color:#424242;}
+		.navbar .nav > li a:hover, a.btn-navbar:hover{background:#FF9900;color:#424242;}
+		.navbar .nav .active > a, .navbar .nav .active > a:hover, a.btn-navbar:active{background-color:#FF9900;color:#424242;}
+		.navbar .nav li ul li a:hover{background:#FF9900;color:#424242;}
+		.navbar .nav li ul li a:active{background:#FF9900;color:#424242;}
+		.btn-primary {
+			  background-image: -moz-linear-gradient(top, #FFFFFF, #B56D00);
+			  background-image: -ms-linear-gradient(top, #FFFFFF, #B56D00);
+			  background-image: -webkit-gradient(linear, 0 0, 0 FFFFFF%, from(#BCBCBC), to(#B56D00));
+			  background-image: -webkit-linear-gradient(top, #FFFFFF, #B56D00);
+			  background-image: -o-linear-gradient(top, #FFFFFF, #B56D00);
+			  background-image: linear-gradient(top, #FFFFFF, #B56D00);
+			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#B56D00', GradientType=0);
+			  border-color: #B56D00 #B56D00 #bfbfbf;
+			  color:#FFFFFF;
+		}
+		.btn-primary:hover,
+		.btn-primary:active,
+		.btn-primary.active,
+		.btn-primary.disabled,
+		.btn-primary[disabled] {
+		  background-color: #B56D00;
+		}
+		#documenter_copyright{display:block !important;visibility:visible !important;}
+	</style>
+	
+	
+	
+    </head>
+    
+<body class="documenter-project-website-documentation" data-spy="scroll" id="top">
+
+<!-- Documentation Navbar -->
+
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container"> 
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+			<a class="brand" href="#">Website Documentation - BC Site Technical Guide</a>
+			<div class="nav-collapse">
+			<ul class="nav">
+					
+			<li><a href="#architecture" title="Architecture">Architecture</a>
+				<ul>
+					<li><a href="#architecture_site_design_template_framework">Site Design - Template / Framework</a>
+					<li><a href="#architecture_data_content_types">Data / Content Types</a>
+					<li><a href="#architecture_folder_content">Folder Content</a>
+					<li><a href="#architecture_site_templates">Site Templates</a>
+					<li><a href="#architecture_custom_module_list_templates">Custom Module List Templates</a>
+					<li><a href="#architecture_content_holders">Content Holders</a>
+					<li><a href="#architecture__nbsp">&nbsp;</a>
+				</ul>
+			</li>
+			<li><a href="#features" title="Features">Features</a></li>
+			<li><a href="#web_apps" title="Web Apps">Web Apps</a></li>
+			<li><a href="#ecommerce" title="eCommerce">eCommerce</a>
+				<ul>
+					<li><a href="#ecommerce_catalogs">Catalogs</a>
+					<li><a href="#ecommerce_products">Products</a>
+					<li><a href="#ecommerce_shipping">Shipping</a>
+					<li><a href="#ecommerce_payment_gateways">Payment Gateways</a>
+				</ul>
+			</li>
+			<li><a href="#forms" title="Forms">Forms</a></li>
+			<li><a href="#images_videos" title="Images | Videos">Images | Videos</a></li>
+			<li><a href="#modules" title="Modules">Modules</a>
+				<ul>
+					<li><a href="#modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_blogs"blogs_a">Blogs</a>
+					<li><a href="#modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_events"events_a">Events</a>
+					<li><a href="#modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_photo_galleries"photo_galleries_a">Photo galleries</a>
+					<li><a href="#modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_media_downloads"media_downloads_a">Media downloads</a>
+					<li><a href="#modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_news"news_a">News</a>
+					<li><a href="#modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_forums"forums_a">Forums</a>
+					<li><a href="#modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_faq"faq_a">FAQ</a>
+					<li><a href="#modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_ad_rotators"ad_rotators_a">Ad Rotators</a>
+				</ul>
+			</li>
+			<li><a href="#social_integration" title="Social Integration">Social Integration</a>
+				<ul>
+					<li><a href="#social_integration_business_profiles">Business Profiles</a>
+					<li><a href="#social_integration_personal_profiles">Personal Profiles</a>
+					<li><a href="#social_integration_page_sharing">Page Sharing</a>
+					<li><a href="#social_integration_following">Following</a>
+				</ul>
+			</li>
+			<li><a href="#site_settings" title="Site Settings">Site Settings</a>
+				<ul>
+					<li><a href="#site_settings_categories">Categories</a>
+					<li><a href="#site_settings_domain_dns_nbsp_settings">Domain DNS&nbsp; Settings</a>
+					<li><a href="#site_settings_secure_zones">Secure Zones</a>
+					<li><a href="#site_settings_categories">Categories</a>
+					<li><a href="#site_settings_google_analytics">Google Analytics</a>
+				</ul>
+			</li>
+			<li><a href="#training" title="Training">Training</a></li>
+			<li><a href="#screen_shots" title="Screen Shots">Screen Shots</a>
+				<ul>
+					<li><a href="#screen_shots_home_page">Home Page</a>
+					<li><a href="#screen_shots_event_calendar_list_view">Event Calendar - List View</a>
+					<li><a href="#screen_shots_classified_ads_list">Classified Ads List</a>
+					<li><a href="#screen_shots_classified_ad_detail_view">Classified Ad - Detail View</a>
+					<li><a href="#screen_shots_member_page">Member Page</a>
+				</ul>
+			</li>
+
+			</ul>
+			</div>
+		</div>
+	</div>
+</div> <!-- End of Navbar -->
+
+<!-- Main Container Beginning -->			
+			
+<div class="container" id="documenter_content">
+    
+	<div id="documenter-cover">
+	<div class="masthead">
+	    <h1>Website Documentation - BC Site Technical Guide</h1>
+	    <p>This document provides technical descriptions of how your Business Catalyst site has been developed and should be used by the site owner or their web master as a reference for making custom changes or understanding how the particular features of BC have been implemented for this particular website</p>
+	    <ul class="marketing-byline">
+			<li>created: 10/10/2014</li>
+			<li>latest update: 06/11/2016</li>
+			<li>by: Greg Tomkins</li>
+			<li><a href=""></a></li>
+		</ul>
+	    <p class="download-info">
+			<a href="http://bc.topleftdesigns.com.au" class="btn btn-primary btn-large">Log Support Ticket</a> <a href="mailto:&#99;&#117;&#115;&#116;&#115;&#101;&#114;&#118;&#105;&#99;&#101;&#64;&#116;&#111;&#112;&#108;&#101;&#102;&#116;&#100;&#101;&#115;&#105;&#103;&#110;&#115;&#46;&#99;&#111;&#109;&#46;&#97;&#117;" class="btn btn-large">Email Support Ticket</a> 
+		</p>
+		
+	</div> <!-- masthead -->
+	
+   <div id="intro">
+    <p class="highlight hero-unit">This site should provide you with sufficient detail to allow you to understand how the different features incorporated into your website have been implemented by way of BC modules. The details provided are for your own particular website and assume you already have a working knowledge in the use of Business Catalyst.<br>
+
+We do not encourage clients to make changes to the layouts in any site templates or module layouts unless you have a deep understanding of HTML and CSS and invariably, some understanding of Javascript. Making such changes will impact many parts of your site and can lead to serious problems.<br>
+
+If you are at all unsure about what you want to do, please contact us through the support portal (see buttons above) or phone us on 0419 706 325.
+
+All change requests or problems with your site MUST be logged by way of a support ticket by either logging into our support portal or by sending an email to us via the above button.</p>
+   </div> <!-- intro -->
+   
+	</div>
+      
+  <section id="architecture">
+	<div class="page-header"><h3>Architecture</h3><hr class="notop"></div>
+<h4 id="architecture_site_design_template_framework">Site Design - Template / Framework</h4>
+<div class="clearfix">
+	<table border="1" cellpadding="5" class="span9">
+		<tbody>
+			<tr>
+				<td align="left" valign="top" width="30%">
+					BC Template</td>
+				<td align="left" colspan="3" valign="top">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					Base template/theme</td>
+				<td align="left" colspan="3" valign="top">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					<blockquote>
+						Source</blockquote>
+				</td>
+				<td align="left" colspan="3" valign="top">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					Responsive Layout</td>
+				<td align="left" colspan="3" valign="top">
+					<p>
+						<label><input id="ResponsiveLayout_0" name="Responsive Layout" type="radio" value="false"> Yes</label> <label> <input id="ResponsiveLayout_1" name="Responsive Layout" type="radio" value="false"> No</label></p>
+				</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					Responsive Framework</td>
+				<td align="left" valign="top">
+					&nbsp;</td>
+				<td align="left" valign="top" width="15%">
+					Version</td>
+				<td align="left" valign="top" width="15%">
+					&nbsp;</td>
+			</tr>
+			<tr>
+				<td align="left" valign="top">
+					&nbsp;</td>
+				<td align="left" colspan="3" rowspan="1" valign="top">
+					&nbsp;</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<p>
+	&nbsp;</p>
+<p>
+	Your website has been developed on the Adobe Business Catalyst platform. If you have not yet acquainted yourself with this system and its wide range of features and modules you may do so by either reviewing these at our website at <a href="http://topleftdesigns.com.au/services/business_catalyst.htm" target="_blank">http://topleftdesigns.com.au/services/business_catalyst.htm</a> or for more detail by visiting the main website at Business Catalyst <a href="http://businesscatalyst.com/features" target="_blank">http://businesscatalyst.com/features</a></p>
+<p>
+	Access to online training for Business Catalyst can be found at <a href="http://docs.businesscatalyst.com/support" target="_blank">http://docs.businesscatalyst.com/support</a></p>
+<p>
+	Access to your site is via your usual domain with /admin appended to the end. You will then be required to login to the BC administration console via the admin username and password we have setup for you.</p>
+<p>
+	Once in to the site you will find the administration dashboard and menu options giving you access to the full range of options available to you.</p>
+<h4 id="architecture_data_content_types">Data / Content Types</h4>
+<p>
+	Your site is comprised of different data that makes up your overall site. The sorts of data held in yru BC site to which you have access is:</p>
+<ul>
+	<li>
+		Site Templates for controlling how yur overal lpages ae presented in a consistent manner</li>
+	<li>
+		Module templates that control how data held in specific BC Modules are presented</li>
+	<li>
+		System Pages and email layouts &amp; content</li>
+	<li>
+		static web pages</li>
+	<li>
+		Web Forms used for capture of information on different pages of your site</li>
+	<li>
+		Content Holders for commonly used HTML code in any part of your site</li>
+	<li>
+		CSS files that control the style settings for the content presented</li>
+	<li>
+		JS or Javascript files that provide certain processing of page content within your browser</li>
+	<li>
+		Images and Videos used witin your site&#39;s pages and modules</li>
+	<li>
+		CRM data</li>
+	<li>
+		Web Apps which ae custom databases utilised witin your site</li>
+	<li>
+		Module data</li>
+	<li>
+		eCommerce related data arund products and product catalogs, tax and shipping</li>
+	<li>
+		Site Settings</li>
+</ul>
+<h4 id="architecture_folder_content">Folder Content</h4>
+<p>
+	If you manage your site pages via the Tree View or view your site via the file manager you will see the overall file structure for your site as illustrated below. The details of what is held in any of these folders which you need to be concerned follow.</p>
+<div class="RadTreeView RadTreeView_Default" id="ctl00_cp_uc_rt">
+	<!-- 2011.2.712.35 -->
+	<ul class="rtUL rtLines">
+		<li class="rtLI rtFirst rtLast">
+			<div class="rtTop">
+				<span class="rtIn folder treenode">/</span></div>
+			<ul class="rtUL">
+				<li class="rtLI">
+					<div class="rtTop">
+						<span class="rtIn folder treenode">_assets</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">_dev</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">fonts</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">interventions</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">ModuleTemplates</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">stylesheets</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">uploads</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<span class="rtIn folder treenode">Workshops</span></div>
+				</li>
+				<li class="rtLI">
+					<div class="rtMid">
+						<a class="rtIn webpage treenode" href="/Admin/WebPages_Detail.aspx?PageID=13482461" title="/index">Index (Start Page for soul-healers.worldsecuresystems.com and 1 others)</a></div>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<h4 id="architecture_site_templates">Site Templates</h4>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<th scope="col" style="width: 30%;">
+				Template name</th>
+			<th scope="col" style="width: 50px;">
+				ID</th>
+			<th scope="col">
+				Details</th>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<h4 id="architecture_custom_module_list_templates">Custom Module List Templates</h4>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<th scope="col" style="width: 50%;">
+				Template name</th>
+			<th scope="col" style="width: 50px;">
+				ID</th>
+			<th scope="col">
+				Details</th>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<h4 id="architecture_content_holders">Content Holders</h4>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 100%;">
+	<tbody>
+		<tr>
+			<th scope="col" style="width: 30%;">
+				Content Holder name</th>
+			<th scope="col" style="width: 50px;">
+				ID</th>
+			<th scope="col">
+				Details</th>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<h4 id="architecture__nbsp">&nbsp;</h4>
+</section>
+<section id="features">
+	<div class="page-header"><h3>Features</h3><hr class="notop"></div>
+<p>
+	Your website includes a number of functional features</p>
+</section>
+<section id="web_apps">
+	<div class="page-header"><h3>Web Apps</h3><hr class="notop"></div>
+<p>
+	Start Here</p>
+</section>
+<section id="ecommerce">
+	<div class="page-header"><h3>eCommerce</h3><hr class="notop"></div>
+<h4 id="ecommerce_catalogs">Catalogs</h4>
+<p>
+	&nbsp;</p>
+<h4 id="ecommerce_products">Products</h4>
+<p>
+	Classification of products</p>
+<p>
+	Custom product fields</p>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 500px;">
+	<tbody>
+		<tr>
+			<td style="width: 175px;">
+				Custom1</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Custom2</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Custom3</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				Custom4</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+	&nbsp;</p>
+<h4 id="ecommerce_shipping">Shipping</h4>
+<p>
+	&nbsp;</p>
+<h4 id="ecommerce_payment_gateways">Payment Gateways</h4>
+<p>
+	&nbsp;</p>
+</section>
+<section id="forms">
+	<div class="page-header"><h3>Forms</h3><hr class="notop"></div>
+<p>	Your site is incusive of certain Web Forms used for capture of information by visitors to the site who wish to submit general enquiries, bookings or purchase goods. The forms used within your site are as follows:</p>
+<table border="0" cellpadding="5" cellspacing="1" style="width: 500px;">
+	<thead>
+		<tr>
+			<th scope="col" style="width: 30%;">
+				Form name</th>
+			<th scope="col" style="width: 50px;">
+				ID</th>
+			<th scope="col">
+				Details</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+		<tr>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+			<td>
+				&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+<p>	&nbsp;</p>
+</section>
+<section id="images_videos">
+	<div class="page-header"><h3>Images | Videos</h3><hr class="notop"></div>
+<p>	Start Here</p>
+</section>
+<section id="modules">
+	<div class="page-header"><h3>Modules</h3><hr class="notop"></div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/blogs"><img alt="Blogs" src="assets/images/image_2.png" style="border-width: 0px; border-style: solid; float: left; margin-left: 11px; margin-right: 11px;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_blogs"blogs_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/blogs">Blogs</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Create, configure, customize and integrate with social media. Make your blog part of your online business.</div>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/events"><img alt="Events" src="assets/images/image_3.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_events"events_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/events">Events</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Promote and manage simple events, using sign-up forms and payment collection, capacity limits and automate follow-up emails prior to the event date.</div>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/photo-galleries"><img alt="Photo galleries" src="assets/images/image_8.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_photo_galleries"photo_galleries_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/photo-galleries">Photo galleries</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Turn a folder containing images into a photo gallery, easy to manage and distribute across your site.</div>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/media-downloads"><img alt="Media downloads" src="assets/images/image_6.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_media_downloads"media_downloads_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/media-downloads">Media downloads</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Let users download media such as PDF files, Word documents, videos, and music.</div>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/news"><img alt="News" src="assets/images/image_7.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_news"news_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/news">News</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Keep your site up to date and visitors informed. Use the AJAX enabled news module for a smooth user experience.</div>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/forums"><img alt="Forums" src="assets/images/image_5.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_forums"forums_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/forums">Forums</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Enable community discussions through a forum. Let visitors post freely or moderate comments before they go live.</div>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/faq"><img alt="FAQ" src="assets/images/image_4.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_faq"faq_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/faq">FAQ</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Users will always have questions. Stay prepared and provide essential answers through the AJAX enabled FAQ module.</div>
+</div>
+<div class="mod_item span12">
+	<div class="span1">
+		<a href="http://docs.businesscatalyst.com/user-manual/modules/ad-rotators"><img alt="Ad Rotators" src="assets/images/image_1.png" style="border-width: 0px; border-style: solid; margin-left: 11px; margin-right: 11px; float: left;"></a></div>
+	<div class="mod_name span2">
+		<h4 id="modules_a_href"http_docsbusinesscatalystcom_user_manual_modules_ad_rotators"ad_rotators_a"><a href="http://docs.businesscatalyst.com/user-manual/modules/ad-rotators">Ad Rotators</a></h4>
+	</div>
+	<div class="mod_dets span8">
+		Use the ad rotator module and spare the time to code scripts that automatically swap images.</div>
+</div>
+<p>	&nbsp;</p>
+</section>
+<section id="social_integration">
+	<div class="page-header"><h3>Social Integration</h3><hr class="notop"></div>
+<p>	Integration of yoru website with your social profiles can occur in a number of ways</p>
+<p>	Your site has been set up with integration to the following social profiles</p>
+<h4 id="social_integration_business_profiles">Business Profiles</h4>
+<p>	&nbsp;</p>
+<h4 id="social_integration_personal_profiles">Personal Profiles</h4>
+<p>	&nbsp;</p>
+<h4 id="social_integration_page_sharing">Page Sharing</h4>
+<p>	&nbsp;</p>
+<h4 id="social_integration_following">Following</h4>
+</section>
+<section id="site_settings">
+	<div class="page-header"><h3>Site Settings</h3><hr class="notop"></div>
+<h4 id="site_settings_categories">Categories</h4>
+<p>	&nbsp;</p>
+<h4 id="site_settings_domain_dns_nbsp_settings">Domain DNS&nbsp; Settings</h4>
+<p>	Your email is being hosted with BC as part of your hosting plan.</p>
+<p>	The following domains are being managed internally within yru BC site:</p>
+<ol>
+	<li>		www.yourdomain.com.au (set as the default domain)</li>
+	<li>		yourdomain.com.au - this domain has been redirected to the www default domain</li>
+</ol>
+<h4 id="site_settings_secure_zones">Secure Zones</h4>
+<p>	No secure zones have been implemented within your site.</p>
+<h4 id="site_settings_categories">Categories</h4>
+<p>	No specific&nbsp; categories have been utilised within yur site</p>
+<h4 id="site_settings_google_analytics">Google Analytics</h4>
+<p>	Google Analytics and Webmaster have been set up on your default domain.</p>
+<p>	You have been granted access to these accounts through yoru Google Account:</p>
+<p>	&nbsp;</p>
+<p>	&nbsp;</p>
+<p>	&nbsp;</p>
+<p>	&nbsp;</p>
+</section>
+<section id="training">
+	<div class="page-header"><h3>Training</h3><hr class="notop"></div>
+<h3>
+	Introduction to Business Catalyst</h3>
+<p>	To familiarise yourself with Business Catalyst you should take a look at this video -<br>
+	<a href="http://docs.businesscatalyst.com/videos/getting-started/what-is-business-catalyst-2">What is Business Catalyst?</a> - <a href="http://docs.businesscatalyst.com/videos/getting-started/what-is-business-catalyst-2">http://docs.businesscatalyst.com/videos/getting-started/what-is-business-catalyst-2</a></p>
+<p>	Other topics we have selected from those available we suggest you look at by way of an introduction to BC are as follows:</p>
+<p style="margin-left:36.0pt;">
+	<a href="http://docs.businesscatalyst.com/getting-started/introducing-the-business-catalyst-admin-console-1" title="Introducing the Business Catalyst Admin Console">Introducing the Business Catalyst Admin Console</a></p>
+<p style="margin-left:36.0pt;">
+	Discover the admin interface and learn about every step involved in using it, from login and password recovery to dashboard layout and functionality.</p>
+<p style="margin-left:36.0pt;">
+	<a href="http://docs.businesscatalyst.com/getting-started/site-hosting-plans-australian-pricing" title="Site hosting plans - Australian pricing">Site hosting plans - Australian pricing</a></p>
+<p style="margin-left:36.0pt;">
+	Discover the admin interface and learn about every step involved in using it, from login and password recovery to dashboard layout and functionality.</p>
+<p style="margin-left:36.0pt;">
+	<a href="http://docs.businesscatalyst.com/getting-started/how-to-add-or-edit-your-website-content" title="How to add or edit your website's content">How to add or edit your website&#39;s content</a></p>
+<p style="margin-left:36.0pt;">
+	The WYSIWYG. The Develop tab. Dreamweaver. Muse. The In Context Editor.</p>
+<p style="margin-left:36.0pt;">
+	<a href="http://docs.businesscatalyst.com/getting-started/the-wysiwyg-editor" title="The WYSIWYG content editor">The WYSIWYG content editor</a></p>
+<p style="margin-left:36.0pt;">
+	Learn how to use the What You See Is What You Get editor. Customize editor options such as fonts and CSS rules.</p>
+<p style="margin-left:36.0pt;">
+	<a href="http://docs.businesscatalyst.com/getting-started/how-to-upload-files-to-your-site" title="How to upload files to your site">How to upload files to your site</a></p>
+<p style="margin-left:36.0pt;">
+	Upload a file using the File Manager. Preview a file. SFTP and Develop mode.</p>
+<p>	Following this we have a number of tutorials on our own site that you can log into from this link - <a href="http://topleftdesigns.com.au/resources/bc-training-tutorials">http://topleftdesigns.com.au/resources/bc-training-tutorials</a></p>
+<table border="0" cellpadding="0" cellspacing="0">
+	<tbody>
+		<tr>
+			<td style="width:359px;height:37px;">
+				<p>					<strong>YOUR LOGIN CREDENTIALS ARE</strong>-</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="width:359px;">
+				<p>					<strong>Username</strong>:</p>
+				<p>					<strong>Password</strong>:&nbsp;</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>	Once the library loads you will find a range of videos not all of which are relevant. I would however suggest the following to introduce you to BC concepts and general features&hellip;</p>
+<ol>
+	<li>		Getting Started: &nbsp;Logging Into Your Admin Backend</li>
+	<li>		Content Editing: Uploading and Inserting Photos, Positioning and Styling Photos ; Learn to enter content with copy and paste</li>
+	<li>		Customers: Managing Customer Records</li>
+	<li>		Marketing: Organizing, Editing, Deleting Email Campaigns</li>
+</ol>
+<h3>
+	Custom Training Videos for Your Site</h3>
+<p>	The following videos have been put together specific to yuor site and provide more indepth information on how to maintain key aspects of your website.</p>
+<p>	&nbsp;</p>
+</section>
+<section id="screen_shots">
+	<div class="page-header"><h3>Screen Shots</h3><hr class="notop"></div>
+<h4 id="screen_shots_home_page">Home Page</h4>
+<p>
+	<img alt="" src="assets/images/image_9.jpg" style="width: 450px; height: 1457px;"></p>
+<p>
+	&nbsp;</p>
+<h4 id="screen_shots_event_calendar_list_view">Event Calendar - List View</h4>
+<p>
+	<img alt="" src="assets/images/image_10.jpg" style="width: 450px; height: 854px;"></p>
+<p>
+	&nbsp;</p>
+<h4 id="screen_shots_classified_ads_list">Classified Ads List</h4>
+<p>
+	<img alt="" src="assets/images/image_11.jpg" style="width: 450px; height: 335px;"></p>
+<p>
+	&nbsp;</p>
+<h4 id="screen_shots_classified_ad_detail_view">Classified Ad - Detail View</h4>
+<p>
+	<img alt="" src="assets/images/image_12.jpg" style="width: 450px; height: 335px;"></p>
+<p>
+	&nbsp;</p>
+<h4 id="screen_shots_member_page">Member Page</h4>
+<p>
+	<img alt="" src="assets/images/image_13.jpg"  ></p>
+</section>
+
+
+
+    <hr />
+
+<footer>
+    <p>Copyright Greg Tomkins 2016 made with the <a href="http://rxa.li/documenter">Documenter v2.0</a></p>
+</footer>
+
+</div><!-- /container --> 
+
+<!-- Le javascript
+    ================================================== --> 
+<!-- Placed at the end of the document so the pages load faster --> 
+<script>document.createElement('section');var duration='400',easing='swing';</script>
+<script src="assets/js/jquery.js"></script> 
+<script src="assets/js/jquery.scrollTo.js"></script>
+<script src="assets/js/jquery.easing.js"></script>
+<script src="assets/js/scripts.js"></script> 
+<script src="assets/js/google-code-prettify/prettify.js"></script> 
+<script src="assets/js/bootstrap-min.js"></script> 
+</body>
+</html>

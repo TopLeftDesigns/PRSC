@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="columns large-12 text-center">
+    <div class="circle"> <span><em class="icon-calendar"></em></span> </div>
+<!--   Thu jquery we swap heading content on hover		-->
+    <div class="flipstate">
+      <div class="disp_a">
+        <h2><a href="#">Upcoming Events</a></h2>
+      </div>
+      <div class="disp_b">
+        <h2><a href="/calendar-v2" title"calendar of events">View All Upcoming Events</a></h2>
+      </div>
+    </div>
+  </div>
+  <!-- //.columns.large-12 --> 
+</div>
+<!-- //.row -->
+<div class="row" id="latestevents"> {module_webapps id="26905" filter="all" collection="events" template=""}
+  {% if events.items %}
+  {% assign eventList = '' %}
+  {% for event in events.items %}
+  {% assign date = event.["Event-Date"] | date: "yyyy-MM-dd" %}
+  {% if date >= globals.site.dateNow | date %}
+  {% assign eventList = eventList | append: date | append: ',' | append: event.itemid | append: ';' %}
+  {% endif %}        
+  {% endfor %}
+  {% assign eventList = eventList | split: ';' | sort%}
+  {% assign ctr = 0 %}
+  {% for eventItem in eventList limit:3 %}
+  {% assign eventSplit = eventItem | split: ',' %}
+  {module_webapps id="26905" filter="item" itemid="{{eventSplit[1]}}"}       
+  {% endfor %}
+  {% endif %} </div>
+<!-- //.row -->
+<div class="row">
+  <div class="columns large-12 text-center">
+    <p> * Please note:  All participants must wear enclosed footwear,  eye and hearing protection. (Earplugs are not permitted).*</p>
+  </div>
+  <!-- //.columns.large-12 --> 
+</div>
+<!-- //.row -->

@@ -1,0 +1,9 @@
+# robots.txt generated at http://www.mcanerin.com
+User-agent: *
+Disallow: 
+Disallow: /_dev/
+Disallow: /_settings/
+Disallow: /Layouts/
+Disallow: /ModuleTemplates/
+Disallow: /Templates/
+Sitemap: http://www.prsci.com.au/sitemap.xml

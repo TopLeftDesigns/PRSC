@@ -1,0 +1,15 @@
+<div class="item" data-start="{tag_start date}" data-end="{tag_end date}">
+    <figure class="alignleft"><img alt="" src="/_assets/images/events/img-list-{tag_event day of month}.jpg" />
+    </figure>
+    <h2>{tag_title}</h2>
+    <p class="datetime">{tag_event month} {tag_event day of month}, {tag_event year}</p>
+    <p>{tag_short description}</p>
+    <p class="action">
+        <a href="{tag_itemid}" class="button-a details-view-button">Details</a>
+        {%if results != "" %} 
+        <a href="result-{{results_id}}" class="button-a results-button">Results</a>
+    	{%endif%}
+    </p>    
+    <p class="tags">
+        {tag_tags}</p>
+</div>

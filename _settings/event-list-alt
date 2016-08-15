@@ -1,0 +1,16 @@
+<div class="columns large-6">
+<div class="section sec-b">
+<a href="/BookingRetrieve.aspx?ID={tag_bookingid}"><img alt="" src="_assets/images/events/img-list-{tag_bookingid}.jpg" /><em class="icon-hover icon-link"></em></a>
+<div class="sec-facts">
+<span>{tag_bookingmonth} {tag_bookingday}, {tag_bookingyear} <em class="icon-calendar"></em></span><span>{tag_capacityempty}/{tag_capacity} <em class="icon-ticket"></em></span>
+</div>
+<div class="sec-info">
+<h4>{tag_name}</h4>
+<hr />
+<p>{tag_body,95}</p>
+</div>
+<!-- //..sec-info -->
+</div>
+<!-- //.section.sec-b -->
+</div>
+<!-- //.columns.large-6 -->

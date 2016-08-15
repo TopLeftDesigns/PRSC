@@ -1,0 +1,52 @@
+<h1>Forum Registration</h1>
+<div class="alert-box alert radius">{module_error}</div>
+<div class="row">
+<div class="columns large-6">
+<h2>Existing Users - Login</h2>
+<form onsubmit="return check_RegistrationForm(this,'login')" action="{module_pageaddress}" method="post">
+    <input type="hidden" name="OrderLogin_Info" />
+    <label>Username
+    <input class="cat_textbox" maxlength="255" name="Username" type="text" /></label>
+    <label>Password
+    <input class="cat_textbox" type="password" maxlength="255" name="Password" /></label>
+    <input class="button small secondary" type="submit" value="Login" />
+    <a onclick="document.getElementById('lostpassword').style.display='inline';return false;" href="#">Forgot your username/password?</a>
+</form>
+<form id="lostpassword" style="display: none;" name="catseczonelpform57982" action="/LostPasswordProcess.aspx" method="post">
+    <h2>Forgot Password</h2>
+    <label>Enter Username or Email Address
+    <input class="cat_textbox" maxlength="255" name="Username" type="text" /></label>
+    <input class="button small secondary" type="submit" value="Retrieve" />
+</form>
+</div>
+<!-- //.columns.large-6 -->
+<div class="columns large-6">
+<h2>New User - Registration</h2>
+<form onsubmit="return check_RegistrationForm(this,'newuser')" action="{module_pageaddress}" method="post">
+    <input type="hidden" name="OrderRegistration_Info" />
+    <label>Name
+    <input class="cat_textbox" value="{module_RegistrationInfo,Name}" name="Registration_Name" type="text" /></label>
+    <label>Email
+    <input class="cat_textbox" value="{module_RegistrationInfo,Email}" name="Registration_Email" type="email" /></label>
+    <label>User Name
+    <input class="cat_textbox" value="{module_RegistrationInfo,Username}" name="Registration_Username" type="text" /></label>
+    <label>Password
+    <input class="cat_textbox" type="password" value="{module_RegistrationInfo,Password}" name="Registration_Password" /></label>
+    <label>Confirm Password
+    <input class="cat_textbox" type="password" maxlength="255" value="{module_RegistrationInfo,ConfirmPassword}" name="Registration_ConfirmPassword" /></label>
+    <label>Alias
+    <input class="cat_textbox" value="{module_RegistrationInfo,Alias}" name="Registration_Alias" type="text" /></label>
+    <label>Signature
+    <textarea class="comment" name="Registration_Signature" rows="4" type="text">{module_RegistrationInfo,Signature}</textarea></label>
+    <input class="button small secondary" type="submit" value="Register" />
+</form>
+</div>
+<!-- //.columns.large-6 -->
+</div>
+<!-- //.row -->
+<script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js"></script>
+<script type="text/javascript">
+	//<![CDATA[
+	 function check_RegistrationForm(theForm,name) {  var why = "";  if (name == 'login') {  why += isEmpty(theForm.Username.value, "Username");  why += isEmpty(theForm.Password.value, "Password");  }  else {  why += isEmpty(theForm.Registration_Name.value, "Full Name");  why += isEmpty(theForm.Registration_Email.value, "Email Address");  why += isEmpty(theForm.Registration_Username.value, "Username");  why += isEmpty(theForm.Registration_Password.value, "Password");  why += isEmpty(theForm.Registration_ConfirmPassword.value, "Password Confirmation");  }  if (why != "") {   alert(why);   return false;  }    return true; }
+	//]]>
+</script>

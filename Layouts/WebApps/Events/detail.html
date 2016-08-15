@@ -1,0 +1,50 @@
+<script type="text/javascript">
+/*$(function(){
+var pfull = $(".meter").data("pfull");
+$(".meter").css("width",pfull)
+});*/
+</script>
+<div class="booking-detail"> <img alt="" src="/_assets/images/events/img-detail-{tag_classifications}.jpg" />
+<aside>
+<em class="icon-calendar"></em>
+<p>{tag_event month} {tag_event day of month}, {tag_event year}</p>
+<!--
+<div class="tickets" style="display:none;">
+<hr />
+<em class="icon-circle-blank"></em>
+<p><span id="capacity">&nbsp;</span>/{tag_capacity}</p>
+</div>
+-->
+</aside>
+<h1>{tag_title}</h1>
+{tag_description}
+<!-- <div id="booking-form">   -->
+<div id="BkgFrm" class="Show{tag_take bookings}">
+<hr />
+<div class="row collapse">
+<div class="small-12 large-6">
+<form class="booking" name="catwebformform9530" method="post" onsubmit="return checkWholeForm9530(this)" enctype="multipart/form-data" action="/FormProcessv2.aspx?WebFormID=10254&amp;OID={module_oid}&amp;OTYPE={module_otype}&amp;EID={module_eid}&amp;CID={module_cid}">
+    <h4>Enter Your Booking</h4>
+    <input name="FirstName" id="FirstName" placeholder="First Name*" type="text" />
+    <input name="LastName" id="LastName" placeholder="Last Name*" type="text" />
+    <input name="EmailAddress" id="EmailAddress" placeholder="Email*" type="email" />
+    <input type="text" name="HomePhone" id="HomePhone" class="cat_textbox" maxlength="255" placeholder="Phone Number" />
+    <label>Enter Word Verification in box below</label>
+    <br />
+    {module_captchav2}{module_ccsecurity}
+    <input class="button radius small" type="submit" value="Submit" />
+    <div class="error">{module_error}</div>
+    <script type="text/javascript" src="/CatalystScripts/ValidationFunctions.js?vs=b1677.r461496-phase1"></script>
+    <script type="text/javascript">
+//<![CDATA[
+var submitcount9530 = 0;function checkWholeForm9530(theForm){var why = "";if (theForm.FirstName) why += isEmpty(theForm.FirstName.value, "First Name"); if (theForm.LastName) why += isEmpty(theForm.LastName.value, "Last Name"); if (theForm.EmailAddress) why += checkEmail(theForm.EmailAddress.value); if (theForm.HomePhone) why += isEmpty(theForm.HomePhone.value, "Home Phone Number"); if (theForm.CaptchaV2) why += captchaIsInvalid(theForm, "Enter Word Verification in box below", "Please enter the correct Word Verification as seen in the image"); if(why != ""){alert(why);return false;}if(submitcount9530 == 0){submitcount9530++;theForm.submit();return false;}else{alert("Form submission is in progress.");return false;}}
+//]]>
+</script>
+</form>
+</div>
+</div>
+</div>
+<!-- end booking form -->
+<div class="go-back">{module_referreraddress,,Go Back}</div>
+</div>
+<!-- END .booking-container -->
